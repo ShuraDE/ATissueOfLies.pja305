@@ -3,10 +3,30 @@ class Mission
 {
 	addOns[]=
 	{
-		"pja305"
+		"pja305",
+		"gnt_c185",
+		"A3_Structures_F_Kart_Mil_Flags",
+		"A3_Characters_F_BLUFOR",
+		"a3_characters_f",
+		"A3_Modules_F_Curator_Curator",
+		"ace_medical",
+		"task_force_radio_items",
+		"ace_weather",
+		"ace_map",
+		"A3_Structures_F_Ind_Cargo"
 	};
 	addOnsAuto[]=
 	{
+		"A3_Characters_F_BLUFOR",
+		"a3_characters_f",
+		"gnt_c185",
+		"A3_Modules_F_Curator_Curator",
+		"ace_medical",
+		"ace_weather",
+		"task_force_radio_items",
+		"ace_map",
+		"A3_Structures_F_Kart_Mil_Flags",
+		"A3_Structures_F_Ind_Cargo",
 		"pja305"
 	};
 	randomSeed=11898615;
@@ -27,6 +47,546 @@ class Mission
 		minute=0;
 		startFogDecay=0.013;
 		forecastFogDecay=0.013;
+	};
+	class Groups
+	{
+		items=4;
+		class Item0
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=2;
+				class Item0
+				{
+					position[]={18010.965,2.3875535,8970.1924};
+					id=0;
+					side="WEST";
+					vehicle="B_Soldier_SL_F";
+					player="PLAYER COMMANDER";
+					leader=1;
+					rank="CAPTAIN";
+					skill=0.60000002;
+					text="zeus1";
+					syncId=0;
+					synchronizations[]={1};
+				};
+				class Item1
+				{
+					position[]={18019.643,2.6951852,8970.6211};
+					id=1;
+					side="WEST";
+					vehicle="B_Soldier_F";
+					player="PLAY CDG";
+					rank="LIEUTENANT";
+					skill=0.60000002;
+				};
+			};
+		};
+		class Item1
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={12898.204,9.3421516,778.59009};
+					azimut=90.930496;
+					id=2;
+					side="CIV";
+					vehicle="GNT_C185F";
+					leader=1;
+					skill=0.60000002;
+					init="moveOut driver this";
+				};
+			};
+		};
+		class Item2
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=2;
+				class Item0
+				{
+					position[]={13685.471,0.040272646,2086.5796};
+					class args
+					{
+						items=4;
+						class Item0
+						{
+							value="zeus1";
+							parentCls="ModuleCurator_F";
+							typeName="Owner";
+						};
+						class Item1
+						{
+							value="";
+							parentCls="ModuleCurator_F";
+							typeName="Name";
+						};
+						class Item2
+						{
+							value="3";
+							parentCls="ModuleCurator_F";
+							typeName="Addons";
+						};
+						class Item3
+						{
+							value="0";
+							parentCls="ModuleCurator_F";
+							typeName="Forced";
+						};
+					};
+					id=3;
+					side="LOGIC";
+					vehicle="ModuleCurator_F";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+				};
+				class Item1
+				{
+					position[]={13930.666,0.022631641,2388.6414};
+					class args
+					{
+						items=13;
+						class Item0
+						{
+							value="2";
+							parentCls="ACE_moduleMedicalSettings";
+							typeName="level";
+						};
+						class Item1
+						{
+							value="2";
+							parentCls="ACE_moduleMedicalSettings";
+							typeName="medicSetting";
+						};
+						class Item2
+						{
+							value="1";
+							parentCls="ACE_moduleMedicalSettings";
+							typeName="allowLitterCreation";
+						};
+						class Item3
+						{
+							value="1800";
+							parentCls="ACE_moduleMedicalSettings";
+							typeName="litterCleanUpDelay";
+						};
+						class Item4
+						{
+							value="1";
+							parentCls="ACE_moduleMedicalSettings";
+							typeName="enableScreams";
+						};
+						class Item5
+						{
+							value="1";
+							parentCls="ACE_moduleMedicalSettings";
+							typeName="playerDamageThreshold";
+						};
+						class Item6
+						{
+							value="1";
+							parentCls="ACE_moduleMedicalSettings";
+							typeName="AIDamageThreshold";
+						};
+						class Item7
+						{
+							value="1";
+							parentCls="ACE_moduleMedicalSettings";
+							typeName="enableUnconsciousnessAI";
+						};
+						class Item8
+						{
+							value="1";
+							parentCls="ACE_moduleMedicalSettings";
+							typeName="remoteControlledAI";
+						};
+						class Item9
+						{
+							value="0";
+							parentCls="ACE_moduleMedicalSettings";
+							typeName="preventInstaDeath";
+						};
+						class Item10
+						{
+							value="1";
+							parentCls="ACE_moduleMedicalSettings";
+							typeName="bleedingCoefficient";
+						};
+						class Item11
+						{
+							value="1";
+							parentCls="ACE_moduleMedicalSettings";
+							typeName="painCoefficient";
+						};
+						class Item12
+						{
+							value="1";
+							parentCls="ACE_moduleMedicalSettings";
+							typeName="keepLocalSettingsSynced";
+						};
+					};
+					id=4;
+					side="LOGIC";
+					vehicle="ACE_moduleMedicalSettings";
+					lock="UNLOCKED";
+					skill=0.60000002;
+				};
+			};
+		};
+		class Item3
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=5;
+				class Item0
+				{
+					position[]={13827.069,-0.0017656237,2387.7051};
+					class args
+					{
+						items=11;
+						class Item0
+						{
+							value="0";
+							parentCls="ACE_moduleAdvancedMedicalSettings";
+							typeName="enableFor";
+						};
+						class Item1
+						{
+							value="1";
+							parentCls="ACE_moduleAdvancedMedicalSettings";
+							typeName="enableAdvancedWounds";
+						};
+						class Item2
+						{
+							value="1";
+							parentCls="ACE_moduleAdvancedMedicalSettings";
+							typeName="enableVehicleCrashes";
+						};
+						class Item3
+						{
+							value="1";
+							parentCls="ACE_moduleAdvancedMedicalSettings";
+							typeName="medicSetting_PAK";
+						};
+						class Item4
+						{
+							value="1";
+							parentCls="ACE_moduleAdvancedMedicalSettings";
+							typeName="consumeItem_PAK";
+						};
+						class Item5
+						{
+							value="0";
+							parentCls="ACE_moduleAdvancedMedicalSettings";
+							typeName="useLocation_PAK";
+						};
+						class Item6
+						{
+							value="1";
+							parentCls="ACE_moduleAdvancedMedicalSettings";
+							typeName="medicSetting_SurgicalKit";
+						};
+						class Item7
+						{
+							value="1";
+							parentCls="ACE_moduleAdvancedMedicalSettings";
+							typeName="consumeItem_SurgicalKit";
+						};
+						class Item8
+						{
+							value="0";
+							parentCls="ACE_moduleAdvancedMedicalSettings";
+							typeName="useLocation_SurgicalKit";
+						};
+						class Item9
+						{
+							value="1";
+							parentCls="ACE_moduleAdvancedMedicalSettings";
+							typeName="healHitPointAfterAdvBandage";
+						};
+						class Item10
+						{
+							value="1";
+							parentCls="ACE_moduleAdvancedMedicalSettings";
+							typeName="painIsOnlySuppressed";
+						};
+					};
+					id=5;
+					side="LOGIC";
+					vehicle="ACE_moduleAdvancedMedicalSettings";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+				};
+				class Item1
+				{
+					position[]={13887.612,0.091948926,2461.0217};
+					class args
+					{
+						items=3;
+						class Item0
+						{
+							value="0";
+							parentCls="ACE_moduleReviveSettings";
+							typeName="enableRevive";
+						};
+						class Item1
+						{
+							value="9999";
+							parentCls="ACE_moduleReviveSettings";
+							typeName="maxReviveTime";
+						};
+						class Item2
+						{
+							value="-1";
+							parentCls="ACE_moduleReviveSettings";
+							typeName="amountOfReviveLives";
+						};
+					};
+					id=6;
+					side="LOGIC";
+					vehicle="ACE_moduleReviveSettings";
+					lock="UNLOCKED";
+					skill=0.60000002;
+				};
+				class Item2
+				{
+					position[]={13512.818,0.16061857,2262.5964};
+					class args
+					{
+						items=6;
+						class Item0
+						{
+							value="1";
+							parentCls="ace_weather_ModuleSettings";
+							typeName="enableServerController";
+						};
+						class Item1
+						{
+							value="0";
+							parentCls="ace_weather_ModuleSettings";
+							typeName="useACEWeather";
+						};
+						class Item2
+						{
+							value="1";
+							parentCls="ace_weather_ModuleSettings";
+							typeName="syncRain";
+						};
+						class Item3
+						{
+							value="1";
+							parentCls="ace_weather_ModuleSettings";
+							typeName="syncWind";
+						};
+						class Item4
+						{
+							value="1";
+							parentCls="ace_weather_ModuleSettings";
+							typeName="syncMisc";
+						};
+						class Item5
+						{
+							value="60";
+							parentCls="ace_weather_ModuleSettings";
+							typeName="serverUpdateInterval";
+						};
+					};
+					id=7;
+					side="LOGIC";
+					vehicle="ace_weather_ModuleSettings";
+					lock="UNLOCKED";
+					skill=0.60000002;
+				};
+				class Item3
+				{
+					position[]={13362.135,-0.19263095,2838.0273};
+					class args
+					{
+						items=7;
+						class Item0
+						{
+							value="1";
+							parentCls="tfar_ModuleTaskForceRadio";
+							typeName="Units";
+						};
+						class Item1
+						{
+							value="DSH&G^G";
+							parentCls="tfar_ModuleTaskForceRadio";
+							typeName="Encryption";
+						};
+						class Item2
+						{
+							value="tf_anprc152_1";
+							parentCls="tfar_ModuleTaskForceRadio";
+							typeName="LRradio";
+						};
+						class Item3
+						{
+							value="tf_anprc152";
+							parentCls="tfar_ModuleTaskForceRadio";
+							typeName="Radio";
+						};
+						class Item4
+						{
+							value="tf_rf7800str";
+							parentCls="tfar_ModuleTaskForceRadio";
+							typeName="RiflemanRadio";
+						};
+						class Item5
+						{
+							value="[""50"",""60"",""70"",""80"",90""]";
+							parentCls="tfar_ModuleTaskForceRadio";
+							typeName="PrFreq";
+						};
+						class Item6
+						{
+							value="[""22""]";
+							parentCls="tfar_ModuleTaskForceRadio";
+							typeName="LrFreq";
+						};
+					};
+					id=8;
+					side="LOGIC";
+					vehicle="tfar_ModuleTaskForceRadio";
+					lock="UNLOCKED";
+					skill=0.60000002;
+					syncId=1;
+					synchronizations[]={0};
+				};
+				class Item4
+				{
+					position[]={13627.233,-0.1157178,2268.0859};
+					class args
+					{
+						items=4;
+						class Item0
+						{
+							value="1";
+							parentCls="ACE_ModuleMap";
+							typeName="MapIllumination";
+						};
+						class Item1
+						{
+							value="1";
+							parentCls="ACE_ModuleMap";
+							typeName="MapShake";
+						};
+						class Item2
+						{
+							value="1";
+							parentCls="ACE_ModuleMap";
+							typeName="MapLimitZoom";
+						};
+						class Item3
+						{
+							value="0";
+							parentCls="ACE_ModuleMap";
+							typeName="MapShowCursorCoordinates";
+						};
+					};
+					id=9;
+					side="LOGIC";
+					vehicle="ACE_ModuleMap";
+					lock="UNLOCKED";
+					skill=0.60000002;
+				};
+			};
+		};
+	};
+	class Vehicles
+	{
+		items=10;
+		class Item0
+		{
+			position[]={13000.045,9.3421516,763.2019};
+			id=10;
+			side="EMPTY";
+			vehicle="Flag_Redburger_F";
+			skill=0.60000002;
+		};
+		class Item1
+		{
+			position[]={13098.754,9.3421516,765.28931};
+			id=11;
+			side="EMPTY";
+			vehicle="Flag_Redburger_F";
+			skill=0.60000002;
+		};
+		class Item2
+		{
+			position[]={13198.953,9.3421516,765.28931};
+			id=12;
+			side="EMPTY";
+			vehicle="Flag_Redburger_F";
+			skill=0.60000002;
+		};
+		class Item3
+		{
+			position[]={13298.262,9.3421516,764.69604};
+			id=13;
+			side="EMPTY";
+			vehicle="Flag_Redburger_F";
+			skill=0.60000002;
+		};
+		class Item4
+		{
+			position[]={13399.057,9.3421516,764.9939};
+			id=14;
+			side="EMPTY";
+			vehicle="Flag_Redburger_F";
+			skill=0.60000002;
+		};
+		class Item5
+		{
+			position[]={13498.959,9.3421516,765.59082};
+			id=15;
+			side="EMPTY";
+			vehicle="Flag_Redburger_F";
+			skill=0.60000002;
+		};
+		class Item6
+		{
+			position[]={13598.861,9.3421516,764.9939};
+			id=16;
+			side="EMPTY";
+			vehicle="Flag_Redburger_F";
+			skill=0.60000002;
+		};
+		class Item7
+		{
+			position[]={13698.465,9.3421516,765.29175};
+			id=17;
+			side="EMPTY";
+			vehicle="Flag_Redburger_F";
+			skill=0.60000002;
+		};
+		class Item8
+		{
+			position[]={13799.261,9.3421516,764.09912};
+			id=18;
+			side="EMPTY";
+			vehicle="Flag_Redburger_F";
+			skill=0.60000002;
+		};
+		class Item9
+		{
+			position[]={18014.738,2.3440635,8974.0166};
+			id=19;
+			side="EMPTY";
+			vehicle="Land_CargoBox_V1_F";
+			leader=1;
+			skill=0.60000002;
+			init="[""AmmoboxInit"",[this,true]] call BIS_fnc_arsenal;";
+		};
 	};
 };
 class Intro
