@@ -1,11 +1,18 @@
 /*
-//alternative:
-//[player, 0.3] call ace_medical_fnc_adjustPainLevel;
-// sleep 1;
-//[player, -0.3] call ace_medical_fnc_adjustPainLevel;
+alternative: via ace painlvl
+*/
+[player, 0.3] call ace_medical_fnc_adjustPainLevel;
+sleep 1;
+[player, -0.3] call ace_medical_fnc_adjustPainLevel;
+
+
+
+/*
+3x^2-x6  x=[-1.5, 0)
+berechnung für schmerzauswirkung (y), starker anstieg langsamer abstíeg
 */
 
-// 3x^2-x6  x=[-1.5, 0)
+/* non functional
 private ["_fnc_createEffect","_effectCC","_effectHandler","_interval","_strength"];
 
 _fnc_createEffect = {
@@ -51,3 +58,4 @@ _effectHandler = [{
 }, 0, []] call CBA_fnc_addPerFrameHandler;
 sleep 2;
 [_effectHandler] call CBA_fnc_removePerFrameHandler
+*/
