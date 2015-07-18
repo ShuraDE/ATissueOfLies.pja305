@@ -23,7 +23,8 @@ class Mission
 		"A3_Structures_F_Heli_Ind_Machines",
 		"A3_Structures_F_EPB_Civ_Dead",
 		"CABuildings",
-		"aia_buildings_config"
+		"aia_buildings_config",
+		"A3_Structures_F_Items_Cans"
 	};
 	addOnsAuto[]=
 	{
@@ -47,6 +48,7 @@ class Mission
 		"A3_Structures_F_EPB_Civ_Dead",
 		"CABuildings",
 		"aia_buildings_config",
+		"A3_Structures_F_Items_Cans",
 		"pja305"
 	};
 	randomSeed=11898615;
@@ -1067,7 +1069,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=22;
+		items=27;
 		class Item0
 		{
 			position[]={18020.295,3.0008533,8980.2432};
@@ -1110,7 +1112,7 @@ class Mission
 			side="EMPTY";
 			vehicle="EvMoney";
 			skill=0.60000002;
-			text="prison_money";
+			text="prison_money_1";
 			init="this setdir 85.225;this setposATL [13220.0869141,6560.946777,1.5321];this setVectorUp [0,0,1]";
 		};
 		class Item4
@@ -1303,6 +1305,63 @@ class Mission
 			vehicle="Sign_MP_blu_EP1";
 			skill=0.60000002;
 			init="this enableSimulation true;this setdir 315.084;this setposATL [13307.230469,6753.253418,0];this setVectorUp [0,0,1]";
+		};
+		class Item22
+		{
+			position[]={13219.825,37.494682,6561.2178};
+			azimut=230.22501;
+			offsetY=1.5321;
+			id=60;
+			side="EMPTY";
+			vehicle="EvMoney";
+			skill=0.60000002;
+			text="prison_money_2";
+			init="this enableSimulation true;this setdir 230.225;this setposATL [13219.825195,6561.217773,1.5321];this setVectorUp [0,0,1]";
+		};
+		class Item23
+		{
+			position[]={13231.615,37.385708,6531.647};
+			azimut=85.224998;
+			offsetY=0.95067602;
+			id=61;
+			side="EMPTY";
+			vehicle="GunrackTK_EP1";
+			skill=0.60000002;
+			init="this enableSimulation true;this setdir 85.225;this setposATL [13231.615234,6531.646973,0.950676];this setVectorUp [0,0,1]";
+		};
+		class Item24
+		{
+			position[]={13237.517,37.42374,6535.7891};
+			azimut=265.22501;
+			offsetY=0.84315097;
+			id=62;
+			side="EMPTY";
+			vehicle="ACE_medicalSupplyCrate_advanced";
+			skill=0.60000002;
+			init="this enableSimulation true;this setdir 265.225;this setposATL [13237.516602,6535.789063,0.843151];this setVectorUp [0,0,1]";
+		};
+		class Item25
+		{
+			position[]={13220.18,37.494682,6560.5752};
+			azimut=165.22501;
+			offsetY=1.54861;
+			id=63;
+			side="EMPTY";
+			vehicle="Item_tf_anprc148jem";
+			skill=0.60000002;
+			init="this enableSimulation true;this setdir 165.225;this setposATL [13220.179688,6560.575195,1.54861];this setVectorUp [0,0,1]";
+		};
+		class Item26
+		{
+			position[]={13219.729,37.494682,6561.2915};
+			azimut=310.22501;
+			offsetY=1.37793;
+			id=64;
+			side="EMPTY";
+			vehicle="Land_Can_V3_F";
+			skill=0.60000002;
+			text="ph_money_nade";
+			init="this enableSimulation false;this setdir 310.225;this setposATL [13219.729492,6561.291504,1.37793];this setVectorUp [0,0,1]";
 		};
 	};
 };
