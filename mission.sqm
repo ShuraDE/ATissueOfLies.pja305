@@ -1396,7 +1396,7 @@ class Mission
 			interruptable=1;
 			type="SWITCH";
 			age="UNKNOWN";
-			name="disarmAction";
+			name="t_moneytrap";
 			expActiv="[true] call ADL_TRAPS_MENU;";
 			expDesactiv="[false] call ADL_TRAPS_MENU;";
 			class Effects
