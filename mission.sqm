@@ -1370,7 +1370,7 @@ class Mission
 	};
 	class Sensors
 	{
-		items=2;
+		items=3;
 		class Item0
 		{
 			position[]={13221.967,41.257305,6561.5664};
@@ -1397,8 +1397,27 @@ class Mission
 			type="SWITCH";
 			age="UNKNOWN";
 			name="t_moneytrap";
-			expActiv="[true] call ADL_TRAPS_MENU;";
-			expDesactiv="[false] call ADL_TRAPS_MENU;";
+			expActiv="[true] call ADL_TRAPS_MONEY_NADE_MENU;";
+			expDesactiv="[false] call ADL_TRAPS_MONEY_NADE_MENU;";
+			class Effects
+			{
+			};
+		};
+		class Item2
+		{
+			position[]={13220.194,37.494682,6561.313};
+			a=3;
+			b=2;
+			angle=357;
+			rectangular=1;
+			activationBy="WEST";
+			repeating=1;
+			interruptable=1;
+			type="SWITCH";
+			age="UNKNOWN";
+			name="t_money_take";
+			expActiv="[true] call ADL_TRAPS_MONEY_TAKE_MENU;";
+			expDesactiv="[false] call ADL_TRAPS_MONEY_TAKE_MENU;";
 			class Effects
 			{
 			};
