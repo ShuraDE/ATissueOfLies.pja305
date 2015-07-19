@@ -20,7 +20,7 @@ if (!(isNull(prison_money_1) && isNull(prison_money_2))) then  {
 								if (!isNil("MONEY_NADE")) then {
 									["money trap execute"] call ADL_DEBUG;
 
-									_nade = createVehicle ["GrenadeHand", position prison_money_2, [], 0, "FLY"];
+									_nade = createVehicle ["GrenadeHand", position prison_money_2, [], 0, "CAN_COLLIDE"];
 									//"GrenadeHand" createVehicle  position prison_money_2;
 									deleteVehicle MONEY_NADE;
 									MONEY_NADE = nil;
