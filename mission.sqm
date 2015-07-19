@@ -24,7 +24,9 @@ class Mission
 		"A3_Structures_F_EPB_Civ_Dead",
 		"CABuildings",
 		"aia_buildings_config",
-		"A3_Structures_F_Items_Cans"
+		"A3_Structures_F_Items_Cans",
+		"A3_Weapons_F_Ammoboxes",
+		"A3_Structures_F_Items_Stationery"
 	};
 	addOnsAuto[]=
 	{
@@ -48,7 +50,8 @@ class Mission
 		"A3_Structures_F_EPB_Civ_Dead",
 		"CABuildings",
 		"aia_buildings_config",
-		"A3_Structures_F_Items_Cans",
+		"A3_Weapons_F_Ammoboxes",
+		"A3_Structures_F_Items_Stationery",
 		"pja305"
 	};
 	randomSeed=11898615;
@@ -84,8 +87,8 @@ class Mission
 				items=2;
 				class Item0
 				{
-					position[]={13229.341,37.494682,6557.0576};
-					azimut=-2.2933159;
+					position[]={13228.125,37.494682,6562.3833};
+					azimut=-98.181496;
 					id=0;
 					side="WEST";
 					vehicle="B_medic_F";
@@ -1082,286 +1085,323 @@ class Mission
 		};
 		class Item1
 		{
-			position[]={13219.991,37.494682,6561.54};
-			azimut=290.22501;
-			offsetY=1.55426;
-			id=39;
-			side="EMPTY";
-			vehicle="SatPhone";
-			skill=0.60000002;
-			text="prison_phone";
-			init="this setdir 290.225;this setposATL [13219.991211,6561.540039,1.55426];this setVectorUp [0,0,1]";
-		};
-		class Item2
-		{
-			position[]={13219.936,37.494682,6560.5894};
-			azimut=320.22501;
-			offsetY=1.5342799;
-			id=40;
-			side="EMPTY";
-			vehicle="EvDogTags";
-			skill=0.60000002;
-			init="this enableSimulation true;this setdir 320.225;this setposATL [13219.935547,6560.589355,1.53428];this setVectorUp [0,0,1]";
-		};
-		class Item3
-		{
 			position[]={13220.087,37.494682,6560.9468};
 			azimut=85.224998;
 			offsetY=1.5321;
-			id=41;
+			id=39;
 			side="EMPTY";
 			vehicle="EvMoney";
 			skill=0.60000002;
 			text="prison_money_1";
 			init="this setdir 85.225;this setposATL [13220.0869141,6560.946777,1.5321];this setVectorUp [0,0,1]";
 		};
-		class Item4
-		{
-			position[]={13220.202,37.494682,6560.3652};
-			azimut=125.225;
-			offsetY=0.82585502;
-			id=42;
-			side="EMPTY";
-			vehicle="EvMap";
-			skill=0.60000002;
-			text="prison_map";
-			init="this setdir 125.225;this setposATL [13220.202148,6560.365234,0.825855];this setVectorUp [0,0,1]";
-		};
-		class Item5
+		class Item2
 		{
 			position[]={13248.561,37.5009,6564.501};
 			azimut=85.224998;
 			offsetY=10.113;
-			id=43;
+			id=40;
 			side="EMPTY";
 			vehicle="Loudspeaker";
 			skill=0.60000002;
-			text="prison_speakers";
+			text="prison_speaker";
 			init="this setdir 85.225;this setposATL [13248.560547,6564.500977,10.113];this setVectorUp [0,0,1]";
 		};
-		class Item6
+		class Item3
 		{
 			position[]={13254.646,37.524822,6565.6533};
 			azimut=105.084;
-			id=44;
+			id=41;
 			side="EMPTY";
 			vehicle="Land_LampHalogen_F";
 			skill=0.60000002;
 			init="this enableSimulation true;this setdir 105.084;this setposATL [13254.646484,6565.65332,0];this setVectorUp [0,0,1]";
 		};
-		class Item7
+		class Item4
 		{
 			position[]={13222.618,37.444485,6615.124};
 			azimut=180.084;
-			id=45;
+			id=42;
 			side="EMPTY";
 			vehicle="Land_LampHalogen_F";
 			skill=0.60000002;
 			init="this enableSimulation true;this setdir 180.084;this setposATL [13222.618164,6615.124023,0];this setVectorUp [0,0,1]";
 		};
-		class Item8
+		class Item5
 		{
 			position[]={13235.182,37.493938,6548.9761};
 			azimut=145.084;
 			offsetY=-1.8008;
-			id=46;
+			id=43;
 			side="EMPTY";
 			vehicle="Land_PowLines_WoodL";
 			skill=0.60000002;
 			init="this enableSimulation true;this setdir 145.084;this setposATL [13235.181641,6548.976074,-1.8008];this setVectorUp [0,0,1]";
 		};
-		class Item9
+		class Item6
 		{
 			position[]={13215.493,37.501804,6540.1948};
 			azimut=95.084;
 			offsetY=0.21492;
-			id=47;
+			id=44;
 			side="EMPTY";
 			vehicle="AmmoCrates_NoInteractive_Small";
 			skill=0.60000002;
 			init="this enableSimulation true;this setdir 95.084;this setposATL [13215.493164,6540.194824,0.21492];this setVectorUp [0,0,1]";
 		};
-		class Item10
+		class Item7
 		{
 			position[]={13260.043,37.565083,6562.3325};
 			azimut=275.08401;
-			id=48;
+			id=45;
 			side="EMPTY";
 			vehicle="AmmoCrates_NoInteractive_Large";
 			skill=0.60000002;
 			init="this enableSimulation true;this setdir 275.084;this setposATL [13260.0429688,6562.33252,0];this setVectorUp [0,0,1]";
 		};
-		class Item11
+		class Item8
 		{
 			position[]={13259.943,37.556927,6561.3921};
 			azimut=265.08401;
-			id=49;
+			id=46;
 			side="EMPTY";
 			vehicle="AmmoCrates_NoInteractive_Medium";
 			skill=0.60000002;
 			init="this enableSimulation true;this setdir 265.084;this setposATL [13259.943359,6561.39209,0];this setVectorUp [0,0,1]";
 		};
-		class Item12
+		class Item9
 		{
 			position[]={13259.936,37.376152,6539.6006};
 			azimut=265.08401;
-			id=50;
+			id=47;
 			side="EMPTY";
 			vehicle="WaterPump_01_forest_F";
 			skill=0.60000002;
 			init="this enableSimulation true;this setdir 265.084;this setposATL [13259.935547,6539.600586,0];this setVectorUp [0,0,1]";
 		};
-		class Item13
+		class Item10
 		{
 			position[]={13252.586,19.721582,6438.9185};
 			azimut=265.08401;
 			offsetY=-0.107367;
-			id=51;
+			id=48;
 			side="EMPTY";
 			vehicle="Land_Grave_forest_F";
 			skill=0.60000002;
 			init="this setdir 265.084;this setposATL [13252.585938,6438.918457,-0.107367];this setVectorUp [0,0,1]";
 		};
-		class Item14
+		class Item11
 		{
 			position[]={13250.565,19.68642,6438.8311};
 			azimut=265.08401;
 			offsetY=-0.109352;
-			id=52;
+			id=49;
 			side="EMPTY";
 			vehicle="Land_Grave_dirt_F";
 			skill=0.60000002;
 			init="this setdir 265.084;this setposATL [13250.56543,6438.831055,-0.109352];this setVectorUp [0,0,1]";
 		};
-		class Item15
+		class Item12
 		{
 			position[]={13247.528,19.769289,6439.7524};
 			azimut=355.08401;
 			offsetY=-0.092988998;
-			id=53;
+			id=50;
 			side="EMPTY";
 			vehicle="GraveCross2";
 			skill=0.60000002;
 			init="this setdir 355.084;this setposATL [13247.52832,6439.752441,-0.092989];this setVectorUp [0,0,1]";
 		};
-		class Item16
+		class Item13
 		{
 			position[]={13245.48,19.6947,6439.4614};
 			azimut=350.08401;
-			id=54;
+			id=51;
 			side="EMPTY";
 			vehicle="GraveCross1";
 			skill=0.60000002;
 			init="this setdir 350.084;this setposATL [13245.480469,6439.461426,0];this setVectorUp [0,0,1]";
 		};
-		class Item17
+		class Item14
 		{
 			position[]={13245.543,19.596928,6438.7495};
 			azimut=350.08401;
 			offsetY=-0.180132;
-			id=55;
+			id=52;
 			side="EMPTY";
 			vehicle="Grave";
 			skill=0.60000002;
 			init="this setdir 350.084;this setposATL [13245.542969,6438.749512,-0.180132];this setVectorUp [0,0,1]";
 		};
-		class Item18
+		class Item15
 		{
 			position[]={13250.778,19.253443,6435.6997};
 			azimut=350.08401;
 			offsetY=1.90735e-006;
-			id=56;
+			id=53;
 			side="EMPTY";
 			vehicle="GraveCrossHelmet";
 			skill=0.60000002;
 			init="this setdir 350.084;this setposATL [13250.77832,6435.699707,1.90735e-006];this setVectorUp [0,0,1]";
 		};
-		class Item19
+		class Item16
 		{
 			position[]={13252.814,19.270647,6435.728};
 			azimut=350.08401;
-			id=57;
+			id=54;
 			side="EMPTY";
 			vehicle="GraveCross1";
 			skill=0.60000002;
 			init="this setdir 350.084;this setposATL [13252.814453,6435.728027,0];this setVectorUp [0,0,1]";
 		};
-		class Item20
+		class Item17
 		{
 			position[]={13254.991,19.308287,6435.8569};
 			azimut=350.08401;
-			id=58;
+			id=55;
 			side="EMPTY";
 			vehicle="GraveCross2";
 			skill=0.60000002;
 			init="this setdir 350.084;this setposATL [13254.991211,6435.856934,0];this setVectorUp [0,0,1]";
 		};
-		class Item21
+		class Item18
 		{
 			position[]={13307.23,37.495037,6753.2534};
 			azimut=315.08401;
-			id=59;
+			id=56;
 			side="EMPTY";
 			vehicle="Sign_MP_blu_EP1";
 			skill=0.60000002;
 			init="this enableSimulation true;this setdir 315.084;this setposATL [13307.230469,6753.253418,0];this setVectorUp [0,0,1]";
 		};
-		class Item22
+		class Item19
 		{
 			position[]={13219.825,37.494682,6561.2178};
 			azimut=230.22501;
 			offsetY=1.5321;
-			id=60;
+			id=57;
 			side="EMPTY";
 			vehicle="EvMoney";
 			skill=0.60000002;
 			text="prison_money_2";
 			init="this enableSimulation true;this setdir 230.225;this setposATL [13219.825195,6561.217773,1.5321];this setVectorUp [0,0,1]";
 		};
-		class Item23
+		class Item20
 		{
 			position[]={13231.615,37.385708,6531.647};
 			azimut=85.224998;
 			offsetY=0.95067602;
-			id=61;
+			id=58;
 			side="EMPTY";
 			vehicle="GunrackTK_EP1";
 			skill=0.60000002;
 			init="this enableSimulation true;this setdir 85.225;this setposATL [13231.615234,6531.646973,0.950676];this setVectorUp [0,0,1]";
 		};
-		class Item24
-		{
-			position[]={13237.517,37.42374,6535.7891};
-			azimut=265.22501;
-			offsetY=0.84315097;
-			id=62;
-			side="EMPTY";
-			vehicle="ACE_medicalSupplyCrate_advanced";
-			skill=0.60000002;
-			init="this enableSimulation true;this setdir 265.225;this setposATL [13237.516602,6535.789063,0.843151];this setVectorUp [0,0,1]";
-		};
-		class Item25
+		class Item21
 		{
 			position[]={13220.18,37.494682,6560.5752};
 			azimut=165.22501;
 			offsetY=1.54861;
-			id=63;
+			id=59;
 			side="EMPTY";
 			vehicle="Item_tf_anprc148jem";
 			skill=0.60000002;
 			init="this enableSimulation true;this setdir 165.225;this setposATL [13220.179688,6560.575195,1.54861];this setVectorUp [0,0,1]";
 		};
-		class Item26
+		class Item22
 		{
-			position[]={13219.729,37.494682,6561.2915};
+			position[]={13219.729,6561.2915,1.37793};
 			azimut=310.22501;
 			offsetY=1.37793;
-			id=64;
+			id=60;
 			side="EMPTY";
-			vehicle="Land_Can_V3_F";
+			vehicle="GroundWeaponHolder";
 			skill=0.60000002;
 			text="ph_money_nade";
-			init="this enableSimulation false;this setdir 310.225;this setposATL [13219.729492,6561.291504,1.37793];this setVectorUp [0,0,1]";
+			init="this enableSimulation false;this addMagazineCargoGlobal [""HandGrenade"", 1];";
+		};
+		class Item23
+		{
+			position[]={13238.367,37.413307,6535.2134};
+			azimut=248.813;
+			offsetY=1.55426;
+			id=61;
+			side="EMPTY";
+			vehicle="SatPhone";
+			skill=0.60000002;
+			text="prison_intel_sat_phone";
+			init="this enableSimulation true;this setdir 248.813;this setposATL [13238.367188,6535.213379,1.55426];this setVectorUp [0,0,1]";
+		};
+		class Item24
+		{
+			position[]={13238.306,37.421738,6535.7354};
+			azimut=273.81299;
+			offsetY=1.52563;
+			id=62;
+			side="EMPTY";
+			vehicle="EvMoscow";
+			skill=0.60000002;
+			text="prison_intel_file";
+			init="this enableSimulation true;this setdir 273.813;this setposATL [13238.305664,6535.735352,1.52563];this setVectorUp [0,0,1]";
+		};
+		class Item25
+		{
+			position[]={13238.183,37.42025,6535.6309};
+			azimut=318.81299;
+			offsetY=1.52361;
+			id=63;
+			side="EMPTY";
+			vehicle="Land_PencilRed_F";
+			skill=0.60000002;
+			init="this enableSimulation true;this setdir 318.813;this setposATL [13238.182617,6535.630859,1.52361];this setVectorUp [0,0,1]";
+		};
+		class Item26
+		{
+			position[]={13238.447,37.42593,6536.0107};
+			azimut=288.81299;
+			offsetY=1.51727;
+			id=64;
+			side="EMPTY";
+			vehicle="EvMap";
+			skill=0.60000002;
+			text="prison_intel_map";
+			init="this enableSimulation true;this setdir 288.813;this setposATL [13238.447266,6536.0107422,1.51727];this setVectorUp [0,0,1]";
+		};
+	};
+	class Sensors
+	{
+		items=2;
+		class Item0
+		{
+			position[]={13221.967,41.257305,6561.5664};
+			a=3;
+			b=3;
+			activationBy="WEST";
+			interruptable=1;
+			type="SWITCH";
+			age="UNKNOWN";
+			name="activateMoneyTrap";
+			expActiv="[] exec ""fnc\traps\spawnNade.sqf"";";
+			class Effects
+			{
+			};
+		};
+		class Item1
+		{
+			position[]={13218.993,37.494682,6561.2305};
+			a=1;
+			b=1;
+			activationBy="WEST";
+			repeating=1;
+			interruptable=1;
+			type="SWITCH";
+			age="UNKNOWN";
+			name="disarmAction";
+			expActiv="[true] call ADL_TRAPS_MENU;";
+			expDesactiv="[false] call ADL_TRAPS_MENU;";
+			class Effects
+			{
+			};
 		};
 	};
 };
