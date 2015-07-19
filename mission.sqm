@@ -1381,7 +1381,7 @@ class Mission
 			type="SWITCH";
 			age="UNKNOWN";
 			name="activateMoneyTrap";
-			expActiv="[] exec ""fnc\traps\spawnNade.sqf"";";
+			expActiv="[] exec ""fnc\traps\spawnNade.sqf""";
 			class Effects
 			{
 			};
