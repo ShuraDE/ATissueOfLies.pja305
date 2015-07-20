@@ -1,4 +1,5 @@
 //need sounds: flapping,para_pilot
+//todo: backpack handling auslagern, erst im "ready state" 
 private ["_unit","_pack","_class","_magazines","_weapons","_items","_helmet"];
 	
 	if (isPlayer) then { exitWith {};}; //nur für spieler
