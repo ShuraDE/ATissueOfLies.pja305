@@ -1,26 +1,31 @@
 //need sounds: flapping, para_pilot
 
+private ["_unit"];
+_unit = player;
 	
-	if (isPlayer) then { exitWith {};}; //nur für spieler
-		
+if (hasInterface) then { //nur für spieler
 	
 	//auto open at 130m above
-	[] spawn {
+	[_unit] spawn {
 		private ["_unit"];
-		_unit = player;
+		_unit = _this select 0;
+		["helo auto open init"] call ADL_DEBUG;
 		if ((getPos _unit select 2) > 500) then {
+			["helo auto open waiting"] call ADL_DEBUG;
 			waitUntil {(getPos _unit select 2) < 130 && animationState _unit == "HaloFreeFall_non" && alive _unit};
 			_unit action ["OpenParachute", _unit]; //open parachute if 150m above ground
 		};
+		["helo auto open done"] call ADL_DEBUG;
 	};
 	
+	["helo wait for jump"] call ADL_DEBUG;
 	waitUntil {animationState _unit == "HaloFreeFall_non"};
 	
     cutText ["", "BLACK FADED",999];
-    [] spawn {
+    [_unit] spawn {
         private ["_unit"];
-        _unit = player;
-
+        _unit = _this select 0;
+		["helo init"] call ADL_DEBUG;
         sleep 2;
 
         "dynamicBlur" ppEffectEnable true;   
@@ -31,9 +36,10 @@
 
         cutText ["", "BLACK IN", 5];
 
+		["helo wait for pilot"] call ADL_DEBUG;
         while {animationState _unit != "para_pilot" && alive _unit} do {
-            playSound "flapping"; //play flapping sound
-            sleep 4.2;		
+            //playSound "flapping"; //play flapping sound
+            //sleep 4.2;		
         };	
 		
         setAperture 0.05; 
@@ -55,8 +61,10 @@
 
 
         while {(getPos _unit select 2) > 2} do {
-            playSound "para_pilot";
-            sleep 4.2;
+            //playSound "para_pilot";
+            //sleep 4.2;
         };		
-		
+		["helo jump done"] call ADL_DEBUG;
     };
+	
+}; 
