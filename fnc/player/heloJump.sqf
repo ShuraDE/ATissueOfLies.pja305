@@ -2,23 +2,25 @@
 
 private ["_unit"];
 _unit = player;
-	
+
 if (hasInterface) then { //nur für spieler
 	
+	["helo jump init"] call ADL_DEBUG;
+		
 	//auto open at 130m above
 	[_unit] spawn {
 		private ["_unit"];
 		_unit = _this select 0;
 		["helo auto open init"] call ADL_DEBUG;
 		if ((getPos _unit select 2) > 500) then {
-			["helo auto open waiting"] call ADL_DEBUG;
+			["helo auto open wait for jump"] call ADL_DEBUG;
 			waitUntil {(getPos _unit select 2) < 130 && animationState _unit == "HaloFreeFall_non" && alive _unit};
 			_unit action ["OpenParachute", _unit]; //open parachute if 150m above ground
 		};
 		["helo auto open done"] call ADL_DEBUG;
 	};
 	
-	["helo wait for jump"] call ADL_DEBUG;
+	["helo jump wait for jump"] call ADL_DEBUG;
 	waitUntil {animationState _unit == "HaloFreeFall_non"};
 	
     cutText ["", "BLACK FADED",999];
@@ -36,11 +38,16 @@ if (hasInterface) then { //nur für spieler
 
         cutText ["", "BLACK IN", 5];
 
-		["helo wait for pilot"] call ADL_DEBUG;
-        while {animationState _unit != "para_pilot" && alive _unit} do {
-            //playSound "flapping"; //play flapping sound
-            //sleep 4.2;		
-        };	
+		["helo jump wait for pilot"] call ADL_DEBUG;
+        waitUntil {animationState _unit != "HaloFreeFall_non" && alive _unit};
+		
+		if (player getVariable ["adl_drop_chute",-1] == -1) then {
+			player setVariable ["adl_drop_chute", player addAction ["Fallschirm lösen", 
+						{
+							moveOut _unit; 
+						}]];
+			["action drop chute append"] call ADL_DEBUG;
+		};
 		
         setAperture 0.05; 
         setAperture -1;
@@ -58,12 +65,16 @@ if (hasInterface) then { //nur für spieler
         "RadialBlur" ppEffectAdjust [0.0, 0.0, 0.0, 0.0]; 
         "RadialBlur" ppEffectCommit 1.0; 
         "RadialBlur" ppEffectEnable false;
-
-
-        while {(getPos _unit select 2) > 2} do {
-            //playSound "para_pilot";
-            //sleep 4.2;
-        };		
+	
+		["helo jump wait for release"] call ADL_DEBUG;
+		waitUntil {animationState _unit != "para_pilot"};
+		
+		if (player getVariable ["adl_drop_chute",-1] != -1) then {
+			player removeAction (player getVariable ["adl_drop_chute",-1]);
+			player setVariable ["adl_drop_chute", -1];
+			["action drop chute removed"] call ADL_DEBUG;
+		};		
+		
 		["helo jump done"] call ADL_DEBUG;
     };
 	

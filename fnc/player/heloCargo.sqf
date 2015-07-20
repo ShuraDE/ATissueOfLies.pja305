@@ -12,7 +12,7 @@
 	if (((getPosASL player) select 2) > 3040) then 
 	{
 		if (headgear _unit != "") then {_helmet = headgear _unit;};
-		unit addHeadgear "H_CrewHelmetHeli_B";
+		_unit addHeadgear "H_CrewHelmetHeli_B";
 	};
     removeBackpack _unit; //remove the backpack
     _unit addBackpack "b_parachute"; //add the parachute	
@@ -20,17 +20,17 @@
     _packHolder = createVehicle ["groundWeaponHolder", [0,0,0], [], 0, "can_collide"];
 	_packHolder addBackpackCargoGlobal [_class, 1];	
 	
-	["helo cargo wait jump"] call ADL_DEBUG;
+	["helo cargo wait for jump"] call ADL_DEBUG;
 	waitUntil {animationState _unit == "HaloFreeFall_non"};
     _packHolder attachTo [_unit,[-0.12,-0.02,-.74],"pelvis"]; 
     _packHolder setVectorDirAndUp [[0,-1,-0.05],[0,0,-1]];	
     
-	["helo cargo wait pilot"] call ADL_DEBUG;
+	["helo cargo wait for pilot"] call ADL_DEBUG;
 	waitUntil {animationState _unit == "para_pilot"};
 	_packHolder attachTo [vehicle _unit,[-0.07,0.67,-0.13],"pelvis"]; 
 	_packHolder setVectorDirAndUp [[0,-0.2,-1],[0,1,0]];
 
-	["helo cargo wait touchdown"] call ADL_DEBUG;
+	["helo cargo wait for touchdown"] call ADL_DEBUG;
 	waitUntil {isTouchingGround _unit || (getPos _unit select 2) < 1};
 	detach _packHolder;
 	deleteVehicle _packHolder; //delete the backpack in front	
