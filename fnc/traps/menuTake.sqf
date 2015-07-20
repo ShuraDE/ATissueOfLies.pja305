@@ -1,5 +1,4 @@
-if (!(isNull(prison_money_1) && isNull(prison_money_2))) then  {
-	if (_this select 0) then {
+if (!(isNull(prison_money_1) && isNull(prison_money_2)) && _this select 0) then  {
 		if (player getVariable ["adl_takeMoneyAction",-1] == -1) then {
 			player setVariable ["adl_takeMoneyAction", player addAction ["Take Money", 
 						{
@@ -15,7 +14,7 @@ if (!(isNull(prison_money_1) && isNull(prison_money_2))) then  {
 							} else {
 								["delete money 2"] call ADL_DEBUG;
 
-								//wenn granate noch da, falle auslösen
+								//wenn granate noch da, falle auslÃ¶sen
 								["check nade"] call ADL_DEBUG;
 								if (!isNil("MONEY_NADE")) then {
 									["money trap execute"] call ADL_DEBUG;
@@ -50,4 +49,3 @@ if (!(isNull(prison_money_1) && isNull(prison_money_2))) then  {
 			["action take money removed"] call ADL_DEBUG;
 		};
 	};
-};
