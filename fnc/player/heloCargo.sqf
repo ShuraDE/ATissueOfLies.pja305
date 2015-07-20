@@ -1,4 +1,9 @@
-//cargo mode
+/*
+Author(s): cobra4v320 - effects adapted from old halo.sqs 
+http://forums.bistudio.com/showthread.php?167042-AI-HALO-Jump-Example-Mission
+
+modified shura
+*/
     private ["_unit","_pack","_class","_magazines","_weapons","_items","_helmet","_packHolder"];
 	_unit 		= player;
     _pack       = unitBackpack _unit;

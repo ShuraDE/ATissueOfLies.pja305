@@ -1,4 +1,9 @@
-//need sounds: flapping, para_pilot
+/*
+Author(s): cobra4v320 - effects adapted from old halo.sqs 
+http://forums.bistudio.com/showthread.php?167042-AI-HALO-Jump-Example-Mission
+
+modified shura
+*/
 
 private ["_unit"];
 _unit = player;
