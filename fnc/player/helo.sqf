@@ -1,41 +1,25 @@
-//need sounds: flapping,para_pilot
-//todo: backpack handling auslagern, erst im "ready state" 
-private ["_unit","_pack","_class","_magazines","_weapons","_items","_helmet"];
+//need sounds: flapping, para_pilot
+
 	
 	if (isPlayer) then { exitWith {};}; //nur für spieler
-	
-	_unit       = [_this, 0, player, [objNull]] call BIS_fnc_param;
-    _pack       = unitBackpack _unit;
-    _class		= typeOf _pack;
-    _magazines	= getMagazineCargo _pack;
-    _weapons   	= getWeaponCargo _pack;
-    _items      = getItemCargo _pack;
-    _helmet     = headgear _unit;
-
-    removeBackpack _unit; //remove the backpack
-    _unit addBackpack "b_parachute"; //add the parachute	
-	[_unit] spawn {
-		private ["_unit"];
-		_unit = _this select 0;
-	}
-	
-	
-	
-	//autoopen at 130m above
-	[_unit] spawn {
-		private ["_unit"];
-		_unit = _this select 0;
 		
+	
+	//auto open at 130m above
+	[] spawn {
+		private ["_unit"];
+		_unit = player;
 		if ((getPos _unit select 2) > 500) then {
-			waitUntil {(getPos _unit select 2) < 130 || animationState _unit == "para_pilot" && alive _unit};
+			waitUntil {(getPos _unit select 2) < 130 && animationState _unit == "HaloFreeFall_non" && alive _unit};
 			_unit action ["OpenParachute", _unit]; //open parachute if 150m above ground
 		};
 	};
 	
+	waitUntil {animationState _unit == "HaloFreeFall_non"};
+	
     cutText ["", "BLACK FADED",999];
-    [_unit] spawn {
+    [] spawn {
         private ["_unit"];
-        _unit = _this select 0;
+        _unit = player;
 
         sleep 2;
 
