@@ -26,7 +26,9 @@ class Mission
 		"aia_buildings_config",
 		"A3_Structures_F_Items_Cans",
 		"A3_Weapons_F_Ammoboxes",
-		"A3_Structures_F_Items_Stationery"
+		"A3_Structures_F_Items_Stationery",
+		"rhsusf_c_hmmwv",
+		"rhsusf_vehicles"
 	};
 	addOnsAuto[]=
 	{
@@ -41,6 +43,8 @@ class Mission
 		"task_force_radio_items",
 		"ace_captives",
 		"RHS_US_A2_AirImport",
+		"rhsusf_c_hmmwv",
+		"rhsusf_vehicles",
 		"A3_Structures_F_Ind_Cargo",
 		"aia_misc3_config",
 		"A3_Structures_F_Civ_Lamps",
@@ -78,7 +82,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=12;
+		items=13;
 		class Item0
 		{
 			side="WEST";
@@ -88,7 +92,7 @@ class Mission
 				class Item0
 				{
 					position[]={13228.125,37.494682,6562.3833};
-					azimut=-98.181496;
+					azimut=-98.181503;
 					id=0;
 					side="WEST";
 					vehicle="B_medic_F";
@@ -97,7 +101,7 @@ class Mission
 					rank="COLONEL";
 					skill=0.60000002;
 					text="zeus1";
-					init="(group this) setGroupId [""SUNRAY""]; this linkItem ""ACE_Altimeter"";";
+					init="(group this) setGroupId [""SUNRAY""]; this linkItem ""ACE_Altimeter""; this setVariable [""c130_seat"",5];";
 					description="SUNRAY (Zeus)";
 					syncId=0;
 					synchronizations[]={2};
@@ -105,7 +109,7 @@ class Mission
 				class Item1
 				{
 					position[]={17671.133,3.5268879,110.69971};
-					azimut=-0.20609413;
+					azimut=-0.206094;
 					id=1;
 					side="WEST";
 					vehicle="B_Soldier_F";
@@ -113,6 +117,7 @@ class Mission
 					rank="COLONEL";
 					skill=0.60000002;
 					text="zeus2";
+					init="this setVariable [""c130_seat"",16];";
 					description="SUNRAY (Zeus)";
 					syncId=1;
 					synchronizations[]={3};
@@ -225,7 +230,7 @@ class Mission
 						};
 						class Item2
 						{
-							value="-1";
+							value="999";
 							parentCls="ACE_moduleReviveSettings";
 							typeName="amountOfReviveLives";
 						};
@@ -678,7 +683,7 @@ class Mission
 					rank="MAJOR";
 					skill=0.60000002;
 					text="IntelOfficer";
-					init="(group this) setGroupId [""ACORN""]";
+					init="(group this) setGroupId [""ACORN""]; this setVariable [""c130_seat"",13];";
 					description="Intelligence Officer";
 				};
 			};
@@ -734,7 +739,7 @@ class Mission
 					rank="CAPTAIN";
 					skill=0.60000002;
 					text="Foxhound_0_0";
-					init="(group this) setGroupId [""Foxhound""];";
+					init="(group this) setGroupId [""Foxhound""]; this setVariable [""c130_seat"",19];";
 					description="Second-in-command";
 				};
 				class Item1
@@ -747,6 +752,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.60000002;
 					text="Foxhound_0_1";
+					init="this setVariable [""c130_seat"",23];";
 					description="Adjutant, Medic";
 				};
 			};
@@ -768,7 +774,7 @@ class Mission
 					rank="LIEUTENANT";
 					skill=0.60000002;
 					text="Foxhound_2_0";
-					init="(group this) setGroupId [""Foxhound-2.1""];";
+					init="(group this) setGroupId [""Foxhound-2.1""]; this setVariable [""c130_seat"",18];";
 					description="TL Foxhound 2";
 				};
 				class Item1
@@ -780,6 +786,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="Foxhound_2_3";
+					init="this setVariable [""c130_seat"",6];";
 				};
 				class Item2
 				{
@@ -791,6 +798,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.60000002;
 					text="Foxhound_2_5";
+					init="this setVariable [""c130_seat"",10];";
 					description="Medic";
 				};
 				class Item3
@@ -803,6 +811,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.60000002;
 					text="Foxhound_2_1";
+					init="this setVariable [""c130_seat"",12];";
 				};
 				class Item4
 				{
@@ -813,6 +822,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="Foxhound_2_4";
+					init="this setVariable [""c130_seat"",22];";
 					description="Munitionsträger";
 				};
 				class Item5
@@ -824,6 +834,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="Foxhound_2_2";
+					init="this setVariable [""c130_seat"",20];";
 				};
 				class Item6
 				{
@@ -834,6 +845,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="Foxhound_2_7";
+					init="this setVariable [""c130_seat"",14];";
 				};
 				class Item7
 				{
@@ -844,6 +856,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="Foxhound_2_8";
+					init="this setVariable [""c130_seat"",8];";
 				};
 				class Item8
 				{
@@ -855,6 +868,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.60000002;
 					text="Foxhound_2_9";
+					init="this setVariable [""c130_seat"",1];";
 				};
 				class Item9
 				{
@@ -866,6 +880,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.60000002;
 					text="Foxhound_2_6";
+					init="this setVariable [""c130_seat"",3];";
 					description="Medic";
 				};
 			};
@@ -887,7 +902,7 @@ class Mission
 					rank="LIEUTENANT";
 					skill=0.60000002;
 					text="Foxhound_1_0";
-					init="(group this) setGroupId [""Foxhound-1.1""];";
+					init="(group this) setGroupId [""Foxhound-1.1""]; this setVariable [""c130_seat"",2];";
 					description="TL Foxhound 1";
 				};
 				class Item1
@@ -920,6 +935,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.60000002;
 					text="Foxhound_1_1";
+					init="this setVariable [""c130_seat"",9];";
 				};
 				class Item4
 				{
@@ -930,6 +946,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="Foxhound_1_4";
+					init="this setVariable [""c130_seat"",4];";
 					description="Munitionsträger";
 				};
 				class Item5
@@ -942,6 +959,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.60000002;
 					text="Foxhound_1_5";
+					init="this setVariable [""c130_seat"",15];";
 					description="Medic";
 				};
 				class Item6
@@ -953,6 +971,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="Foxhound_1_7";
+					init="this setVariable [""c130_seat"",24];";
 				};
 				class Item7
 				{
@@ -963,6 +982,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="Foxhound_1_8";
+					init="this setVariable [""c130_seat"",17];";
 				};
 				class Item8
 				{
@@ -974,6 +994,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.60000002;
 					text="Foxhound_1_9";
+					init="this setVariable [""c130_seat"",11];";
 				};
 				class Item9
 				{
@@ -985,6 +1006,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.60000002;
 					text="Foxhound_1_6";
+					init="this setVariable [""c130_seat"",21];";
 					description="Medic";
 				};
 			};
@@ -1069,6 +1091,24 @@ class Mission
 				};
 			};
 		};
+		class Item12
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={15224.024,-0.26169759,5279.0269};
+					azimut=-52.673008;
+					id=38;
+					side="WEST";
+					vehicle="rhsusf_m998_d_s_2dr";
+					leader=1;
+					skill=0.60000002;
+				};
+			};
+		};
 	};
 	class Vehicles
 	{
@@ -1076,7 +1116,7 @@ class Mission
 		class Item0
 		{
 			position[]={18020.295,3.0008533,8980.2432};
-			id=38;
+			id=39;
 			side="EMPTY";
 			vehicle="Land_CargoBox_V1_F";
 			leader=1;
@@ -1088,7 +1128,7 @@ class Mission
 			position[]={13220.087,37.494682,6560.9468};
 			azimut=85.224998;
 			offsetY=1.5321;
-			id=39;
+			id=40;
 			side="EMPTY";
 			vehicle="EvMoney";
 			skill=0.60000002;
@@ -1100,7 +1140,7 @@ class Mission
 			position[]={13248.561,37.5009,6564.501};
 			azimut=85.224998;
 			offsetY=10.113;
-			id=40;
+			id=41;
 			side="EMPTY";
 			vehicle="Loudspeaker";
 			skill=0.60000002;
@@ -1111,7 +1151,7 @@ class Mission
 		{
 			position[]={13254.646,37.524822,6565.6533};
 			azimut=105.084;
-			id=41;
+			id=42;
 			side="EMPTY";
 			vehicle="Land_LampHalogen_F";
 			skill=0.60000002;
@@ -1121,7 +1161,7 @@ class Mission
 		{
 			position[]={13222.618,37.444485,6615.124};
 			azimut=180.084;
-			id=42;
+			id=43;
 			side="EMPTY";
 			vehicle="Land_LampHalogen_F";
 			skill=0.60000002;
@@ -1132,7 +1172,7 @@ class Mission
 			position[]={13235.182,37.493938,6548.9761};
 			azimut=145.084;
 			offsetY=-1.8008;
-			id=43;
+			id=44;
 			side="EMPTY";
 			vehicle="Land_PowLines_WoodL";
 			skill=0.60000002;
@@ -1143,7 +1183,7 @@ class Mission
 			position[]={13215.493,37.501804,6540.1948};
 			azimut=95.084;
 			offsetY=0.21492;
-			id=44;
+			id=45;
 			side="EMPTY";
 			vehicle="AmmoCrates_NoInteractive_Small";
 			skill=0.60000002;
@@ -1153,7 +1193,7 @@ class Mission
 		{
 			position[]={13260.043,37.565083,6562.3325};
 			azimut=275.08401;
-			id=45;
+			id=46;
 			side="EMPTY";
 			vehicle="AmmoCrates_NoInteractive_Large";
 			skill=0.60000002;
@@ -1163,7 +1203,7 @@ class Mission
 		{
 			position[]={13259.943,37.556927,6561.3921};
 			azimut=265.08401;
-			id=46;
+			id=47;
 			side="EMPTY";
 			vehicle="AmmoCrates_NoInteractive_Medium";
 			skill=0.60000002;
@@ -1173,7 +1213,7 @@ class Mission
 		{
 			position[]={13259.936,37.376152,6539.6006};
 			azimut=265.08401;
-			id=47;
+			id=48;
 			side="EMPTY";
 			vehicle="WaterPump_01_forest_F";
 			skill=0.60000002;
@@ -1184,7 +1224,7 @@ class Mission
 			position[]={13252.586,19.721582,6438.9185};
 			azimut=265.08401;
 			offsetY=-0.107367;
-			id=48;
+			id=49;
 			side="EMPTY";
 			vehicle="Land_Grave_forest_F";
 			skill=0.60000002;
@@ -1195,7 +1235,7 @@ class Mission
 			position[]={13250.565,19.68642,6438.8311};
 			azimut=265.08401;
 			offsetY=-0.109352;
-			id=49;
+			id=50;
 			side="EMPTY";
 			vehicle="Land_Grave_dirt_F";
 			skill=0.60000002;
@@ -1206,7 +1246,7 @@ class Mission
 			position[]={13247.528,19.769289,6439.7524};
 			azimut=355.08401;
 			offsetY=-0.092988998;
-			id=50;
+			id=51;
 			side="EMPTY";
 			vehicle="GraveCross2";
 			skill=0.60000002;
@@ -1216,7 +1256,7 @@ class Mission
 		{
 			position[]={13245.48,19.6947,6439.4614};
 			azimut=350.08401;
-			id=51;
+			id=52;
 			side="EMPTY";
 			vehicle="GraveCross1";
 			skill=0.60000002;
@@ -1227,7 +1267,7 @@ class Mission
 			position[]={13245.543,19.596928,6438.7495};
 			azimut=350.08401;
 			offsetY=-0.180132;
-			id=52;
+			id=53;
 			side="EMPTY";
 			vehicle="Grave";
 			skill=0.60000002;
@@ -1238,7 +1278,7 @@ class Mission
 			position[]={13250.778,19.253443,6435.6997};
 			azimut=350.08401;
 			offsetY=1.90735e-006;
-			id=53;
+			id=54;
 			side="EMPTY";
 			vehicle="GraveCrossHelmet";
 			skill=0.60000002;
@@ -1248,7 +1288,7 @@ class Mission
 		{
 			position[]={13252.814,19.270647,6435.728};
 			azimut=350.08401;
-			id=54;
+			id=55;
 			side="EMPTY";
 			vehicle="GraveCross1";
 			skill=0.60000002;
@@ -1258,7 +1298,7 @@ class Mission
 		{
 			position[]={13254.991,19.308287,6435.8569};
 			azimut=350.08401;
-			id=55;
+			id=56;
 			side="EMPTY";
 			vehicle="GraveCross2";
 			skill=0.60000002;
@@ -1268,7 +1308,7 @@ class Mission
 		{
 			position[]={13307.23,37.495037,6753.2534};
 			azimut=315.08401;
-			id=56;
+			id=57;
 			side="EMPTY";
 			vehicle="Sign_MP_blu_EP1";
 			skill=0.60000002;
@@ -1279,7 +1319,7 @@ class Mission
 			position[]={13219.825,37.494682,6561.2178};
 			azimut=230.22501;
 			offsetY=1.5321;
-			id=57;
+			id=58;
 			side="EMPTY";
 			vehicle="EvMoney";
 			skill=0.60000002;
@@ -1291,7 +1331,7 @@ class Mission
 			position[]={13231.615,37.385708,6531.647};
 			azimut=85.224998;
 			offsetY=0.95067602;
-			id=58;
+			id=59;
 			side="EMPTY";
 			vehicle="GunrackTK_EP1";
 			skill=0.60000002;
@@ -1302,7 +1342,7 @@ class Mission
 			position[]={13220.18,37.494682,6560.5752};
 			azimut=165.22501;
 			offsetY=1.54861;
-			id=59;
+			id=60;
 			side="EMPTY";
 			vehicle="Item_tf_anprc148jem";
 			skill=0.60000002;
@@ -1313,7 +1353,7 @@ class Mission
 			position[]={13219.729,6561.2915,1.37793};
 			azimut=310.22501;
 			offsetY=1.37793;
-			id=60;
+			id=61;
 			side="EMPTY";
 			vehicle="GroundWeaponHolder";
 			skill=0.60000002;
@@ -1325,7 +1365,7 @@ class Mission
 			position[]={13238.367,37.413307,6535.2134};
 			azimut=248.813;
 			offsetY=1.55426;
-			id=61;
+			id=62;
 			side="EMPTY";
 			vehicle="SatPhone";
 			skill=0.60000002;
@@ -1337,7 +1377,7 @@ class Mission
 			position[]={13238.306,37.421738,6535.7354};
 			azimut=273.81299;
 			offsetY=1.52563;
-			id=62;
+			id=63;
 			side="EMPTY";
 			vehicle="EvMoscow";
 			skill=0.60000002;
@@ -1349,7 +1389,7 @@ class Mission
 			position[]={13238.183,37.42025,6535.6309};
 			azimut=318.81299;
 			offsetY=1.52361;
-			id=63;
+			id=64;
 			side="EMPTY";
 			vehicle="Land_PencilRed_F";
 			skill=0.60000002;
@@ -1360,12 +1400,22 @@ class Mission
 			position[]={13238.447,37.42593,6536.0107};
 			azimut=288.81299;
 			offsetY=1.51727;
-			id=64;
+			id=65;
 			side="EMPTY";
 			vehicle="EvMap";
 			skill=0.60000002;
 			text="prison_intel_map";
 			init="this enableSimulation true;this setdir 288.813;this setposATL [13238.447266,6536.0107422,1.51727];this setVectorUp [0,0,1]";
+		};
+	};
+	class Markers
+	{
+		items=1;
+		class Item0
+		{
+			position[]={15031.795,0.079946958,4869.6831};
+			name="C130_SPAWN_POINT";
+			type="Empty";
 		};
 	};
 	class Sensors

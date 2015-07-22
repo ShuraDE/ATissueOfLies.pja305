@@ -27,12 +27,12 @@ if (hasInterface) then { //nur für spieler
 	["helo jump wait for jump"] call ADL_DEBUG;
 	waitUntil {animationState _unit == "HaloFreeFall_non"};
 	
-	cutText ["", "BLACK FADED",999];
+	//cutText ["", "BLACK FADED",999];
 	[_unit] spawn {
 		private ["_unit"];
 		_unit = _this select 0;
-		["helo init"] call ADL_DEBUG;
-		sleep 2;
+		["helo jumping"] call ADL_DEBUG;
+		//sleep 2;
 
 		"dynamicBlur" ppEffectEnable true;   
 		"dynamicBlur" ppEffectAdjust [6];   
@@ -44,12 +44,7 @@ if (hasInterface) then { //nur für spieler
 
 		["helo jump wait for pilot"] call ADL_DEBUG;
 		waitUntil {animationState _unit != "HaloFreeFall_non" && alive _unit};
-		
-		(vehicle _unit) addAction ["Fallschirm lösen", 
-						{
-							moveOut _unit; 
-						}]];
-		["helo action drop chute append"] call ADL_DEBUG;
+		sleep 1;
 		setAperture 0.05; 
 		setAperture -1;
 
