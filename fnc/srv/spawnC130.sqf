@@ -15,5 +15,13 @@ HELO_SPAWN_C130 attachTo [_demonPortal,[0,0,0]];
 HELO_SPAWN_C130 engineOn true;
 
 sleep 3;
-//TODO
-//retract gears !!
+
+/* TODO 
+
+* retract gears
+* Cargo 25 KI (so no player get in)
+* board a ship
+* jump light (red) --> green only via mission start
+* 
+
+*/
