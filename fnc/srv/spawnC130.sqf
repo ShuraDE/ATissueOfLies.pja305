@@ -1,3 +1,7 @@
+/*
+Based on: VQI - R. Von Quest - aka the "Goblin" 
+    with: a big thanks to dr_strangepete and cobra4v320!
+*/
 private ["_demonPortal"];
 
 _demonPortal = "Sign_Sphere25cm_F" createVehicle ([15029,4747.89,10000]);
