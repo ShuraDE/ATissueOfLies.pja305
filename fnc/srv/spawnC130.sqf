@@ -5,7 +5,9 @@ Based on: VQI - R. Von Quest - aka the "Goblin"
 private ["_demonPortal"];
 
 _demonPortal = "Sign_Sphere25cm_F" createVehicle ([15029,4747.89,10000]);
-hideObject _demonPortal; _demonPortal setVectorUp [0,0,1]; _demonPortal setDir 315;
+hideObject _demonPortal; 
+_demonPortal setVectorUp [0,0,1]; 
+_demonPortal setDir 315;
 _demonPortal setPosASL [15029,4747.89,8000]; //ASL = Above Sea level
 sleep 1;
 ["HELO C130 spawn portal"] call ADL_DEBUG;
