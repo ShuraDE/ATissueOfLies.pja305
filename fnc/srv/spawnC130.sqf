@@ -21,6 +21,10 @@ HELO_SPAWN_C130 setVectorUp [0,0,1];
 HELO_SPAWN_C130 attachTo [_demonPortal,[0,0,0]];
 HELO_SPAWN_C130 engineOn true;
 
+/*
+ .... aber nimm mal createvehicle Array und mach am bei NONE ein CAN_COLLIDE rein 
+*/
+
 sleep 1;
 
 //Fix the Damn Floor, or you'll trip and go into FreeFall animation!
