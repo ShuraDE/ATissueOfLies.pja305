@@ -14,16 +14,33 @@ sleep 1;
 HELO_SPAWN_C130 = "RHS_C130J" createVehicle (position _demonPortal);
 publicVariable "HELO_SPAWN_C130";
 
-HELO_SPAWN_C130 allowDamage false; HELO_SPAWN_C130 setVectorUp [0,0,1];
+HELO_SPAWN_C130 allowDamage false; 
+HELO_SPAWN_C130 setVectorUp [0,0,1];
 HELO_SPAWN_C130 attachTo [_demonPortal,[0,0,0]];
 HELO_SPAWN_C130 engineOn true;
 
-sleep 3;
+sleep 1;
+
+//Fix the Damn Floor, or you'll trip and go into FreeFall animation!
+_floorfix1 = "Box_NATO_WpsSpecial_F" createVehicle (position _demonPortal); //HotFix until more time to test
+_floorfix2 = "Box_NATO_WpsSpecial_F" createVehicle (position _demonPortal); //HotFix until more time to test
+clearWeaponCargoGlobal _floorfix1;
+clearWeaponCargoGlobal _floorfix2;
+clearMagazineCargoGlobal _floorfix1;
+clearMagazineCargoGlobal _floorfix2;
+clearItemCargoGlobal _floorfix1;
+clearItemCargoGlobal _floorfix2;
+_floorfix1 enableSimulation false;
+_floorfix2 enableSimulation false;
+_floorfix1 attachTo [HELO_SPAWN_C130,[0.8,-3.1,-4.7]];
+_floorfix2 attachTo [HELO_SPAWN_C130,[-0.8,-3.1,-4.7]];
+
+sleep 1;
 
 /* TODO 
 
 * retract gears
-* Cargo 25 KI (so no player get in)
+* Cargoslot 25 KI (so no player get in)
 * board a ship
 * jump light (red) --> green only via mission start
 * 
