@@ -34,7 +34,7 @@ for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
 for "_i" from 1 to 3 do {_unit addItemToVest "SmokeShell";};
 for "_i" from 1 to 6 do {_unit addItemToVest "30Rnd_556x45_Stanag_Tracer_Green";};
 
-_unit addHeadgear "rhsusf_lwh_helmet_marpatwd";comment "Add weapons";
+_unit addHeadgear "rhsusf_lwh_helmet_marpatwd";
 _unit addWeapon "rhs_weap_m16a4_grip_acog_usmc";
 _unit addPrimaryWeaponItem "rhsusf_acc_nt4_black";
 _unit addPrimaryWeaponItem "rhsusf_acc_anpeq15side";
@@ -42,7 +42,7 @@ _unit addPrimaryWeaponItem "rhsusf_acc_ACOG_USMC";
 
 _unit addWeapon "rhsusf_weap_m1911a1";
 
-_unit addWeapon "Binocular";comment "Add items";
+_unit addWeapon "Binocular";
 _unit linkItem "ItemMap";
 _unit linkItem "ItemCompass";
 _unit linkItem "tf_microdagr";
