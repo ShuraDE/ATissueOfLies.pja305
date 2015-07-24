@@ -37,18 +37,18 @@ _floorfix2 enableSimulation false;
 _floorfix1 attachTo [HELO_SPAWN_C130,[0.8,-3.1,-4.7]];
 _floorfix2 attachTo [HELO_SPAWN_C130,[-0.8,-3.1,-4.7]];
 
-sleep 1;
 
 //block cargo seat 25, so no player can get in cockpit
 _dummy = "B_Helipilot_F" createVehicle (position _demonPortal);
 _dummy moveInCargo [HELO_SPAWN_C130,25];
 
+sleep 1;
+
 /* TODO 
 
-* retract gears
-* Cargoslot 25 KI (so no player get in) --- done
-* board a ship
+* xxxxxxxxx   Cargoslot 25 KI (so no player get in) --- done
+* board/attach a ship or shipcontainer
 * jump light (red) --> green only via mission start
-* 
+* retract gears
 
 */
