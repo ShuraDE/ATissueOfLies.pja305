@@ -1,4 +1,4 @@
-private ["_unit];
+private ["_unit"];
 
 _unit = [_this, 0, player] call BIS_fnc_param;
 

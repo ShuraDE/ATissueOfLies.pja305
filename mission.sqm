@@ -1130,7 +1130,7 @@ class Mission
 			offsetY=1.5321;
 			id=40;
 			side="EMPTY";
-			vehicle="EvMoney";
+			vehicle="Land_Money_F";
 			skill=0.60000002;
 			text="prison_money_1";
 			init="this setdir 85.225;this setposATL [13220.0869141,6560.946777,1.5321];this setVectorUp [0,0,1]";
@@ -1321,7 +1321,7 @@ class Mission
 			offsetY=1.5321;
 			id=58;
 			side="EMPTY";
-			vehicle="EvMoney";
+			vehicle="Land_Money_F";
 			skill=0.60000002;
 			text="prison_money_2";
 			init="this enableSimulation true;this setdir 230.225;this setposATL [13219.825195,6561.217773,1.5321];this setVectorUp [0,0,1]";

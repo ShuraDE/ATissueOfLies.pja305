@@ -24,7 +24,7 @@ ADL_TRAPS_MONEY_TAKE_MENU = compile preprocessFile "fnc\traps\menuTake.sqf";
 if (isServer) then {
 	missionNamespace setVariable ["HELO_COMPLETE",false];
 	//create c130 fixed in air, public variable is "HELO_SPAWN_C130"
-	[] call compile preprocessFile "fnc\srv\spawnC130.sqf";
+	[] call compile preprocessFile "fnc\srv\spawnC130_fixed.sqf";
 	
 	["server is ready"] call ADL_DEBUG;
 	SERVER_IS_READY = true;
