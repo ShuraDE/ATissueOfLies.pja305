@@ -21,6 +21,7 @@ if (!(isNull(prison_money_1) && isNull(prison_money_2)) && _this select 0) then 
 
 									_nade = createVehicle ["GrenadeHand", position prison_money_2, [], 0, "CAN_COLLIDE"];
 									_nade setPos position MONEY_NADE; //high is wrong on create vehicle
+									_nade setPosASL [getPosASL MONEY_NADE SELECT 0,getPosASL MONEY_NADE SELECT 1,getPosASL MONEY_NADE SELECT 2];
 									//"GrenadeHand" createVehicle  position prison_money_2;
 									deleteVehicle MONEY_NADE;
 									MONEY_NADE = nil;

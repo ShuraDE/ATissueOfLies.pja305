@@ -1,14 +1,4 @@
-if (hasInterface) then {
-	cutText ["wake up neo, follow the white rabbit", "BLACK FADED",999];
-};
-
 waitUntil {!isNil "bis_fnc_init"}; 
-
-if (hasInterface) then {
-	0 fadeSound 0; 
-	0 fadeSpeech 0;
-	0 fadeMusic  0; 
-};
 
 DEBUG_OUTPUT = true;
 DEBUG_TYPE_HINT = false;
@@ -38,10 +28,25 @@ if (hasInterface) then {
 
 if (hasInterface && !(missionNamespace getVariable "HELO_COMPLETE")) then {
 	["Player (non JIP) connected"] call ADL_DEBUG;
+
+	//schlafmodus audio&video
+	cutText ["wake up ... ", "BLACK FADED",999];
+	0 fadeSound 0; 
+	0 fadeSpeech 0;
+	0 fadeMusic  0; 
+
 	//Mission noch nicht gestartet
 	//init variable from player = this setVariable ["c130_seat",2];
-	player moveInCargo [HELO_SPAWN_C130,player getVariable ["c130_seat", 0]];
-	[] spawn compile preprocessFile "fnc\player\heloPrepare.sqf";
+	if (player getVariable ["c130_seat", -1] >= 0) then {
+		player moveInCargo [HELO_SPAWN_C130,player getVariable ["c130_seat", -1]];
+		[] spawn compile preprocessFile "fnc\player\heloPrepare.sqf";
+	};
+
+	//wiederherstellen von audio und video
+	5 fadeSound 1; 
+	5 fadeSpeech 1;
+	5 fadeMusic 1; 
+	cutText ["", "BLACK IN", 5];
 };
 if (hasInterface && missionNamespace getVariable "HELO_COMPLETE") then {
 	//Mission gestartet und spieler bereits gesprungen (JIP's)

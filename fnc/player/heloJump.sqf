@@ -40,7 +40,7 @@ if (hasInterface) then { //nur für spieler
 		"dynamicBlur" ppEffectAdjust [0.0];  
 		"dynamicBlur" ppEffectCommit 5;  
 
-		cutText ["", "BLACK IN", 5];
+		//cutText ["", "BLACK IN", 5];
 
 		["helo jump wait for pilot"] call ADL_DEBUG;
 		waitUntil {animationState _unit != "HaloFreeFall_non" && alive _unit};
