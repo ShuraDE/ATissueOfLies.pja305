@@ -15,7 +15,7 @@ if (isServer) then {
 	//velocity
 	_vel = velocity _skeet;
 	_dir = ((direction _skeet) + (random(10) - 5) % 360);
-	_speed = 5 + (random(6) - 3);
+	_speed = 6 + (random(6) - 3);
 
 	_skeet setVelocity [
 		(_vel select 0) + (sin _dir * _speed), 
@@ -23,32 +23,15 @@ if (isServer) then {
 		10 + (random(6) -3)
 	];
 
-	//append hit event
+	//append hit event and shoot all non bluefor in range
 	_eh_hP_skeet = _skeet addMPEventHandler ["MPHit", {hint format["%1 has hit", name (_this select 1)];}];
-	skeet_shooter setVariable ["skeet_nr",_skeet_nr];
+	_list = TTWerfer nearEntities ["Man", 10];
 
-	//handle  ai
-	skeet_shooter setBehaviour "COMBAT";
-	skeet_shooter disableAI "MOVE";
-	//skeet_shooter doWatch _skeet; 
-	skeet_shooter doTarget _skeet; 
-
-	sleep (random(2)/10 + 0.3);
-	skeet_shooter fire currentWeapon skeet_shooter;
-	if (random(4) < 3) then {
-		sleep (random(10)/10) min 0.5;
-		skeet_shooter fire currentWeapon skeet_shooter;	
-	};
-	//skeet_shooter forceWeaponFire [currentWeapon skeet_shooter, currentWeaponMode skeet_shooter];
-	//skeet_shooter doFire _skeet;
-	
-	//if another one is fired ignore this
-	if (skeet_shooter getVariable ["skeet_nr",0] == TTWerfer getVariable ["skeet_nr",0]) then {
-		sleep (random(10)/10) min 0.3;
-		skeet_shooter doTarget objNull;
-		skeet_shooter setBehaviour "SAFE";
-		skeet_shooter enableAI "MOVE";
-	};
+	{
+		if (side _x != west) then {
+			[_x,_skeet,_skeet_nr] spawn compile preprocessFile "fnc\srv\shootSkeet.sqf";
+		};
+	}forEach _list;
 	
 	//clear up
 	sleep 5;

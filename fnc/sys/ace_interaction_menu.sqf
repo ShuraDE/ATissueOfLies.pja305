@@ -1,5 +1,5 @@
 //root menu entry, append if !exists
-_mainAction = ["ACE_MainActions", "Interaktionen", "", {}, {true}] call ace_interact_menu_fnc_createAction;
+_mainAction = ["ACE_MainActions", (localize "STR_ACE_Interaction_MainAction"), "", {}, {true}] call ace_interact_menu_fnc_createAction;
 
 /* 
 * Prison objects
