@@ -37,7 +37,8 @@ class Mission
 		"A3_Structures_F_Items_Stationery",
 		"A3_Structures_F_Heli_Items_Electronics",
 		"A3_Structures_F_Items_Electronics",
-		"ace_interaction"
+		"ace_interaction",
+		"caair2_mv22"
 	};
 	addOnsAuto[]=
 	{
@@ -74,6 +75,7 @@ class Mission
 		"A3_Structures_F_Items_Stationery",
 		"A3_Structures_F_Heli_Items_Electronics",
 		"A3_Structures_F_Items_Electronics",
+		"caair2_mv22",
 		"pja305"
 	};
 	randomSeed=11898615;
@@ -100,7 +102,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=11;
+		items=12;
 		class Item0
 		{
 			side="WEST";
@@ -109,7 +111,7 @@ class Mission
 				items=2;
 				class Item0
 				{
-					position[]={13228.125,37.494682,6562.3833};
+					position[]={12926.661,9.3421516,800.32495};
 					azimut=-98.181503;
 					id=0;
 					side="WEST";
@@ -126,7 +128,7 @@ class Mission
 				};
 				class Item1
 				{
-					position[]={13228.323,37.494862,6549.752};
+					position[]={12912.378,9.3421516,799.13892};
 					azimut=-0.206094;
 					id=1;
 					side="WEST";
@@ -628,7 +630,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={17687.242,3.8305688,118.25195};
+					position[]={17686.816,3.8335128,119.57031};
 					id=11;
 					side="WEST";
 					vehicle="B_officer_F";
@@ -637,8 +639,8 @@ class Mission
 					rank="MAJOR";
 					skill=0.60000002;
 					text="IntelOfficer";
-					init="(group this) setGroupId [""ACORN""]; this setVariable [""c130_seat"",13];";
-					description="Intelligence Officer";
+					init="(group this) setGroupId [""ACORN""]; this setVariable [""c130_seat"",13];  this setVariable [""v22_seat"",1];";
+					description="Acron - Intelligence Officer";
 				};
 			};
 		};
@@ -950,7 +952,7 @@ class Mission
 				items=2;
 				class Item0
 				{
-					position[]={17692.834,3.8503835,116.96045};
+					position[]={17691.879,3.8554425,116.08154};
 					id=21;
 					side="WEST";
 					vehicle="B_Soldier_SL_F";
@@ -959,12 +961,12 @@ class Mission
 					rank="CAPTAIN";
 					skill=0.60000002;
 					text="Foxhound_0_0";
-					init="(group this) setGroupId [""Foxhound""]; this setVariable [""c130_seat"",19];";
-					description="Second-in-command";
+					init="(group this) setGroupId [""Foxhound""]; this setVariable [""c130_seat"",19];this setVariable [""v22_seat"",3];";
+					description="Foxhound Truppführer";
 				};
 				class Item1
 				{
-					position[]={17691.672,3.8761313,117.57813};
+					position[]={17690.717,3.8811901,116.69923};
 					id=22;
 					side="WEST";
 					vehicle="B_medic_F";
@@ -972,7 +974,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.60000002;
 					text="Foxhound_0_1";
-					init="this setVariable [""c130_seat"",23];";
+					init="this setVariable [""c130_seat"",23]; this setVariable [""v22_seat"",2];";
 					description="Adjutant, Medic";
 				};
 			};
@@ -982,10 +984,10 @@ class Mission
 			side="WEST";
 			class Vehicles
 			{
-				items=10;
+				items=7;
 				class Item0
 				{
-					position[]={17702.736,3.6138442,108.22266};
+					position[]={17701.963,3.6241274,109.65698};
 					id=23;
 					side="WEST";
 					vehicle="B_Soldier_TL_F";
@@ -994,23 +996,23 @@ class Mission
 					rank="LIEUTENANT";
 					skill=0.60000002;
 					text="Foxhound_2_0";
-					init="(group this) setGroupId [""Foxhound-2.1""]; this setVariable [""c130_seat"",18];";
-					description="TL Foxhound 2";
+					init="(group this) setGroupId [""Foxhound Bravo""]; this setVariable [""c130_seat"",18]; this setVariable [""v22_seat"",5];";
+					description="Foxhound TL Bravo";
 				};
 				class Item1
 				{
-					position[]={17701.199,3.6364644,108.42163};
+					position[]={17700.426,3.6483967,109.85596};
 					id=24;
 					side="WEST";
 					vehicle="B_Soldier_F";
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="Foxhound_2_3";
-					init="this setVariable [""c130_seat"",6];";
+					init="this setVariable [""c130_seat"",6]; this setVariable [""v22_seat"",11];";
 				};
 				class Item2
 				{
-					position[]={17702.492,3.6248269,110.63354};
+					position[]={17701.719,3.6590707,112.06786};
 					id=25;
 					side="WEST";
 					vehicle="B_medic_F";
@@ -1018,12 +1020,12 @@ class Mission
 					rank="CORPORAL";
 					skill=0.60000002;
 					text="Foxhound_2_5";
-					init="this setVariable [""c130_seat"",10];";
+					init="this setVariable [""c130_seat"",10]; this setVariable [""v22_seat"",13];";
 					description="Medic";
 				};
 				class Item3
 				{
-					position[]={17701.77,3.6255443,106.94336};
+					position[]={17700.996,3.6387055,108.37769};
 					id=26;
 					side="WEST";
 					vehicle="B_soldier_AR_F";
@@ -1031,76 +1033,42 @@ class Mission
 					rank="CORPORAL";
 					skill=0.60000002;
 					text="Foxhound_2_1";
-					init="this setVariable [""c130_seat"",12];";
+					init="this setVariable [""c130_seat"",12]; this setVariable [""v22_seat"",7];";
 				};
 				class Item4
 				{
-					position[]={17703.631,3.6010623,107.17896};
+					position[]={17702.857,3.6113455,108.61329};
 					id=27;
 					side="WEST";
 					vehicle="B_Soldier_A_F";
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="Foxhound_2_4";
-					init="this setVariable [""c130_seat"",22];";
+					init="this setVariable [""c130_seat"",22]; this setVariable [""v22_seat"",9];";
 					description="Munitionsträger";
 				};
 				class Item5
 				{
-					position[]={17704.586,3.5840442,108.39355};
+					position[]={17703.813,3.5943274,109.82787};
 					id=28;
 					side="WEST";
 					vehicle="B_Soldier_GL_F";
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="Foxhound_2_2";
-					init="this setVariable [""c130_seat"",20];";
+					init="this setVariable [""c130_seat"",20]; this setVariable [""v22_seat"",17];";
 				};
 				class Item6
 				{
-					position[]={17704.865,3.5834236,105.74585};
+					position[]={17703.813,3.6145582,111.34277};
 					id=29;
-					side="WEST";
-					vehicle="B_Soldier_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="Foxhound_2_7";
-					init="this setVariable [""c130_seat"",14];";
-				};
-				class Item7
-				{
-					position[]={17702.219,3.6163304,105.56886};
-					id=30;
-					side="WEST";
-					vehicle="B_Soldier_GL_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="Foxhound_2_8";
-					init="this setVariable [""c130_seat"",8];";
-				};
-				class Item8
-				{
-					position[]={17699.49,3.6520746,106.19506};
-					id=31;
-					side="WEST";
-					vehicle="B_soldier_AR_F";
-					player="PLAY CDG";
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="Foxhound_2_9";
-					init="this setVariable [""c130_seat"",1];";
-				};
-				class Item9
-				{
-					position[]={17704.586,3.5818436,109.90844};
-					id=32;
 					side="WEST";
 					vehicle="B_medic_F";
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.60000002;
 					text="Foxhound_2_6";
-					init="this setVariable [""c130_seat"",3];";
+					init="this setVariable [""c130_seat"",3]; this setVariable [""v22_seat"",15];";
 					description="Medic";
 				};
 			};
@@ -1110,11 +1078,11 @@ class Mission
 			side="WEST";
 			class Vehicles
 			{
-				items=10;
+				items=7;
 				class Item0
 				{
 					position[]={17683.807,3.7185974,114.1687};
-					id=33;
+					id=30;
 					side="WEST";
 					vehicle="B_Soldier_TL_F";
 					player="PLAY CDG";
@@ -1122,111 +1090,79 @@ class Mission
 					rank="LIEUTENANT";
 					skill=0.60000002;
 					text="Foxhound_1_0";
-					init="(group this) setGroupId [""Foxhound-1.1""]; this setVariable [""c130_seat"",2];";
-					description="TL Foxhound 1";
+					init="(group this) setGroupId [""Foxhound Alpha""]; this setVariable [""c130_seat"",2]; this setVariable [""v22_seat"",4];";
+					description="Foxhound TL Alpha";
 				};
 				class Item1
 				{
 					position[]={17683.457,3.7047024,115.85938};
-					id=34;
+					id=31;
 					side="WEST";
 					vehicle="B_Soldier_F";
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="Foxhound_1_3";
+					init=" this setVariable [""v22_seat"",8];";
 				};
 				class Item2
 				{
 					position[]={17680.924,3.6821399,114.67651};
-					id=35;
+					id=32;
 					side="WEST";
 					vehicle="B_Soldier_GL_F";
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="Foxhound_1_2";
+					init=" this setVariable [""v22_seat"",6];";
 				};
 				class Item3
 				{
 					position[]={17681.885,3.7020283,113.17505};
-					id=36;
+					id=33;
 					side="WEST";
 					vehicle="B_soldier_AR_F";
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.60000002;
 					text="Foxhound_1_1";
-					init="this setVariable [""c130_seat"",9];";
+					init="this setVariable [""c130_seat"",9]; this setVariable [""v22_seat"",10];";
 				};
 				class Item4
 				{
 					position[]={17683.875,3.7298183,112.37427};
-					id=37;
+					id=34;
 					side="WEST";
 					vehicle="B_Soldier_A_F";
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="Foxhound_1_4";
-					init="this setVariable [""c130_seat"",4];";
+					init="this setVariable [""c130_seat"",4]; this setVariable [""v22_seat"",12];";
 					description="Munitionsträger";
 				};
 				class Item5
 				{
 					position[]={17685.787,3.7469764,113.24463};
-					id=38;
+					id=35;
 					side="WEST";
 					vehicle="B_medic_F";
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.60000002;
 					text="Foxhound_1_5";
-					init="this setVariable [""c130_seat"",15];";
+					init="this setVariable [""c130_seat"",15]; this setVariable [""v22_seat"",16];";
 					description="Medic";
 				};
 				class Item6
 				{
-					position[]={17682.447,3.7228603,110.71534};
-					id=39;
-					side="WEST";
-					vehicle="B_Soldier_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="Foxhound_1_7";
-					init="this setVariable [""c130_seat"",24];";
-				};
-				class Item7
-				{
-					position[]={17680.57,3.6973681,111.34766};
-					id=40;
-					side="WEST";
-					vehicle="B_Soldier_GL_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="Foxhound_1_8";
-					init="this setVariable [""c130_seat"",17];";
-				};
-				class Item8
-				{
-					position[]={17679.305,3.6609259,113.17993};
-					id=41;
-					side="WEST";
-					vehicle="B_soldier_AR_F";
-					player="PLAY CDG";
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="Foxhound_1_9";
-					init="this setVariable [""c130_seat"",11];";
-				};
-				class Item9
-				{
 					position[]={17685.582,3.754807,111.48681};
-					id=42;
+					id=36;
 					side="WEST";
 					vehicle="B_medic_F";
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.60000002;
 					text="Foxhound_1_6";
-					init="this setVariable [""c130_seat"",21];";
+					init="this setVariable [""c130_seat"",21]; this setVariable [""v22_seat"",14];";
 					description="Medic";
 				};
 			};
@@ -1242,7 +1178,7 @@ class Mission
 					position[]={6368.0186,1.7843499,-4638.2275};
 					azimut=55.531101;
 					offsetY=3500;
-					id=43;
+					id=37;
 					side="WEST";
 					vehicle="RHS_C130J";
 					leader=1;
@@ -1321,7 +1257,7 @@ class Mission
 				{
 					position[]={15224.024,-0.26169759,5279.0269};
 					azimut=-52.673008;
-					id=44;
+					id=38;
 					side="WEST";
 					vehicle="rhsusf_m998_d_s_2dr";
 					leader=1;
@@ -1329,10 +1265,90 @@ class Mission
 				};
 			};
 		};
+		class Item11
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=6;
+				class Item0
+				{
+					position[]={17697.129,3.8424468,120.03296};
+					id=39;
+					side="WEST";
+					vehicle="B_Soldier_TL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="LIEUTENANT";
+					skill=0.60000002;
+					text="Bullfrog_0";
+					init="(group this) setGroupId [""Bullfrog""]; this setVariable [""c130_seat"",11];";
+					description="Bullfrog Teamleader";
+				};
+				class Item1
+				{
+					position[]={17700.172,3.8133862,120.5957};
+					id=40;
+					side="WEST";
+					vehicle="B_soldier_AR_F";
+					player="PLAY CDG";
+					rank="CORPORAL";
+					skill=0.60000002;
+					text="Bullfrog_3";
+					init="this setVariable [""c130_seat"",9];this setVariable [""c130_seat"",19];";
+				};
+				class Item2
+				{
+					position[]={17697.754,3.7998617,122.27052};
+					id=41;
+					side="WEST";
+					vehicle="B_Soldier_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="Bullfrog_5";
+					init="this setVariable [""c130_seat"",7];";
+				};
+				class Item3
+				{
+					position[]={17695.539,3.851464,119.27001};
+					id=42;
+					side="WEST";
+					vehicle="B_medic_F";
+					player="PLAY CDG";
+					rank="CORPORAL";
+					skill=0.60000002;
+					text="Bullfrog_4";
+					init="this setVariable [""c130_seat"",24];this setVariable [""c130_seat"",23];";
+					description="Medic";
+				};
+				class Item4
+				{
+					position[]={17698.582,3.8076129,118.85865};
+					id=43;
+					side="WEST";
+					vehicle="B_Soldier_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="Bullfrog_6";
+					init="this setVariable [""c130_seat"",2];";
+				};
+				class Item5
+				{
+					position[]={17695.434,3.8341048,121.86523};
+					id=44;
+					side="WEST";
+					vehicle="B_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="Bullfrog_2";
+					init="this setVariable [""c130_seat"",4];this setVariable [""c130_seat"",13];";
+				};
+			};
+		};
 	};
 	class Vehicles
 	{
-		items=29;
+		items=30;
 		class Item0
 		{
 			position[]={18020.295,3.0008533,8980.2432};
@@ -1650,6 +1666,15 @@ class Mission
 			skill=0.60000002;
 			text="prison_radio";
 			init="this enableSimulation false;this setdir 68.813;this setposATL [13238.1,6535.7,1.53];this setVectorUp [0,0,1]";
+		};
+		class Item29
+		{
+			position[]={12946.563,9.3421516,784.07104};
+			id=74;
+			side="EMPTY";
+			vehicle="MV22";
+			skill=0.60000002;
+			text="v22_test";
 		};
 	};
 	class Markers
