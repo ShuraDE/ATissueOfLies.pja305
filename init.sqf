@@ -20,7 +20,13 @@ ADL_TRAPS_MONEY_NADE_SPAWN = compile preprocessFile "fnc\traps\spawnNade.sqf";
 ADL_TRAPS_MONEY_TAKE_MENU = compile preprocessFile "fnc\traps\menuTake.sqf";
 
 if (isServer) then {
+	
+	//set civ to friendly
+	civilian setFriend [WEST, 1];
+
+	//set default parameters
 	missionNamespace setVariable ["HELO_COMPLETE",false];
+	
 	//create c130 fixed in air, public variable is "HELO_SPAWN_C130"
 	[] call compile preprocessFile "fnc\srv\spawnC130_fixed.sqf";
 	

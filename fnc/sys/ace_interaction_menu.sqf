@@ -63,3 +63,13 @@ if (count _actionsObject == 0 && {count _actionsClass == 0}) then {
   _actionDisarmNade = ["prison_money_disarm","Entschaerfen","", {hint "todo: disarm"}, {true}, {},[],[0.1,0,-0.65],1] call ace_interact_menu_fnc_createAction;
   [MONEY_NADE, 0, [], _actionDisarmNade] call ace_interact_menu_fnc_addActionToObject;  
 };
+
+
+//prison tontauben werfer
+_actionsObject = TTWerfer getVariable ["ace_interact_menu_actions", []];
+_actionsClass = missionNamespace getVariable [format ["ace_interact_menu_Act_%1", typeOf TTWerfer], []];
+if (count _actionsObject == 0 && {count _actionsClass == 0}) then {
+  //_actionDisarmNade = ["prison_money_disarm","Entschärfen","", {hint "todo: disarm"}, {true}] call ace_interact_menu_fnc_createAction;
+  _actionThrowSkeet = ["skeet_thrower","Neue Disk","", {[[[],"fnc\srv\spawnSkeet.sqf"],"BIS_fnc_execVM",false,false] call BIS_fnc_MP;}, {true}, {},[],[0,0,0],6] call ace_interact_menu_fnc_createAction;
+  [TTWerfer, 0, [], _actionThrowSkeet] call ace_interact_menu_fnc_addActionToObject;  
+};
