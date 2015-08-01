@@ -10,6 +10,7 @@ if ( behaviour _shooter != "COMBAT") then {_shooter setBehaviour "COMBAT";};
 _shooter disableAI "MOVE";
 //skeet_shooter doWatch _skeet; 
 _shooter doTarget _skeet; 
+_shooter allowFleeing 0;
 
 sleep (random(2)/10 + 0.3);
 _shooter fire currentWeapon _shooter;
@@ -30,4 +31,6 @@ sleep 3; // if no new skeet fired, return default mode
 if (_shooter getVariable ["skeet_nr",0] == TTWerfer getVariable ["skeet_nr",0]) then {
 	_shooter setBehaviour "SAFE";
 	_shooter enableAI "MOVE";
+	_shooter allowFleeing 0.7;
+	[format["reset %1",name _shooter]] call ADL_DEBUG;
 };
