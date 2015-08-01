@@ -1,5 +1,13 @@
 waitUntil {!isNil "bis_fnc_init"}; 
 
+if (hasInterface) then {
+	//schlafmodus audio&video
+	cutText ["wake up ... ", "BLACK FADED",999];
+	0 fadeSound 0; 
+	0 fadeSpeech 0;
+	0 fadeMusic  0; 
+};
+
 DEBUG_OUTPUT = true;
 DEBUG_TYPE_HINT = false;
 DEBUG_TYPE_CHAT = true;
@@ -27,20 +35,19 @@ if (hasInterface) then {
 
 
 if (hasInterface && !(missionNamespace getVariable "HELO_COMPLETE")) then {
-	["Player (non JIP) connected"] call ADL_DEBUG;
-
-	//schlafmodus audio&video
-	cutText ["wake up ... ", "BLACK FADED",999];
-	0 fadeSound 0; 
-	0 fadeSpeech 0;
-	0 fadeMusic  0; 
-
 	//Mission noch nicht gestartet
-	//init variable from player = this setVariable ["c130_seat",2];
+	["Player (non JIP) connected"] call ADL_DEBUG;
+	
+	//C130 HELO Jump
 	if (player getVariable ["c130_seat", -1] >= 0) then {
 		player moveInCargo [HELO_SPAWN_C130,player getVariable ["c130_seat", -1]];
 		[] spawn compile preprocessFile "fnc\player\heloPrepare.sqf";
 	};
+	//Osprey V22 Sitz
+	if (player getVariable ["v22_seat", -1] >= 0) then {
+		player moveInCargo [DROPSHIP_V22,player getVariable ["v22_seat", -1]];
+		
+	};	
 
 	//wiederherstellen von audio und video
 	5 fadeSound 1; 
