@@ -1,4 +1,4 @@
-_skeet = createVehicle ["SkeetDisk", getPosASL TTWerfer, [], 0, "FLY"];
+_skeet = createVehicle ["SkeetDisk", getPos TTWerfer, [], 0, "FLY"];
 //_skeet setVectorDirAndUp [vectorDir TTWerfer, vectorUp TTWerfer];
 _skeet attachTo [TTWerfer , [0,-0.4,0.15]];
 detach _skeet;
@@ -14,21 +14,23 @@ _skeet setVelocity [
 	(_vel select 1) + (cos _dir * _speed), 
 	10 + (random(6) -3)
 ];
-
 skeet_shooter setBehaviour "COMBAT";
-sleep 0.1;
+//skeet_shooter doWatch _skeet; 
 skeet_shooter doTarget _skeet; 
 
-sleep 0.3;
-skeet_shooter forceWeaponFire [currentWeapon skeet_shooter, currentWeaponMode skeet_shooter];
+sleep 0.4;
+skeet_shooter fire currentWeapon skeet_shooter;
+if (random(4) < 3) then {
+	sleep (random(10)/10) min 0.5;
+	skeet_shooter fire currentWeapon skeet_shooter;	
+};
+//skeet_shooter forceWeaponFire [currentWeapon skeet_shooter, currentWeaponMode skeet_shooter];
 //skeet_shooter doFire _skeet;
-sleep 0.2;
-skeet_shooter forceWeaponFire [currentWeapon skeet_shooter, currentWeaponMode skeet_shooter];
-//skeet_shooter doFire _skeet;
-skeet_shooter setBehaviour "SAFE";
+
+sleep (random(10)/10) min 0.3;
 skeet_shooter doTarget objNull;
-//skeet_shooter stop false;
+skeet_shooter setBehaviour "SAFE";
 
 //clear up
-sleep 2;
+sleep 1;
 deleteVehicle _skeet;

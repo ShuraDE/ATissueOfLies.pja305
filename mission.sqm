@@ -1410,13 +1410,13 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={13154.239,37.058136,6661.2666};
-					azimut=-11.0513;
+					position[]={13154.395,37.042435,6661.4414};
+					azimut=348.06937;
 					id=46;
 					side="CIV";
-					vehicle="C_Nikos";
+					vehicle="C_man_polo_1_F_afro";
 					leader=1;
-					skill=0.60000002;
+					skill=1;
 					text="skeet_shooter";
 					init="for ""_i"" from 1 to 6 do {this addItemToUniform ""30Rnd_556x45_Stanag_Tracer_Green"";}; this addWeapon ""rhs_weap_m16a4_grip_acog_usmc"";gamemaster01 addCuratorEditableObjects [[this],true]; ";
 				};
