@@ -43,7 +43,7 @@ _actionsClass = missionNamespace getVariable [format ["ace_interact_menu_Act_%1"
 if (count _actionsObject == 0 && {count _actionsClass == 0}) then {
   ["EvMoney", 0, [], _mainAction] call ace_interact_menu_fnc_addActionToClass;
 };
-_actionTakeMoney = ["prison_money_take","Geld nehmen","", {hint "todo: take money"}, {true}] call ace_interact_menu_fnc_createAction;
+_actionTakeMoney = ["prison_money_take","Geld nehmen","", {call ADL_TRAPS_MONEY_TAKE_MENU;}, {true}] call ace_interact_menu_fnc_createAction;
 _actionCheckMoney = ["prison_money_check","Geld untersuchen","", {hint "todo: check money"}, {true}] call ace_interact_menu_fnc_createAction;
 ["EvMoney", 0, ["ACE_MainActions"], _actionTakeMoney] call ace_interact_menu_fnc_addActionToClass;
 ["EvMoney", 0, ["ACE_MainActions"], _actionCheckMoney] call ace_interact_menu_fnc_addActionToClass;
@@ -60,7 +60,7 @@ _actionsObject = MONEY_NADE getVariable ["ace_interact_menu_actions", []];
 _actionsClass = missionNamespace getVariable [format ["ace_interact_menu_Act_%1", typeOf MONEY_NADE], []];
 if (count _actionsObject == 0 && {count _actionsClass == 0}) then {
   //_actionDisarmNade = ["prison_money_disarm","Entschärfen","", {hint "todo: disarm"}, {true}] call ace_interact_menu_fnc_createAction;
-  _actionDisarmNade = ["prison_money_disarm","Entschaerfen","", {hint "todo: disarm"}, {true}, {},[],[0.1,0,-0.65],1] call ace_interact_menu_fnc_createAction;
+  _actionDisarmNade = ["prison_money_disarm","Entschaerfen","", {spawn ADL_TRAPS_MONEY_NADE_MENU;}, {true}, {},[],[0.1,0,-0.65],1] call ace_interact_menu_fnc_createAction;
   [MONEY_NADE, 0, [], _actionDisarmNade] call ace_interact_menu_fnc_addActionToObject;  
 };
 

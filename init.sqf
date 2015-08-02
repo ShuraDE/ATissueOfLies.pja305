@@ -13,11 +13,11 @@ DEBUG_TYPE_HINT = false;
 DEBUG_TYPE_CHAT = true;
 DEBUG_TYPE_LOG = true;
 
-ADL_DEBUG = compile preprocessFile "fnc\sys\debug.sqf";
+ADL_DEBUG = compile preprocessFileLineNumbers "fnc\sys\debug.sqf";
 
-ADL_TRAPS_MONEY_NADE_MENU = compile preprocessFile "fnc\traps\menuDisarm.sqf";
-ADL_TRAPS_MONEY_NADE_SPAWN = compile preprocessFile "fnc\traps\spawnNade.sqf";
-ADL_TRAPS_MONEY_TAKE_MENU = compile preprocessFile "fnc\traps\menuTake.sqf";
+ADL_TRAPS_MONEY_NADE_MENU = compile preprocessFileLineNumbers "fnc\traps\menuDisarm.sqf";
+ADL_TRAPS_MONEY_NADE_SPAWN = compile preprocessFileLineNumbers "fnc\traps\spawnNade.sqf";
+ADL_TRAPS_MONEY_TAKE_MENU = compile preprocessFileLineNumbers "fnc\traps\menuTake.sqf";
 
 if (isServer) then {
 	
@@ -29,6 +29,8 @@ if (isServer) then {
 	
 	//create c130 fixed in air, public variable is "HELO_SPAWN_C130"
 	[] call compile preprocessFile "fnc\srv\spawnC130_fixed.sqf";
+	[] call compile preprocessFile "fnc\traps\spawnNade.sqf";
+	
 	
 	["server is ready"] call ADL_DEBUG;
 	SERVER_IS_READY = true;
@@ -37,6 +39,9 @@ if (isServer) then {
 if (hasInterface) then {
 	if (!isServer) then {["waiting on server"] call ADL_DEBUG;};
 	waitUntil {!isNil "SERVER_IS_READY" && !isNull player};
+	
+	//bound ace menu entries
+	[] call compile preprocessFile "fnc\sys\ace_interaction_menu.sqf";
 };
 
 
