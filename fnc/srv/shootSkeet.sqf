@@ -31,6 +31,6 @@ sleep 3; // if no new skeet fired, return default mode
 if (_shooter getVariable ["skeet_nr",0] == TTWerfer getVariable ["skeet_nr",0]) then {
 	_shooter setBehaviour "SAFE";
 	_shooter enableAI "MOVE";
-	_shooter allowFleeing 0.7;
+	_shooter allowFleeing 0.2;
 	[format["reset %1",name _shooter]] call ADL_DEBUG;
 };
