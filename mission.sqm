@@ -113,7 +113,7 @@ class Mission
 				items=2;
 				class Item0
 				{
-					position[]={13140.759,37.499893,6647.8286};
+					position[]={13226.617,37.494846,6549.772};
 					azimut=14.310445;
 					id=0;
 					side="WEST";
@@ -1449,7 +1449,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=36;
+		items=37;
 		class Item0
 		{
 			position[]={18020.295,3.0008533,8980.2432};
@@ -1843,6 +1843,15 @@ class Mission
 			lock="UNLOCKED";
 			skill=1;
 			text="tonne";
+		};
+		class Item36
+		{
+			position[]={13221.778,37.494682,6563.0347};
+			id=84;
+			side="EMPTY";
+			vehicle="Land_FlatTV_01_F";
+			skill=0.60000002;
+			text="TV";
 		};
 	};
 	class Markers

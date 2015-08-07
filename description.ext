@@ -1,0 +1,3 @@
+#include "defines.hpp"
+#include "dlg_note.hpp"
+#include "dlg_movie.hpp"
