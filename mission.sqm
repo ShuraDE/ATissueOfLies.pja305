@@ -1388,7 +1388,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=43;
+		items=39;
 		class Item0
 		{
 			position[]={18020.295,3.0008533,8980.2432};
@@ -1780,6 +1780,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_HDMICable_01_F";
 			skill=0.60000002;
+			text="prison_cable";
 			init="this enableSimulation false;this setdir 210.987;this setposATL [13237.448242,6558.145996,1.7706];this setVectorUp [0,0,1]";
 		};
 		class Item36
@@ -1791,7 +1792,8 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_HandyCam_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this setdir 10.861;this setposATL [13236.887695,6558.0366211,1.76595];this setVectorUp [0,0,1]";
+			text="prison_cam";
+			init="this enableSimulation false;this setdir 10.861;this setposATL [13236.84,6558.028,1.76595];this setVectorUp [0,0,1]";
 		};
 		class Item37
 		{
@@ -1802,55 +1804,20 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_HDMICable_01_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this setdir 180.293;this setposATL [13237.0498047,6558.121094,1.77377];this setVectorUp [0,0,1]";
+			text="prison_cable_connected";
+			init="this enableSimulation false;this setdir 180.861;this setposATL [13237.00585938,6558.109375,1.78161];this setVectorUp [0,0,1]";
 		};
 		class Item38
 		{
-			position[]={13254.532,37.488777,6553.2798};
+			position[]={13237.242,37.494682,6558.4712};
+			azimut=155;
+			offsetY=1.77922;
 			id=86;
-			side="EMPTY";
-			vehicle="Land_PCSet_01_screen_F";
-			skill=0.60000002;
-			init="this enableSimulation true;this setdir 0;this setposATL [13254.532227,6553.279785,0];this setVectorUp [0,0,1]";
-		};
-		class Item39
-		{
-			position[]={13253.69,37.491226,6553.7095};
-			id=87;
-			side="EMPTY";
-			vehicle="Land_FlatTV_01_F";
-			skill=0.60000002;
-			init="this enableSimulation true;this setdir 0;this setposATL [13253.69043,6553.709473,0];this setVectorUp [0,0,1]";
-		};
-		class Item40
-		{
-			position[]={13252.48,37.49474,6553.7427};
-			azimut=145;
-			id=88;
-			side="EMPTY";
-			vehicle="SmallTV";
-			skill=0.60000002;
-			init="this enableSimulation true;this setdir 145;this setposATL [13252.480469,6553.742676,0];this setVectorUp [0,0,1]";
-		};
-		class Item41
-		{
-			position[]={13251.877,37.49649,6553.022};
-			azimut=145;
-			id=89;
 			side="EMPTY";
 			vehicle="Land_Laptop_unfolded_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir 145;this setposATL [13251.876953,6553.0219727,0];this setVectorUp [0,0,1]";
-		};
-		class Item42
-		{
-			position[]={13251.922,37.496361,6552.2554};
-			azimut=145;
-			id=90;
-			side="EMPTY";
-			vehicle="Land_Laptop_unfolded_scripted_F";
-			skill=0.60000002;
-			init="this enableSimulation true;this setdir 145;this setposATL [13251.921875,6552.255371,0];this setVectorUp [0,0,1]";
+			text="prison_laptop";
+			init="this enableSimulation false;this setdir 155;this setposATL [13237.2,6558.47,1.765];this setVectorUp [0,0,1]";
 		};
 	};
 	class Markers
