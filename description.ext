@@ -1,3 +1,7 @@
 #include "defines.hpp"
 #include "dlg_note.hpp"
 #include "dlg_movie.hpp"
+
+OnLoadMission = "Get in and recover prisoner and intel";
+author="www.Gruppe-Adler.de - Shura, Salbei";
+onLoadName="A Tissue of Lies";

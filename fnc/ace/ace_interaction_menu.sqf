@@ -35,7 +35,7 @@ if (count _actionsObject == 0 && {count _actionsClass == 0}) then {
 _actionsObject = prison_file getVariable ["ace_interact_menu_actions", []];
 _actionsClass = missionNamespace getVariable [format ["ace_interact_menu_Act_%1", typeOf prison_file], []];
 if (count _actionsObject == 0 && {count _actionsClass == 0}) then {
-  _actionSearchSatPhoneIntel = ["prison_phone_intel_search","Untersuchen","", {hint "todo: sat intel"}, {true}] call ace_interact_menu_fnc_createAction;
+  _actionSearchSatPhoneIntel = ["prison_phone_intel_search","Untersuchen","", {hint "todo: memo intel"}, {true}] call ace_interact_menu_fnc_createAction;
   [prison_file, 0, [], _actionSearchSatPhoneIntel] call ace_interact_menu_fnc_addActionToObject;
 };
 ["menu prison file"] call ADL_DEBUG;
