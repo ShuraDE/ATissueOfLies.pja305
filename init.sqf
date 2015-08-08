@@ -13,38 +13,50 @@ DEBUG_TYPE_HINT = false;
 DEBUG_TYPE_CHAT = true;
 DEBUG_TYPE_LOG = true;
 
+
+//functions for all
 ADL_DEBUG = compile preprocessFileLineNumbers "fnc\sys\debug.sqf";
 
-ADL_TRAPS_MONEY_NADE_MENU = compile preprocessFileLineNumbers "fnc\traps\menuDisarm.sqf";
-ADL_TRAPS_MONEY_NADE_SPAWN = compile preprocessFileLineNumbers "fnc\traps\spawnNade.sqf";
-ADL_TRAPS_MONEY_TAKE_MENU = compile preprocessFileLineNumbers "fnc\traps\menuTake.sqf";
+
 
 if (isServer) then {
+
+	//server functions
+	ADL_SRV_spawnSkeet = compile preprocessFileLineNumbers "fnc\srv\spawnSkeet.sqf";
+	ADL_SRV_spawnV22  = compile preprocessFileLineNumbers "fnc\srv\spawnV22.sqf";
+	ADL_SRV_spawnC130 = compile preprocessFileLineNumbers "fnc\srv\spawnC130_fixed.sqf";
+	ADL_SRV_spawnNade = compile preprocessFileLineNumbers "fnc\srv\spawnNade.sqf";
 	
-	//set civ to friendly
-	civilian setFriend [WEST, 1];
+	//set civ & ind to friendly
+	civilian setFriend [west, 1];
+	independent setFriend [west, 1];
+	independent setFriend [east, 1];
 
 	//set default parameters
 	missionNamespace setVariable ["HELO_COMPLETE",false];
 	
 	//create c130 fixed in air, public variable is "HELO_SPAWN_C130"
-	[] call compile preprocessFile "fnc\srv\spawnC130_fixed.sqf";
-	[] call compile preprocessFile "fnc\traps\spawnNade.sqf";
+	[] call ADL_SRV_spawnC130;
+	
+	//create nade, public variable "MONEY_NADE"
+	[] call ADL_SRV_spawnNade;
 	
 	
 	["server is ready"] call ADL_DEBUG;
 	SERVER_IS_READY = true;
 	publicVariable "SERVER_IS_READY";
 };
+
+//all players
 if (hasInterface) then {
 	if (!isServer) then {["waiting on server"] call ADL_DEBUG;};
 	waitUntil {!isNil "SERVER_IS_READY" && !isNull player};
 	
 	//bound ace menu entries
-	[] call compile preprocessFile "fnc\sys\ace_interaction_menu.sqf";
+	[] call compile preprocessFile "fnc\ace\ace_interaction_menu.sqf";
 };
 
-
+//player regular connected
 if (hasInterface && !(missionNamespace getVariable "HELO_COMPLETE")) then {
 	//Mission noch nicht gestartet
 	["Player (non JIP) connected"] call ADL_DEBUG;
@@ -66,6 +78,8 @@ if (hasInterface && !(missionNamespace getVariable "HELO_COMPLETE")) then {
 	5 fadeMusic 1; 
 	cutText ["", "BLACK IN", 5];
 };
+
+//player jip connected
 if (hasInterface && missionNamespace getVariable "HELO_COMPLETE") then {
 	//Mission gestartet und spieler bereits gesprungen (JIP's)
 	["JIP connected"] call ADL_DEBUG;

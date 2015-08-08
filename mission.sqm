@@ -1449,7 +1449,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=37;
+		items=35;
 		class Item0
 		{
 			position[]={18020.295,3.0008533,8980.2432};
@@ -1687,92 +1687,80 @@ class Mission
 		};
 		class Item22
 		{
-			position[]={13219.729,6561.2915,1.37793};
-			azimut=310.22501;
-			offsetY=1.37793;
-			id=70;
-			side="EMPTY";
-			vehicle="Gunrack1";
-			skill=0.60000002;
-			text="ph_money_nade";
-			init="this enableSimulation false;this addMagazineCargoGlobal [""HandGrenade"", 1];";
-		};
-		class Item23
-		{
 			position[]={13238.304,37.411362,6535.0859};
 			azimut=248.813;
 			offsetY=1.55426;
-			id=71;
+			id=70;
 			side="EMPTY";
 			vehicle="SatPhone";
 			skill=0.60000002;
 			text="prison_phone";
 			init="this enableSimulation false;this setdir 248.813;this setposATL [13238.303711,6535.0859375,1.55426];this setVectorUp [0,0,1]";
 		};
-		class Item24
+		class Item23
 		{
 			position[]={13238.227,37.416828,6535.4209};
 			azimut=273.81299;
 			offsetY=1.52563;
-			id=72;
+			id=71;
 			side="EMPTY";
 			vehicle="EvMoscow";
 			skill=0.60000002;
 			text="prison_file";
 			init="this enableSimulation false;this setdir 273.813;this setposATL [13238.226563,6535.420898,1.52563];this setVectorUp [0,0,1]";
 		};
-		class Item25
+		class Item24
 		{
 			position[]={13238.215,37.416828,6535.4199};
 			azimut=318.81299;
 			offsetY=1.54035;
-			id=73;
+			id=72;
 			side="EMPTY";
 			vehicle="Land_PencilRed_F";
 			skill=0.60000002;
 			init="this enableSimulation false;this setdir 318.813;this setposATL [13238.214844,6535.419922,1.54035];this setVectorUp [0,0,1]";
 		};
-		class Item26
+		class Item25
 		{
 			position[]={13238.114,37.426208,6535.9976};
 			azimut=293.81299;
 			offsetY=1.52078;
-			id=74;
+			id=73;
 			side="EMPTY";
 			vehicle="EvMap";
 			skill=0.60000002;
 			text="prison_map";
 			init="this enableSimulation false;this setdir 293.813;this setposATL [13238.114258,6535.997559,1.52078];this setVectorUp [0,0,1]";
 		};
-		class Item27
+		class Item26
 		{
 			position[]={13238.399,37.420937,6535.6938};
 			azimut=278.81299;
 			offsetY=1.52302;
-			id=75;
+			id=74;
 			side="EMPTY";
 			vehicle="Land_Tablet_01_F";
 			skill=0.60000002;
 			text="prison_tablet";
 			init="this enableSimulation false;this setdir 278.813;this setposATL [13238.399414,6535.693848,1.53];this setVectorUp [0,0,1]";
 		};
-		class Item28
+		class Item27
 		{
 			position[]={13237.992,37.420712,6535.6426};
 			azimut=68.813004;
 			offsetY=1.52479;
-			id=76;
+			id=75;
 			side="EMPTY";
 			vehicle="Land_FMradio_F";
 			skill=0.60000002;
 			text="prison_radio";
 			init="this enableSimulation false;this setdir 68.813;this setposATL [13238.1,6535.7,1.53];this setVectorUp [0,0,1]";
 		};
-		class Item29
+		class Item28
 		{
 			position[]={13151.896,37.070484,6662.1387};
 			azimut=-193.72723;
-			id=77;
+			id=76;
 			side="EMPTY";
 			vehicle="SkeetMachine";
 			leader=1;
@@ -1780,78 +1768,69 @@ class Mission
 			text="TTWerfer";
 			description="SUNRAY (Zeus)";
 		};
-		class Item30
+		class Item29
 		{
 			position[]={13145.364,37.372849,6658.6768};
 			azimut=-98.181503;
-			id=78;
+			id=77;
 			side="EMPTY";
 			vehicle="Land_Portable_generator_F";
 			leader=1;
 			skill=0.60000002;
 			description="SUNRAY (Zeus)";
 		};
-		class Item31
+		class Item30
 		{
 			position[]={14674.003,0,-1684.9219};
 			azimut=51.153824;
-			id=79;
+			id=78;
 			side="EMPTY";
 			vehicle="Submarine_01_F";
 			skill=0.60000002;
 			text="SUBMARINE_SSN842";
 			init="this enableSimulation false;gamemaster01 addCuratorEditableObjects [[this],true];";
 		};
-		class Item32
+		class Item31
 		{
 			position[]={14651.455,0,-1676.8726};
 			azimut=-395.79944;
-			id=80;
+			id=79;
 			side="EMPTY";
 			vehicle="B_Boat_Transport_01_F";
 			skill=0.60000002;
 			text="BOAT_01";
 		};
-		class Item33
+		class Item32
 		{
 			position[]={14656.498,0,-1671.6797};
 			azimut=-27.559122;
-			id=81;
+			id=80;
 			side="EMPTY";
 			vehicle="B_Boat_Transport_01_F";
 			skill=0.60000002;
 			text="BOAT_02";
 		};
-		class Item34
+		class Item33
 		{
 			position[]={14660.557,0,-1667.6196};
 			azimut=-32.699276;
-			id=82;
+			id=81;
 			side="EMPTY";
 			vehicle="B_Boat_Transport_01_F";
 			skill=0.60000002;
 			text="BOAT_03";
 		};
-		class Item35
+		class Item34
 		{
 			position[]={13227.027,37.494682,6570.8486};
 			azimut=55.531101;
-			id=83;
+			id=82;
 			side="EMPTY";
 			vehicle="Land_MetalBarrel_F";
 			leader=1;
 			lock="UNLOCKED";
 			skill=1;
 			text="tonne";
-		};
-		class Item36
-		{
-			position[]={13221.778,37.494682,6563.0347};
-			id=84;
-			side="EMPTY";
-			vehicle="Land_FlatTV_01_F";
-			skill=0.60000002;
-			text="TV";
 		};
 	};
 	class Markers
