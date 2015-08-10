@@ -113,17 +113,17 @@ class Mission
 				items=2;
 				class Item0
 				{
-					position[]={13252.216,37.475975,6547.7065};
+					position[]={17685.039,3.6087105,104.69116};
 					azimut=14.3104;
 					id=0;
 					side="WEST";
-					vehicle="B_medic_F";
+					vehicle="B_Soldier_GL_F";
 					player="PLAYER COMMANDER";
 					leader=1;
 					rank="COLONEL";
 					skill=0.60000002;
 					text="zeus1";
-					init="(group this) setGroupId [""SUNRAY""]; this linkItem ""ACE_Altimeter"";this setVariable [""v22_seat"",24];";
+					init="(group this) setGroupId [""SUNRAY""]; this linkItem ""ACE_Altimeter"";this setVariable [""v22_seat"",-1];";
 					description="SUNRAY (Zeus)";
 					syncId=0;
 					synchronizations[]={2};
@@ -1394,7 +1394,7 @@ class Mission
 		items=39;
 		class Item0
 		{
-			position[]={18020.295,3.0008533,8980.2432};
+			position[]={17694.734,3.5721941,99.841309};
 			id=48;
 			side="EMPTY";
 			vehicle="Land_CargoBox_V1_F";

@@ -21,6 +21,12 @@ ADL_DEBUG = compile preprocessFileLineNumbers "fnc\sys\debug.sqf";
 
 if (isServer) then {
 
+	//TFAR
+	tf_no_auto_long_range_radio = true; //Long Range Radio an GrpFhr austeilen? - ja ^ nein
+    publicVariable "tf_no_auto_long_range_radio";
+    tf_give_personal_radio_to_regular_soldier = false; //Personal Radio an normalen Schützen austeilen? - ja ^ nein
+    publicVariable "tf_give_personal_radio_to_regular_soldier";	
+
 	//server functions
 	ADL_SRV_spawnSkeet = compile preprocessFileLineNumbers "fnc\srv\spawnSkeet.sqf";
 	ADL_SRV_spawnV22  = compile preprocessFileLineNumbers "fnc\srv\spawnV22.sqf";
