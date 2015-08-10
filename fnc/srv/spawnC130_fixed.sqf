@@ -4,13 +4,14 @@ Based on: VQI - R. Von Quest - aka the "Goblin"
 */
 private ["_demonPortal"];
 
-_demonPortal = "Sign_Sphere25cm_F" createVehicle ([15029,4747.89,1000]);
+
+_demonPortal = "Sign_Sphere25cm_F" createVehicle ([15029,4747.89,3000]);
 hideObject _demonPortal; 
 _demonPortal setVectorUp [0,0,1]; 
 _demonPortal setDir 315;
-_demonPortal setPosASL [15029,4747.89,1000]; //ASL = Above Sea level
+_demonPortal setPosASL [(getMarkerPos "mrk_c130_drop" select 0),(getMarkerPos "mrk_c130_drop" select 1),3000]; //ASL = Above Sea level
 sleep 1;
-["HELO C130 spawn portal"] call ADL_DEBUG;
+["HELO C130 spawn"] call ADL_DEBUG;
 
 //create the C130 Jump Craft!!!!
 DROPSHIP_C130 = "RHS_C130J" createVehicle (position _demonPortal);
@@ -41,13 +42,9 @@ clearItemCargoGlobal _floorfix1;
 clearItemCargoGlobal _floorfix2;
 _floorfix1 enableSimulation false;
 _floorfix2 enableSimulation false;
-_floorfix1 attachTo [DROPSHIP_C130,[0.8,-3.1,-4.7]];
-_floorfix2 attachTo [DROPSHIP_C130,[-0.8,-3.1,-4.7]];
+_floorfix1 attachTo [DROPSHIP_C130,[0.8,-3.1,-2.7]];
+_floorfix2 attachTo [DROPSHIP_C130,[-0.8,-3.1,-2.7]];
 
-
-//block cargo seat 25, so no player can get in cockpit
-_dummy = "B_Helipilot_F" createVehicle (position _demonPortal);
-_dummy moveInCargo [DROPSHIP_C130,25];
 
 sleep 1;
 

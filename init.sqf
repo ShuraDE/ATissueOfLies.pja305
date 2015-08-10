@@ -29,7 +29,8 @@ if (isServer) then {
 
 	//server functions
 	ADL_SRV_spawnSkeet = compile preprocessFileLineNumbers "fnc\srv\spawnSkeet.sqf";
-	ADL_SRV_spawnV22  = compile preprocessFileLineNumbers "fnc\srv\spawnV22.sqf";
+	//ADL_SRV_spawnV22  = compile preprocessFileLineNumbers "fnc\srv\spawnV22.sqf";
+	ADL_SRV_flight_drop_V22 =  compile preprocessFileLineNumbers "fnc\srv\flight_drop_V22.sqf";
 	ADL_SRV_spawnC130 = compile preprocessFileLineNumbers "fnc\srv\spawnC130_fixed.sqf";
 	ADL_SRV_spawnNade = compile preprocessFileLineNumbers "fnc\srv\spawnNade.sqf";
 	

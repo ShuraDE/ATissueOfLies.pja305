@@ -117,13 +117,13 @@ class Mission
 					azimut=14.3104;
 					id=0;
 					side="WEST";
-					vehicle="B_medic_F";
+					vehicle="B_soldier_exp_F";
 					player="PLAYER COMMANDER";
 					leader=1;
 					rank="COLONEL";
 					skill=0.60000002;
 					text="zeus1";
-					init="(group this) setGroupId [""SUNRAY""]; this linkItem ""ACE_Altimeter"";this setVariable [""v22_seat"",24];";
+					init="(group this) setGroupId [""SUNRAY""]; this linkItem ""ACE_Altimeter""; this setVariable [""v22_seat"",-1]; this setVariable [""c130_seat"",-1]; ";
 					description="SUNRAY (Zeus)";
 					syncId=0;
 					synchronizations[]={2};
@@ -886,7 +886,7 @@ class Mission
 				};
 				class Item7
 				{
-					position[]={13203.875,34.616291,6503.5503};
+					position[]={13882.993,0,3031.4541};
 					class args
 					{
 						items=5;
@@ -1189,7 +1189,7 @@ class Mission
 					position[]={17700.172,3.8133862,120.5957};
 					id=38;
 					side="WEST";
-					vehicle="B_soldier_AR_F";
+					vehicle="B_Soldier_GL_F";
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.60000002;
@@ -1201,7 +1201,7 @@ class Mission
 					position[]={17697.754,3.7998617,122.27052};
 					id=39;
 					side="WEST";
-					vehicle="B_engineer_F";
+					vehicle="B_soldier_exp_F";
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="Bullfrog_5";
@@ -1253,9 +1253,9 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={9529.6299,0.1033155,-2047.3853};
+					position[]={7985.5879,0,-1708.5571};
 					azimut=55.531101;
-					offsetY=3500;
+					offsetY=1500;
 					id=43;
 					side="WEST";
 					vehicle="MV22";
@@ -1264,19 +1264,17 @@ class Mission
 					rank="CAPTAIN";
 					skill=1;
 					text="dropship_v22";
-					init="gamemaster01 addCuratorEditableObjects [[this],true]; gamemaster02 addCuratorEditableObjects [[this],true]; this flyInHeight 3000;";
+					init="gamemaster01 addCuratorEditableObjects [[this],true]; gamemaster02 addCuratorEditableObjects [[this],true]; this flyInHeight 1000;";
 				};
 			};
 			class Waypoints
 			{
-				items=4;
+				items=2;
 				class Item0
 				{
-					position[]={9946.9072,2999.7893,-1488.3301};
-					combatMode="BLUE";
-					formation="COLUMN";
-					speed="FULL";
-					combat="SAFE";
+					position[]={8895.5059,1000,-1435.9326};
+					placement=2;
+					expActiv="hint ""wp v22""";
 					class Effects
 					{
 					};
@@ -1284,24 +1282,7 @@ class Mission
 				};
 				class Item1
 				{
-					position[]={9367.4844,0.037412778,-1078.0493};
-					class Effects
-					{
-					};
-					showWP="NEVER";
-				};
-				class Item2
-				{
-					position[]={8514.6758,0.053180046,-1435.9912};
-					class Effects
-					{
-					};
-					showWP="NEVER";
-				};
-				class Item3
-				{
-					position[]={8898.0889,-0.017490596,-2105.9766};
-					type="CYCLE";
+					position[]={10386.663,1000,-954.83398};
 					class Effects
 					{
 					};
@@ -1391,7 +1372,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=45;
+		items=42;
 		class Item0
 		{
 			position[]={17694.734,3.5721941,99.841309};
@@ -1724,17 +1705,17 @@ class Mission
 		class Item30
 		{
 			position[]={15686.748,0,212.58789};
-			azimut=80.296677;
+			azimut=80.2967;
 			id=78;
 			side="EMPTY";
 			vehicle="Submarine_01_F";
 			skill=0.60000002;
 			text="SUBMARINE_SSN842";
-			init="this enableSimulation false;gamemaster01 addCuratorEditableObjects [[this],true];";
+			init="this enableSimulation false; gamemaster01 addCuratorEditableObjects [[this],true]; this setPosASL [15686.7,212.579,-9.56109];";
 		};
 		class Item31
 		{
-			position[]={15673.284,0,226.09497};
+			position[]={15671.778,0,222.83447};
 			azimut=-395.79944;
 			id=79;
 			side="EMPTY";
@@ -1744,8 +1725,8 @@ class Mission
 		};
 		class Item32
 		{
-			position[]={15678.347,0,226.5271};
-			azimut=-27.559122;
+			position[]={15679.474,0,223.70605};
+			azimut=73.286674;
 			id=80;
 			side="EMPTY";
 			vehicle="B_Boat_Transport_01_F";
@@ -1754,8 +1735,8 @@ class Mission
 		};
 		class Item33
 		{
-			position[]={15683.209,0,227.2168};
-			azimut=-32.699276;
+			position[]={15691.982,0,226.52588};
+			azimut=22.140301;
 			id=81;
 			side="EMPTY";
 			vehicle="B_Boat_Transport_01_F";
@@ -1824,91 +1805,94 @@ class Mission
 		};
 		class Item39
 		{
-			position[]={15643.978,0,222.18628};
-			azimut=-395.79944;
+			position[]={15647.048,0,218.42529};
+			azimut=-306.362;
 			id=87;
 			side="EMPTY";
 			vehicle="B_Boat_Transport_01_F";
 			skill=0.60000002;
-			text="BOAT_01_1";
+			text="BOAT_04";
 		};
 		class Item40
 		{
-			position[]={15649.04,0,222.61841};
-			azimut=-27.559122;
+			position[]={15655.11,0,219.78271};
+			azimut=57.653099;
 			id=88;
 			side="EMPTY";
 			vehicle="B_Boat_Transport_01_F";
 			skill=0.60000002;
-			text="BOAT_02_1";
+			text="BOAT_05";
 		};
 		class Item41
 		{
-			position[]={15653.902,0,223.30811};
-			azimut=-32.699276;
+			position[]={15714.358,0,229.85352};
+			azimut=-84.546997;
 			id=89;
 			side="EMPTY";
 			vehicle="B_Boat_Transport_01_F";
 			skill=0.60000002;
-			text="BOAT_03_1";
-		};
-		class Item42
-		{
-			position[]={15704.684,0,231.48682};
-			azimut=-395.79944;
-			id=90;
-			side="EMPTY";
-			vehicle="B_Boat_Transport_01_F";
-			skill=0.60000002;
-			text="BOAT_01_2";
-		};
-		class Item43
-		{
-			position[]={15709.746,0,231.91895};
-			azimut=-27.559122;
-			id=91;
-			side="EMPTY";
-			vehicle="B_Boat_Transport_01_F";
-			skill=0.60000002;
-			text="BOAT_02_2";
-		};
-		class Item44
-		{
-			position[]={15714.608,0,232.60864};
-			azimut=-32.699276;
-			id=92;
-			side="EMPTY";
-			vehicle="B_Boat_Transport_01_F";
-			skill=0.60000002;
-			text="BOAT_03_2";
+			text="BOAT_06";
 		};
 	};
 	class Markers
 	{
-		items=4;
+		items=6;
 		class Item0
 		{
-			position[]={15031.795,0.079946958,4869.6831};
-			name="C130_SPAWN_POINT";
+			position[]={15411.453,0,231.33179};
+			name="mrk_v22_drop";
 			type="Empty";
 		};
 		class Item1
 		{
-			position[]={15624.82,0,236.88843};
-			name="mrk_v22_drop";
+			position[]={15224.703,0,-4681.062};
+			name="mrk_v22_exit";
 			type="Empty";
 		};
 		class Item2
 		{
-			position[]={18405.309,12.558627,-3724.2896};
-			name="mrk_v22_exit";
+			position[]={16419.254,0,318.85742};
+			name="mrk_v22_direction";
 			type="Empty";
 		};
 		class Item3
 		{
-			position[]={16406.432,0,254.74243};
-			name="mrk_v22_direction";
+			position[]={13059.716,0.37899208,6991.2358};
+			name="mrk_c130_drop";
 			type="Empty";
+		};
+		class Item4
+		{
+			position[]={1286.1042,68.064911,11661.959};
+			name="mrk_c130_exit";
+			type="Empty";
+		};
+		class Item5
+		{
+			position[]={11217.203,2.2838991,8971.7813};
+			name="mrk_130_direction";
+			type="Empty";
+		};
+	};
+	class Sensors
+	{
+		items=1;
+		class Item0
+		{
+			position[]={9830.0059,0,-1255.603};
+			a=5000;
+			b=500;
+			angle=60.8367;
+			activationBy="WEST";
+			interruptable=1;
+			type="SWITCH";
+			age="UNKNOWN";
+			name="trg_v22_water";
+			expActiv="[[DROPSHIP_V22],""ADL_SRV_flight_drop_V22"",false,false] call BIS_fnc_MP;";
+			expDesactiv="hint ""deactive""";
+			class Effects
+			{
+			};
 		};
 	};
 };

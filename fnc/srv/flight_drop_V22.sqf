@@ -26,8 +26,8 @@ _mv22 flyInHeight 10;
 //fast to target
 _mv22 setSpeedMode "full";
 _wp =_grpAir addWaypoint [getMarkerPos "mrk_v22_drop", 0];
-waitUntil { (abs(((getPos _mv22) select 0) - ((getMarkerPos "mrk_v22_drop") select 0)) < 800) 
-		 && (abs(((getPos _mv22) select 1) - ((getMarkerPos "mrk_v22_drop") select 1)) < 800); };
+waitUntil { (abs(((getPos _mv22) select 0) - ((getMarkerPos "mrk_v22_drop") select 0)) < 900) 
+		 && (abs(((getPos _mv22) select 1) - ((getMarkerPos "mrk_v22_drop") select 1)) < 900); };
 
 //flucht vector 		 
 _wp =_grpAir addWaypoint [getMarkerPos "mrk_v22_direction", 0];		
@@ -35,8 +35,8 @@ _wp =_grpAir addWaypoint [getMarkerPos "mrk_v22_direction", 0];
 //slowdown near target		 
 _mv22 setSpeedMode "limited";
 ["v22 reduce"] call ADL_DEBUG;
-waitUntil { (abs(((getPos _mv22) select 0) - ((getMarkerPos "mrk_v22_drop") select 0)) < 350) 
-		 && (abs(((getPos _mv22) select 1) - ((getMarkerPos "mrk_v22_drop") select 1)) < 350); };
+waitUntil { (abs(((getPos _mv22) select 0) - ((getMarkerPos "mrk_v22_drop") select 0)) < 450) 
+		 && (abs(((getPos _mv22) select 1) - ((getMarkerPos "mrk_v22_drop") select 1)) < 450); };
 
 deleteWaypoint [_grpAir, 0];
 		 
@@ -57,15 +57,13 @@ while {Alive _mv22 and (speed _mv22 >= 15) and (getPosASL _mv22 select 2 > 10) }
 	} else {
 		_vel=1.02;
 	};
-				
 
 	_mv22 setVelocity [_xVel/_vel,_yVel/_vel,_zVel];
 
-	//für testzweckem RPM nicht bei MV22 verfügbar
-	//hint format ["Speed: %1 \nHeight: %2\nEngines: %3\n Rotors: %4\n Velocity: %5\n VelFaktor: %6", speed _mv22, getPosASL _mv22 select 2, enginesRpmRTD _mv22, rotorsRpmRTD _mv22, velocity _mv22, _vel];
-	sleep 0.1;
+	sleep 0.2;
 };
 
+//todo: add jump light
 
 _mv22 animate["ramp_top",1];
 _mv22 animate["ramp_bottom",1];
@@ -117,7 +115,7 @@ sleep 10;
 {
 	//notfall port
 	if (isPlayer _x) then { 
-		_x setPos [15624.82,0,0];//236.88843];
+		_x setPos [15624.82,243,0];//236.88843];
 	} else {
 		deleteVehicle _x;
 	};

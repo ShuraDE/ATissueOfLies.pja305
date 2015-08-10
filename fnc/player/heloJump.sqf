@@ -9,6 +9,7 @@ _unit = player;
 
 if (hasInterface) then { //nur für spieler
 	
+
 	["helo jump init"] call ADL_DEBUG;
 		
 	//auto open at 130m above
@@ -19,7 +20,7 @@ if (hasInterface) then { //nur für spieler
 		if ((getPos _unit select 2) > 500) then {
 			["helo auto open wait for jump"] call ADL_DEBUG;
 			waitUntil {(getPos _unit select 2) < 130 && animationState _unit == "HaloFreeFall_non" && alive _unit};
-			_unit action ["OpenParachute", _unit]; //open parachute if 150m above ground
+			_unit action ["OpenParachute", _unit]; //open parachute if ~130m above ground
 		};
 		["helo auto open done"] call ADL_DEBUG;
 	};
@@ -64,4 +65,5 @@ if (hasInterface) then { //nur für spieler
 		
 		["helo jump done, pilot chute"] call ADL_DEBUG;
 	};
+
 }; 
