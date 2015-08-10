@@ -31,8 +31,7 @@ comment "Remove existing items";
 	_unit addItemToUniform "ACE_microDAGR";
 	_unit addItemToUniform "Chemlight_green";
 	_unit addItemToUniform "Chemlight_red";	
-	
-	
+		
 //vest	
 	_unit addVest "V_PlateCarrier2_rgr";
 	for "_i" from 1 to 2 do {_unit addItemToVest "ACE_CableTie";};
@@ -49,11 +48,9 @@ comment "Remove existing items";
 	_unit linkItem "ItemCompass";
 	_unit linkItem "ACE_Altimeter";
 	_unit linkItem "tf_anprc152";
+	_unit linkItem "ItemGPS";
 	//_unit linkItem "ACE_NVG_Wide"; //mission soll tagsüber bzw in den morgenstunden spielen
-	//_unit linkItem "ItemGPS"; //hat microdagr
 	
-	
-
 	
 	switch (typeOf _unit) do {	
 		case "B_Soldier_GL_F": {			
@@ -87,8 +84,8 @@ comment "Remove existing items";
 		};
 		
 		case "B_medic_F": {
-			_unit addBackpack "B_Kitbag_rgr";
-			//additional medic equip
+			_unit addBackpack "B_Carryall_khk";
+			//additional medic equip (+ default medic see below)
 			for "_i" from 1 to 15 do {_unit addItemToBackpack "ACE_fieldDressing";};
 			for "_i" from 1 to 20 do {_unit addItemToBackpack "ACE_packingBandage";};
 			for "_i" from 1 to 15 do {_unit addItemToBackpack "ACE_elasticBandage";};
@@ -101,11 +98,6 @@ comment "Remove existing items";
 			for "_i" from 1 to 5 do {_unit addItemToBackpack "ACE_personalAidKit";};
 			for "_i" from 1 to 5 do {_unit addItemToBackpack "ACE_surgicalKit";};
 			for "_i" from 1 to 1 do {_unit addItemToBackpack "30Rnd_556x45_Stanag_Tracer_Green";};
-
-			//sidearm for medics
-			for "_i" from 1 to 3 do {_unit addItemToVest "rhsusf_mag_7x45acp_MHP";};
-			_unit addWeapon "rhsusf_weap_m1911a1";
-			_unit addWeapon "Binocular";	
 				
 		};
 		
@@ -118,34 +110,35 @@ comment "Remove existing items";
 		case "B_Soldier_TL_F";
 		case "B_Soldier_SL_F";
 		case "B_officer_F": {
+			//TFAR LR radio
 			_unit addBackpack "tf_rt1523g_bwmod";
 
-			//sidearm and binocular to leaders
-			for "_i" from 1 to 3 do {_unit addItemToVest "rhsusf_mag_7x45acp_MHP";};
-			_unit addWeapon "rhsusf_weap_m1911a1";
+			//binocular to leaders
 			_unit addWeapon "Binocular";
-			//cTab
-			_unit linkItem "ItemcTab";	
-			
-			
 		};
 		default {
 			_unit addBackpack "B_Kitbag_rgr";
 		};
 	};
 
-	
+//default primary weapon if not already defined
 	if ((primaryWeapon _unit) == "") then {
-	//if unit havnt a primary grab default
 		for "_i" from 1 to 1 do {_unit addItemToUniform "30Rnd_556x45_Stanag_Tracer_Green";};
 		for "_i" from 1 to 5 do {_unit addItemToVest "30Rnd_556x45_Stanag_Tracer_Green";};	
 		for "_i" from 1 to 10 do {_unit addItemToBackpack "30Rnd_556x45_Stanag_Tracer_Green";};
 		_unit addWeapon "rhs_weap_m16a4_grip_acog_usmc";
 		_unit addPrimaryWeaponItem "rhsusf_acc_anpeq15A";  
 		_unit addPrimaryWeaponItem "rhsusf_acc_eotech_552";			
-		crap
 	};
-
+	
+//sidearms only for seals, medic & leaders
+	if ("Bullfrog" == (groupId (group _unit)) || typeOf _unit in ["B_medic_F","B_Soldier_TL_F","B_Soldier_SL_F","B_officer_F"]) then {
+		if (!(typeOf _unit in ["B_Soldier_TL_F","B_Soldier_SL_F"])) then {
+			for "_i" from 1 to 3 do {_unit addItemToVest "rhsusf_mag_7x45acp_MHP";};
+			_unit addWeapon "rhsusf_weap_m1911a1";	
+		};
+	};
+	
 //default medic backpack equipment for everyone
 	_unit addItemToBackpack "ACE_personalAidKit";
 	for "_i" from 1 to 15 do {_unit addItemToBackpack "ACE_fieldDressing";};
@@ -155,14 +148,9 @@ comment "Remove existing items";
 
 //seals special equipment
 	if ("Bullfrog" == (groupId (group _unit))) then {
-		_unit addPrimaryWeaponItem "rhsusf_acc_nt4_black";
+		_unit addPrimaryWeaponItem "rhsusf_acc_nt4_black"; //silencer
 	
-	//each one (not only TL) gets a pistol
-		if (!(typeOf _unit in ["B_Soldier_TL_F","B_Soldier_SL_F"])) then {
-			for "_i" from 1 to 3 do {_unit addItemToVest "rhsusf_mag_7x45acp_MHP";};
-			_unit addWeapon "rhsusf_weap_m1911a1";	
-		};
-	//seal GL get 2x HuntIR
+		//seal GL get 2x HuntIR
 		if (typeOf _unit in ["B_Soldier_GL_F"]) then {
 			for "_i" from 1 to 2 do {_unit addItemToVest "ACE_HuntIR_M203";};	
 		};
