@@ -54,7 +54,12 @@ if (hasInterface) then {
 	
 	//bound ace menu entries
 	[] call compile preprocessFile "fnc\ace\ace_interaction_menu.sqf";
+	
+	//gear
+	[player] call compile preprocessFile "fnc\player\gear.sqf";
 };
+
+
 
 //player regular connected
 if (hasInterface && !(missionNamespace getVariable "HELO_COMPLETE")) then {
@@ -63,7 +68,7 @@ if (hasInterface && !(missionNamespace getVariable "HELO_COMPLETE")) then {
 	
 	//C130 HELO Jump
 	if (player getVariable ["c130_seat", -1] >= 0) then {
-		player moveInCargo [HELO_SPAWN_C130,player getVariable ["c130_seat", -1]];
+		player moveInCargo [DROPSHIP_C130,player getVariable ["c130_seat", -1]];
 		[] spawn compile preprocessFile "fnc\player\heloPrepare.sqf";
 	};
 	//Osprey V22 Sitz
@@ -84,3 +89,4 @@ if (hasInterface && missionNamespace getVariable "HELO_COMPLETE") then {
 	//Mission gestartet und spieler bereits gesprungen (JIP's)
 	["JIP connected"] call ADL_DEBUG;
 }
+

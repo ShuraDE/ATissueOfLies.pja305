@@ -114,7 +114,7 @@ class Mission
 				class Item0
 				{
 					position[]={13252.216,37.475975,6547.7065};
-					azimut=14.310445;
+					azimut=14.3104;
 					id=0;
 					side="WEST";
 					vehicle="B_medic_F";
@@ -123,7 +123,7 @@ class Mission
 					rank="COLONEL";
 					skill=0.60000002;
 					text="zeus1";
-					init="(group this) setGroupId [""SUNRAY""]; this linkItem ""ACE_Altimeter"";";
+					init="(group this) setGroupId [""SUNRAY""]; this linkItem ""ACE_Altimeter"";this setVariable [""v22_seat"",24];";
 					description="SUNRAY (Zeus)";
 					syncId=0;
 					synchronizations[]={2};
@@ -134,11 +134,12 @@ class Mission
 					azimut=-0.206094;
 					id=1;
 					side="WEST";
-					vehicle="B_Soldier_F";
+					vehicle="B_medic_F";
 					player="PLAY CDG";
 					rank="COLONEL";
 					skill=0.60000002;
 					text="zeus2";
+					init="this setVariable [""v22_seat"",23];";
 					description="SUNRAY (Zeus)";
 					syncId=1;
 					synchronizations[]={3};
@@ -619,6 +620,7 @@ class Mission
 					leader=1;
 					lock="UNLOCKED";
 					skill=0.60000002;
+					text="gamemaster02";
 					syncId=3;
 					synchronizations[]={3,1};
 				};
@@ -1199,11 +1201,12 @@ class Mission
 					position[]={17697.754,3.7998617,122.27052};
 					id=39;
 					side="WEST";
-					vehicle="B_Soldier_F";
+					vehicle="B_engineer_F";
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="Bullfrog_5";
 					init="this setVariable [""c130_seat"",7];";
+					description="Ingenieur";
 				};
 				class Item3
 				{
@@ -1223,7 +1226,7 @@ class Mission
 					position[]={17698.582,3.8076129,118.85865};
 					id=41;
 					side="WEST";
-					vehicle="B_Soldier_F";
+					vehicle="B_soldier_exp_F";
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="Bullfrog_6";
@@ -1611,7 +1614,7 @@ class Mission
 			side="EMPTY";
 			vehicle="GunrackTK_EP1";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir 85.225;this setposATL [13231.615234,6531.646973,0.950676];this setVectorUp [0,0,1]";
+			init="this enableSimulation false;this setdir 85.225;this setposATL [13231.615234,6531.646973,0.950676];this setVectorUp [0,0,1]";
 		};
 		class Item21
 		{
@@ -1761,7 +1764,7 @@ class Mission
 		};
 		class Item34
 		{
-			position[]={13227.027,37.494682,6570.8486};
+			position[]={13215.232,37.494682,6552.3701};
 			azimut=55.531101;
 			id=82;
 			side="EMPTY";

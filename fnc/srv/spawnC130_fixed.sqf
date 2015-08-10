@@ -13,16 +13,16 @@ sleep 1;
 ["HELO C130 spawn portal"] call ADL_DEBUG;
 
 //create the C130 Jump Craft!!!!
-HELO_SPAWN_C130 = "RHS_C130J" createVehicle (position _demonPortal);
-publicVariable "HELO_SPAWN_C130";
+DROPSHIP_C130 = "RHS_C130J" createVehicle (position _demonPortal);
+publicVariable "DROPSHIP_C130";
 
-HELO_SPAWN_C130 allowDamage false; 
-HELO_SPAWN_C130 setVectorUp [0,0,1];
-HELO_SPAWN_C130 attachTo [_demonPortal,[0,0,0]];
-HELO_SPAWN_C130 engineOn true;
+DROPSHIP_C130 allowDamage false; 
+DROPSHIP_C130 setVectorUp [0,0,1];
+DROPSHIP_C130 attachTo [_demonPortal,[0,0,0]];
+DROPSHIP_C130 engineOn true;
 
-gamemaster01 addCuratorEditableObjects [[HELO_SPAWN_C130],true]; 
-gamemaster02 addCuratorEditableObjects [[HELO_SPAWN_C130],true]; 
+gamemaster01 addCuratorEditableObjects [[DROPSHIP_C130],true]; 
+gamemaster02 addCuratorEditableObjects [[DROPSHIP_C130],true]; 
 
 /*
  .... aber nimm mal createvehicle Array und mach am bei NONE ein CAN_COLLIDE rein 
@@ -41,13 +41,13 @@ clearItemCargoGlobal _floorfix1;
 clearItemCargoGlobal _floorfix2;
 _floorfix1 enableSimulation false;
 _floorfix2 enableSimulation false;
-_floorfix1 attachTo [HELO_SPAWN_C130,[0.8,-3.1,-4.7]];
-_floorfix2 attachTo [HELO_SPAWN_C130,[-0.8,-3.1,-4.7]];
+_floorfix1 attachTo [DROPSHIP_C130,[0.8,-3.1,-4.7]];
+_floorfix2 attachTo [DROPSHIP_C130,[-0.8,-3.1,-4.7]];
 
 
 //block cargo seat 25, so no player can get in cockpit
 _dummy = "B_Helipilot_F" createVehicle (position _demonPortal);
-_dummy moveInCargo [HELO_SPAWN_C130,25];
+_dummy moveInCargo [DROPSHIP_C130,25];
 
 sleep 1;
 
