@@ -61,7 +61,7 @@ if (count _actionsObject == 0 && {count _actionsClass == 0}) then {
   ["EvMoney", 0, [], _mainAction] call ace_interact_menu_fnc_addActionToClass;
 };
 _actionTakeMoney = ["prison_money_take","Geld nehmen","", {[player,_target] spawn ADL_MNU_INTEL_MONEY;}, {true}] call ace_interact_menu_fnc_createAction;
-_actionCheckMoney = ["prison_money_check","Geld untersuchen","", {hint "todo: check money"}, {true}] call ace_interact_menu_fnc_createAction;
+_actionCheckMoney = ["prison_money_check","Geld untersuchen","", {[player,_target] spawn ADL_MNU_INTEL_MONEY_CHECK;}, {true}] call ace_interact_menu_fnc_createAction;
 ["EvMoney", 0, ["ACE_MainActions"], _actionTakeMoney] call ace_interact_menu_fnc_addActionToClass;
 ["EvMoney", 0, ["ACE_MainActions"], _actionCheckMoney] call ace_interact_menu_fnc_addActionToClass;
 ["menu prison money"] call ADL_DEBUG;

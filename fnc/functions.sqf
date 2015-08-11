@@ -1,4 +1,5 @@
 ADL_MNU_INTEL_MONEY  = compile preprocessFileLineNumbers "fnc\intel\prisonMoney.sqf";
+ADL_MNU_INTEL_MONEY_CHECK  = compile preprocessFileLineNumbers "fnc\intel\prisonMoneyCheck.sqf";
 ADL_MNU_INTEL_NADE  = compile preprocessFileLineNumbers "fnc\intel\prisonNade.sqf";
 ADL_MNU_INTEL_SATPHONE  = compile preprocessFileLineNumbers "fnc\intel\prisonSatPhone.sqf";
 ADL_MNU_INTEL_LAPTOP = compile preprocessFileLineNumbers "fnc\intel\prisonLaptop.sqf";
