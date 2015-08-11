@@ -113,8 +113,8 @@ class Mission
 				items=2;
 				class Item0
 				{
-					position[]={13225.872,37.494682,6560.8203};
-					azimut=14.3104;
+					position[]={13237.464,37.490402,6544.1089};
+					azimut=167.21246;
 					id=0;
 					side="WEST";
 					vehicle="B_soldier_exp_F";

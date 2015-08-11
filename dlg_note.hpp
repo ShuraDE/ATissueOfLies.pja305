@@ -24,7 +24,7 @@ class dlg_intel_paper
 		class dlg_txt_paper: RscText
 		{
 			idc = 1001;
-			text = "Menjual,\n2d Lt untuk $ 200,000\nPFC untuk $ 15.000\nLokasi Quienhammel untuk Kertosudiro\nhari ini di 2 jam";
+			text = "Menjual,\n2d Lt untuk $ 220,000\nPFC untuk $ 50.000\nLokasi Quienhammel untuk Kertosudiro\nhari ini di 2 jam";
 			x = 0.42 * safezoneW + safezoneX;
 			y = 0.335 * safezoneH + safezoneY;
 			w = 0.309375 * safezoneW;

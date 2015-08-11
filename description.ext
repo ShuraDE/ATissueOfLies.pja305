@@ -2,6 +2,15 @@
 #include "dlg_note.hpp"
 #include "dlg_movie.hpp"
 
-OnLoadMission = "Get in - grab it - get out";
-author="www.Gruppe-Adler.de - Shura, Salbei";
+enableDebugConsole = 1;
+
+OnLoadMission = "good luck";
+author="by gruppe-adler.de from Shura, Salbei";
 onLoadName="A Tissue of Lies";
+
+class Header
+{
+  gameType = Coop;
+  minPlayers = 5;
+  maxPlayers = 25;
+};

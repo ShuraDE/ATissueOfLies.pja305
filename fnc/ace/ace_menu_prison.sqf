@@ -40,7 +40,7 @@ if (count _actionsObject == 0 && {count _actionsClass == 0}) then {
 _actionsObject = prison_file getVariable ["ace_interact_menu_actions", []];
 _actionsClass = missionNamespace getVariable [format ["ace_interact_menu_Act_%1", typeOf prison_file], []];
 if (count _actionsObject == 0 && {count _actionsClass == 0}) then {
-  _actionSearchMemoIntel = ["prison_memo_intel_search","Untersuchen","", {[player, _target] spawn ADL_MNU_INTEL_MEMO;}, {true}] call ace_interact_menu_fnc_createAction;
+  _actionSearchMemoIntel = ["prison_memo_intel_search","Untersuchen","", {[player, true] spawn ADL_MNU_INTEL_MEMO;}, {true}] call ace_interact_menu_fnc_createAction;
   [prison_file, 0, [], _actionSearchMemoIntel] call ace_interact_menu_fnc_addActionToObject;
 };
 ["menu prison memo"] call ADL_DEBUG;
