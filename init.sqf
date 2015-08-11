@@ -27,17 +27,18 @@ if (isServer) then {
     tf_give_personal_radio_to_regular_soldier = false; //Personal Radio an normalen Schützen austeilen? - ja ^ nein
     publicVariable "tf_give_personal_radio_to_regular_soldier";	
 
-	//server functions
-	ADL_SRV_spawnSkeet = compile preprocessFileLineNumbers "fnc\srv\spawnSkeet.sqf";
-	//ADL_SRV_spawnV22  = compile preprocessFileLineNumbers "fnc\srv\spawnV22.sqf";
+	//server only functions
 	ADL_SRV_flight_drop_V22 =  compile preprocessFileLineNumbers "fnc\srv\flight_drop_V22.sqf";
 	ADL_SRV_spawnC130 = compile preprocessFileLineNumbers "fnc\srv\spawnC130_fixed.sqf";
 	ADL_SRV_spawnNade = compile preprocessFileLineNumbers "fnc\srv\spawnNade.sqf";
 	
 	//set civ & ind to friendly
 	civilian setFriend [west, 1];
+	civilian setFriend [east, 1];
+	civilian setFriend [independent, 1];
 	independent setFriend [west, 1];
 	independent setFriend [east, 1];
+	independent setFriend [civilian, 1];
 
 	//set default parameters
 	missionNamespace setVariable ["HELO_COMPLETE",false];
@@ -53,6 +54,9 @@ if (isServer) then {
 	SERVER_IS_READY = true;
 	publicVariable "SERVER_IS_READY";
 };
+
+//functions for player and server
+[] spawn compile preprocessFileLineNumbers "fnc\functions.sqf";
 
 //all players
 if (hasInterface) then {

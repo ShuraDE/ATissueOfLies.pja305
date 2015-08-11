@@ -113,7 +113,7 @@ class Mission
 				items=2;
 				class Item0
 				{
-					position[]={17688.986,3.5872402,102.38281};
+					position[]={13245.518,37.498692,6557.002};
 					azimut=14.3104;
 					id=0;
 					side="WEST";
@@ -1172,7 +1172,7 @@ class Mission
 				items=6;
 				class Item0
 				{
-					position[]={17697.129,3.8424468,120.03296};
+					position[]={17713.334,3.2941649,76.170654};
 					id=37;
 					side="WEST";
 					vehicle="B_Soldier_TL_F";
@@ -1186,7 +1186,7 @@ class Mission
 				};
 				class Item1
 				{
-					position[]={17700.172,3.8133862,120.5957};
+					position[]={17716.377,3.3803861,76.733398};
 					id=38;
 					side="WEST";
 					vehicle="B_Soldier_GL_F";
@@ -1198,7 +1198,7 @@ class Mission
 				};
 				class Item2
 				{
-					position[]={17697.754,3.7998617,122.27052};
+					position[]={17713.959,3.3063436,78.408218};
 					id=39;
 					side="WEST";
 					vehicle="B_soldier_exp_F";
@@ -1210,7 +1210,7 @@ class Mission
 				};
 				class Item3
 				{
-					position[]={17695.539,3.851464,119.27001};
+					position[]={17711.744,3.2314119,75.407707};
 					id=40;
 					side="WEST";
 					vehicle="B_medic_F";
@@ -1223,18 +1223,18 @@ class Mission
 				};
 				class Item4
 				{
-					position[]={17698.582,3.8076129,118.85865};
+					position[]={17714.787,3.3420491,74.996346};
 					id=41;
 					side="WEST";
 					vehicle="B_soldier_exp_F";
 					player="PLAY CDG";
 					skill=0.60000002;
-					text="Bullfrog_6";
+					text="Bullfrog_1";
 					init="this setVariable [""c130_seat"",2];";
 				};
 				class Item5
 				{
-					position[]={17695.434,3.8341048,121.86523};
+					position[]={17711.639,3.2407179,78.002922};
 					id=42;
 					side="WEST";
 					vehicle="B_Soldier_GL_F";
@@ -1358,7 +1358,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={13306.593,30.817297,6555.4258};
+					position[]={13823.679,-0.0022458385,6523.5664};
 					azimut=150.987;
 					offsetY=1.77107;
 					id=47;

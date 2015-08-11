@@ -94,7 +94,7 @@ if (isServer) then {
 				
 				//wenn hit angezeigt werden soll, public hint
 				if (_tmp_skeetMachine getVariable["skeet_machine_hitHint", false]) then {
-					[format["%1 has hit", name (_this select 1)],"hint", _tmp_skeetMachine nearEntities ["Man", 5]] call BIS_fnc_MP;
+					[format["%1 has hit", name (_this select 1)],"hint", (_tmp_skeetMachine nearEntities ["Man", 15])] call BIS_fnc_MP;
 				};
 				
 				//wenn results angezeigt werden sollen, hash map befüllen
