@@ -1,0 +1,8 @@
+missionNamespace variables:
+* HELO_COMPLETE
+
+
+user varibles:
+* money
+* v22_seat
+* c130_seat

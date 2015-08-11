@@ -113,7 +113,7 @@ class Mission
 				items=2;
 				class Item0
 				{
-					position[]={13245.518,37.498692,6557.002};
+					position[]={13225.872,37.494682,6560.8203};
 					azimut=14.3104;
 					id=0;
 					side="WEST";
@@ -1194,7 +1194,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.60000002;
 					text="Bullfrog_3";
-					init="this setVariable [""c130_seat"",9];this setVariable [""c130_seat"",19];";
+					init="this setVariable [""c130_seat"",19];";
 				};
 				class Item2
 				{
@@ -1218,7 +1218,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.60000002;
 					text="Bullfrog_4";
-					init="this setVariable [""c130_seat"",24];this setVariable [""c130_seat"",23];";
+					init="this setVariable [""c130_seat"",23];";
 					description="Medic";
 				};
 				class Item4
@@ -1241,7 +1241,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="Bullfrog_2";
-					init="this setVariable [""c130_seat"",4];this setVariable [""c130_seat"",13];";
+					init="this setVariable [""c130_seat"",13];";
 				};
 			};
 		};
