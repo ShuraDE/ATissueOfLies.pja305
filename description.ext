@@ -5,7 +5,7 @@
 enableDebugConsole = 1;
 
 OnLoadMission = "good luck";
-author="by gruppe-adler.de from Shura, Salbei";
+author="Shura, Salbei @ www.gruppe-adler.de";
 onLoadName="A Tissue of Lies";
 
 class Header

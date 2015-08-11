@@ -1,8 +1,19 @@
 missionNamespace variables:
 * HELO_COMPLETE
+* intel_satphone
 
 
 user varibles:
 * money
 * v22_seat
 * c130_seat
+
+
+external ressources:
+indo_radio.ogg
+* indonesia radio:  http://www.surfmusic.de/country/indonesia.html
+  Listen Live	RRI World Service - Voice Of Indonesia
+music.ogg
+* freesound.org : 160891__nigelnix__mouth-music.mp3
+scream_man.ogg
+* freesound.org :278177__alexaxy__man-scream.wav

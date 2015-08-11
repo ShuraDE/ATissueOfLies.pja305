@@ -1,4 +1,4 @@
-private ["_tv","_src","_soundToPlay","_soundPath","_videoFile","_audioFile"];
+private ["_tv","_src","_soundToPlay","_videoFile","_audioFile"];
 _tv = _this select 0;
 _videoFile = _this select 1;
 _audioFile = _this select 2;
@@ -25,7 +25,6 @@ if (missionNamespace getVariable "video_active") then {
 if (!(isNil "_audioFile") && _audioFile != "") then {
 	//missionNamespace setVariable ["video_file", _videoFile];
 	["video: create audio source"] call ADL_DEBUG;
-	_soundPath = ([(str missionConfigFile), 0, -15] call BIS_fnc_trimString);
 	_soundToPlay = ([(str missionConfigFile), 0, -15] call BIS_fnc_trimString) + _audioFile;
 	playSound3D [_soundToPlay, _tv, false, getPos _tv, 10, 1, 50]; 
 } else {
