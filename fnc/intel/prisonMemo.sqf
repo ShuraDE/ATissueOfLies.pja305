@@ -3,6 +3,9 @@ private ["_unit", "_dlg"];
 _unit = _this select 0;
 _translationDebug = if (count _this > 1) then { _this select 1; } else { false; };
 
+[_unit] call ADL_ANIM_ACTIVATE;
+
+
 [] spawn {
 	_dlg = createDialog "dlg_intel_paper";
 };

@@ -18,7 +18,7 @@ _laptopFile_1 = ["prison_laptop_file_1", "Show file 'neraca keuangan'", "", {pri
 
 //videos
 _laptopVideos = ["prison_laptop_videos", "Videos", "", {}, {true}] call ace_interact_menu_fnc_createAction;
-_laptopVideo_1 = ["prison_laptop_video_1", "Show file 'us guy'", "", {[prison_laptop, "media\intro_video.ogg", "media\Epoq-Lepidoptera.ogg"] spawn ADL_SHOW_VIDEO}, {true}] call ace_interact_menu_fnc_createAction;
+_laptopVideo_1 = ["prison_laptop_video_1", "Show file 'us guy'", "", {[prison_laptop, "media\intro_video.ogg", "media\intro_audio.ogg"] spawn ADL_VIDEO_SHOW_SRV}, {true}] call ace_interact_menu_fnc_createAction;
 
 [prison_laptop, 0, ["ACE_MainActions"], _laptopVideos] call ace_interact_menu_fnc_addActionToObject;
 [prison_laptop, 0, ["ACE_MainActions","prison_laptop_videos"], _laptopVideo_1] call ace_interact_menu_fnc_addActionToObject;

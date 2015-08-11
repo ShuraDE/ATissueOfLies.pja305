@@ -8,6 +8,10 @@ ADL_MNU_INTEL_MEMO = compile preprocessFileLineNumbers "fnc\intel\prisonMemo.sqf
 ADL_MNU_INTEL_LAPTOP_HACKED = compile preprocessFileLineNumbers "fnc\ace\ace_menu_laptop.sqf";
 
 
-ADL_SHOW_VIDEO = compile preprocessFileLineNumbers "fnc\srv\showVideo.sqf";
-ADL_SHOW_VIDEO_LOCAL = compile preprocessFileLineNumbers "fnc\player\showVideo_local.sqf";
-ADL_STOP_VIDEO = compile preprocessFileLineNumbers "fnc\player\stopVideo.sqf";
+
+ADL_VIDEO_SHOW_SRV = compile preprocessFileLineNumbers "fnc\srv\showVideo.sqf";
+ADL_VIDEO_SHOW_LOCAL = compile preprocessFileLineNumbers "fnc\player\showVideo_local.sqf";
+ADL_VIDEO_STOP = compile preprocessFileLineNumbers "fnc\player\stopVideo.sqf";
+
+ADL_ANIM_TAKE =  compile preprocessFileLineNumbers "fnc\player\animTake.sqf";
+ADL_ANIM_ACTIVATE =  compile preprocessFileLineNumbers "fnc\player\animActivate.sqf";
