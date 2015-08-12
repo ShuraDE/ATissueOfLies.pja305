@@ -1,8 +1,8 @@
-
 #include "defines.hpp"
 #include "dlg_note.hpp"
 #include "dlg_movie.hpp"
-#include "sounds.hpp"
+#include "CfgSounds.hpp"
+//#include "CfgVehicles.hpp"
 
 enableDebugConsole = 1;
 
@@ -16,4 +16,3 @@ class Header
   minPlayers = 5;
   maxPlayers = 25;
 };
-

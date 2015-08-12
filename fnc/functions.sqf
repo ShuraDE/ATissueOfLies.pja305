@@ -4,11 +4,12 @@ ADL_MNU_INTEL_NADE  = compile preprocessFileLineNumbers "fnc\intel\prisonNade.sq
 ADL_MNU_INTEL_SATPHONE  = compile preprocessFileLineNumbers "fnc\intel\prisonSatPhone.sqf";
 ADL_MNU_INTEL_LAPTOP = compile preprocessFileLineNumbers "fnc\intel\prisonLaptop.sqf";
 ADL_MNU_INTEL_MEMO = compile preprocessFileLineNumbers "fnc\intel\prisonMemo.sqf";
-ADL_MNU_INTEL_RADIO = compile preprocessFileLineNumbers "fnc\intel\prisonRadio.sqf";
+
 
 ADL_MNU_INTEL_LAPTOP_HACKED = compile preprocessFileLineNumbers "fnc\ace\ace_menu_laptop.sqf";
 
 
+ADL_AUDIO_RADIO = compile preprocessFileLineNumbers "fnc\srv\playRadio.sqf";
 
 ADL_VIDEO_SHOW_SRV = compile preprocessFileLineNumbers "fnc\srv\showVideo.sqf";
 ADL_VIDEO_SHOW_LOCAL = compile preprocessFileLineNumbers "fnc\player\showVideo_local.sqf";

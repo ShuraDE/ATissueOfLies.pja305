@@ -1,7 +1,9 @@
 missionNamespace variables:
 * HELO_COMPLETE
 * intel_satphone
-
+* video_audio_src
+* video_active
+* radio_audio_src
 
 user varibles:
 * money
