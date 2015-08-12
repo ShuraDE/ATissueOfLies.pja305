@@ -2,6 +2,7 @@
 #include "defines.hpp"
 #include "dlg_note.hpp"
 #include "dlg_movie.hpp"
+#include "sounds.hpp"
 
 enableDebugConsole = 1;
 
@@ -16,25 +17,3 @@ class Header
   maxPlayers = 25;
 };
 
-class CfgSounds
-{
-  sounds[] = {};
-  class mistake_music
-  {
-    name = "ADL_ATOL_SND_MUSIC";
-    sound[] = {"snd\music.ogg", 1, 1};
-    titles[] = {1, "next time more luck ;)"};
-  };
-  class radio_indo
-  {
-    name = "ADL_ATOL_SND_RADIO_INDO";
-    sound[] = {"snd\indo_radio.ogg", 1, 1};
-    titles[] = {0, "Radio"};
-  };  
-  class video_intro
-  {
-    name = "ADL_ATOL_SND_VIDEO_INTRO";
-    sound[] = {"media\intro_audio.ogg", 1, 1};
-    titles[] = {0, ""};
-  };   
-};

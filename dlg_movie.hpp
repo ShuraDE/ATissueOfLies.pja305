@@ -20,17 +20,4 @@ class RscMissionScreen
 			loops = 1;
 		};
 	};
-};	
-class CfgSounds
-{
-	sounds[] = {};
-	class videoSound
-	{
-		// how the sound is referred to in the editor (e.g. trigger effects)
-		name = "videoSoundfile";
-		// filename, volume, pitch
-		sound[] = {"test2_audio.ogg", 1, 1};
-		// subtitle delay in seconds, subtitle text 
-		titles[] = {1, "playback startet"};
-	};
 };
