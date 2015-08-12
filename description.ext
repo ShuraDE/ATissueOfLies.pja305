@@ -34,7 +34,7 @@ class CfgSounds
   class video_intro
   {
     name = "ADL_ATOL_SND_VIDEO_INTRO";
-    sound[] = {"snd\intro_audio.ogg", 1, 1};
+    sound[] = {"media\intro_audio.ogg", 1, 1};
     titles[] = {0, ""};
   };   
 };
