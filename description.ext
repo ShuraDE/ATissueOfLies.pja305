@@ -29,7 +29,7 @@ class CfgSounds
   {
     name = "ADL_ATOL_SND_RADIO_INDO";
     sound[] = {"snd\indo_radio.ogg", 1, 1};
-    titles[] = {0, ""};
+    titles[] = {0, "Radio"};
   };  
   class video_intro
   {
