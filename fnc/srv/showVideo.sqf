@@ -1,4 +1,4 @@
-private ["_tv","_videoFile","_audioCfg","_soundSource"];
+private ["_tv","_videoFile","_audioCfg"];
 _tv = _this select 0;
 _videoFile = _this select 1;
 _audioCfg = if (count _this > 2) then { _this select 2; } else { objNull; };
