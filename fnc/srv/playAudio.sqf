@@ -5,9 +5,9 @@ private ["_obj","_snd","_tmp"];
 _obj = _this select 0;
 _snd = _this select 1;
 
-if (count (attachedObjects prison_radio) > 0) then {
-	if (count (attachedObjects prison_radio) == 1 && typeOf (attachedObjects prison_radio select 0) == "Sign_Arrow_Blue_F") then {
-		deleteVehicle (attachedObjects prison_radio select 0);
+if (count (attachedObjects _obj) > 0) then {
+	if (count (attachedObjects _obj) == 1 && typeOf (attachedObjects _obj select 0) == "Sign_Arrow_Blue_F") then {
+		deleteVehicle (attachedObjects _obj select 0);
 		["delete temp sound holder"] call ADL_DEBUG;
 	} else { //mehr als 1
 		{
@@ -15,7 +15,7 @@ if (count (attachedObjects prison_radio) > 0) then {
 				deleteVehicle _x; 
 				["delete temp sound holder"] call ADL_DEBUG;
 			};
-		} forEach (attachedObjects prison_radio);
+		} forEach (attachedObjects _obj);
 	};
 };
 
