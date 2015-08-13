@@ -3,8 +3,8 @@
 	<Package name="Mission1">
 		<Container name="Default">
 			<Key ID="STR_ADL_ATOL_LOAD_MISSION">
-				<Original>good luck</Original>
-				<English>good luck</English>
+				<Original>Good luck on you're mission</Original>
+				<English>Good luck on you're missionk</English>
 				<German>Viel Erfolg bei der Mission</German>
 			</Key>
 		</Container>	
@@ -25,8 +25,8 @@
 				<German>Du hast nun %1 USD</German>
 			</Key>						
 			<Key ID="STR_ADL_ATOL_MONEY_CHECK">
-				<Original>Hmm?   A boulter is fixed there and leaves beyond the desk.</Original>
-				<English>Hmm?   A boulter is fixed there and leaves beyond the desk.</English>
+				<Original>Hmm?   A fishing line is fixed there and leads behind the desk.</Original>
+				<English>Hmm?   A fishing line is fixed there and leads behind the desk.</English>
 				<German>Hmm?   Eine Angelsehne geht von einem Bündel unter den Tisch.</German>
 			</Key>			
 			<Key ID="STR_ADL_ATOL_MONEY_AMOUNT">
@@ -35,8 +35,8 @@
 				<German>Das sind ca. 70.000 USD</German>
 			</Key>		
 			<Key ID="STR_ADL_ATOL_NO_SPACE_DESK">
-				<Original>My space is gone, i place it on the desk</Original>
-				<English>My space is gone, i place it on the desk</English>
+				<Original>I've got no room any more, i'll place it on the desk</Original>
+				<English>I've got no room any more, i'll place it on the desk</English>
 				<German>Ich habe kein Platz mehr, lege sie derweil auf den Tisch</German>
 			</Key>				
 			<Key ID="STR_ADL_ATOL_PHONE_DONE">
@@ -45,8 +45,8 @@
 				<German>Irgendjemand hat die Daten bereits kopiert</German>
 			</Key>	
 			<Key ID="STR_ADL_ATOL_PHONE_SUCCESS">
-				<Original>Successfully copied contacts to your flashdevice</Original>
-				<English>Successfully copied contacts to your flashdevice</English>
+				<Original>Successfully copied contacts to your flashdisk</Original>
+				<English>Successfully copied contacts to your flashdisk</English>
 				<German>Daten erfolgreich auf die Flashdisk kopiert</German>
 			</Key>			
 			<Key ID="STR_ADL_ATOL_FAILURE">
@@ -55,15 +55,15 @@
 				<German>Fehlgeschlagen!</German>
 			</Key>
 			<Key ID="STR_ADL_ATOL_HACK_N_COPY">
-				<Original>Hacking and copy data....</Original>
-				<English>Hacking and copy data....</English>
+				<Original>Hacking and copying data....</Original>
+				<English>Hacking and copying data....</English>
 				<German>Hacke und und kopiere Daten....</German>
 			</Key>																										
 		</Container>	
 		<Container name="ACE_MENU">
 			<Key ID="STR_ADL_ATOL_ACE_RADIO_ON">
-				<Original>Turn on</Original>
-				<English>Turn on</English>
+				<Original>Turn radio on</Original>
+				<English>Turn radio on</English>
 				<German>Radio anschalten</German>
 			</Key>
 			<Key ID="STR_ADL_ATOL_ACE_SHOW_FILE">
@@ -127,8 +127,8 @@
 				<German>Einstellungen</German>
 			</Key>	
 			<Key ID="STR_ADL_ACE_SKEET_SPEED">
-				<Original>Speed</Original>
-				<English>Speed</English>
+				<Original>Throwing speed</Original>
+				<English>Throwing speed</English>
 				<German>Wurfgeschwindigkeit</German>
 			</Key>	
 			<Key ID="STR_ADL_ACE_SKEET_RAISE">
@@ -142,18 +142,18 @@
 				<German>Interval</German>
 			</Key>	
 			<Key ID="STR_ADL_ACE_SKEET_COINCIDENCE">
-				<Original>coincidence</Original>
-				<English>coincidence</English>
+				<Original>Randomnes factor</Original>
+				<English>Randomnes factor</English>
 				<German>Zufallsfaktor</German>
 			</Key>	
 			<Key ID="STR_ADL_ACE_SKEET_CHEMLIGHT">
-				<Original>append chemlight</Original>
-				<English>append chemlight</English>
+				<Original>attach chemlight</Original>
+				<English>attach chemlight</English>
 				<German>Knicklicht befestigen</German>
 			</Key>	
 			<Key ID="STR_ADL_ACE_SKEET_SHOW_SINGLE">
-				<Original>show single hit</Original>
-				<English>show single hit</English>
+				<Original>show every single hit</Original>
+				<English>show every single hit</English>
 				<German>Einzeltreffer anzeigen</German>
 			</Key>		
 			<Key ID="STR_ADL_ACE_SKEET_SHOW_RESULT">
