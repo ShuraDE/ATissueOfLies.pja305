@@ -6,7 +6,7 @@
 
 enableDebugConsole = 1;
 
-OnLoadMission = "good luck";
+OnLoadMission = $STR_ADL_ATOL_LOAD_MISSION;
 author="Shura, Salbei @ www.gruppe-adler.de";
 onLoadName="A Tissue of Lies";
 
