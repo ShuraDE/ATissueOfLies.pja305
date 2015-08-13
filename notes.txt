@@ -1,9 +1,12 @@
+public variables
+* PVEH_netSay3D     (eventhandler)
+* SERVER_IS_READY
+
+
 missionNamespace variables:
 * HELO_COMPLETE
 * intel_satphone
-* video_audio_src
 * video_active
-* radio_audio_src
 
 user varibles:
 * money

@@ -18,7 +18,7 @@ if (missionNamespace getVariable "video_active") then {
 	//stop video
 	[[],"ADL_VIDEO_STOP",true] call BIS_fnc_MP;
 	//stop audio
-	deleteVehicle (missionNamespace getVariable "video_audio_src");
+	//todo delete attached sign
 };
 
 
@@ -27,10 +27,7 @@ missionNamespace setVariable ["video_active",true];
 
 //create audio source
 if (!(isNil "_audioCfg") && _audioCfg != "") then {
-	//missionNamespace setVariable ["video_file", _videoFile];
-	["video: create audio source"] call ADL_DEBUG;
-	_soundSource = createSoundSource [_audioCfg, position _tv, [], 0];
-	missionNamespace setVariable ["video_audio_src",_soundSource];
+	[_tv, _audioCfg] call ADL_AUDIO_PLAY;
 } else {
 	["video: no audio file"] call ADL_DEBUG;
 };

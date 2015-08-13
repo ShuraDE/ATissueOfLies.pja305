@@ -15,7 +15,6 @@ DEBUG_TYPE_LOG = true;
 
 
 //functions for all
-ADL_DEBUG = compile preprocessFileLineNumbers "fnc\sys\debug.sqf";
 [] spawn compile preprocessFileLineNumbers "fnc\functions.sqf";
 
 
@@ -54,8 +53,6 @@ if (isServer) then {
 	SERVER_IS_READY = true;
 	publicVariable "SERVER_IS_READY";
 };
-
-
 
 //all players
 if (hasInterface) then {

@@ -13,7 +13,7 @@ _actionDisarmNade = ["prison_money_disarm",localize "STR_ADL_ATOL_ACE_DISARM",""
 _actionsObject = prison_radio getVariable ["ace_interact_menu_actions", []];
 _actionsClass = missionNamespace getVariable [format ["ace_interact_menu_Act_%1", typeOf prison_radio], []];
 if (count _actionsObject == 0 && {count _actionsClass == 0}) then {
-  _actionTurnOnRadio = ["prison_radio_turnOn",localize "STR_ADL_ATOL_ACE_RADIO_ON","", {[player,_target,"snd\indo_radio.ogg"] spawn ADL_AUDIO_RADIO;}, {true}] call ace_interact_menu_fnc_createAction;
+  _actionTurnOnRadio = ["prison_radio_turnOn",localize "STR_ADL_ATOL_ACE_RADIO_ON","", {[player,_target,"snd_mistake_music"] spawn ADL_AUDIO_RADIO;}, {true}] call ace_interact_menu_fnc_createAction;
   [prison_radio, 0, [], _actionTurnOnRadio] call ace_interact_menu_fnc_addActionToObject;  
 };
 ["menu prison radio"] call ADL_DEBUG;

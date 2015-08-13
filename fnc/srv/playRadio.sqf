@@ -9,18 +9,11 @@ _unit = _this select 0;
 _radio = _this select 1;
 _audioCfg = _this select 2;
 
-/* funkt nicht ordentlich im 3D
-_soundSource = createSoundSource [_audioCfg, position _radio, [], 20];
-missionNamespace setVariable ["radio_audio_src",_soundSource];
-*/
 
-/* kann nicht gestopt werden
-_soundToPlay = ([(str missionConfigFile), 0, -15] call BIS_fnc_trimString) + "sounds\allahu_akbar.ogg";
-playSound3d [_soundToPlay, _radio, false, (getPos _radio), 10, 1];
-*/
-playSound3D [ ([(str missionConfigFile), 0, -15] call BIS_fnc_trimString) + _audioCfg, prison_radio, false, getPosASL prison_radio, 1, 1, 0];
+[_radio, _audioCfg] call ADL_AUDIO_PLAY;
 
 
+/*
 [_radio,_audioCfg] spawn {
 	private ["_radio","_audioCfg"];
 	_radio = _this select 0;
@@ -33,5 +26,5 @@ playSound3D [ ([(str missionConfigFile), 0, -15] call BIS_fnc_trimString) + _aud
 	_actionTurnOnRadio = ["prison_radio_turnOn","Radio anschalten","", {[player,_target,_audioCfg] spawn ADL_MNU_INTEL_RADIO;}, {true}] call ace_interact_menu_fnc_createAction;
 	[[_radio, 0, [], _actionTurnOnRadio],"ace_interact_menu_fnc_addActionToObject"] call BIS_fnc_MP;
 };
-
+'/
 
