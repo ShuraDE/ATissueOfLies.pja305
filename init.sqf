@@ -13,9 +13,8 @@ DEBUG_TYPE_HINT = false;
 DEBUG_TYPE_CHAT = true;
 DEBUG_TYPE_LOG = true;
 
-
 //functions for all
-[] spawn compile preprocessFileLineNumbers "fnc\functions.sqf";
+[] call compile preprocessFileLineNumbers "fnc\functions.sqf";
 
 
 if (isServer) then {
@@ -56,6 +55,7 @@ if (isServer) then {
 
 //all players
 if (hasInterface) then {
+
 	if (!isServer) then {["waiting on server"] call ADL_DEBUG;};
 	waitUntil {!isNil "SERVER_IS_READY" && !isNull player};
 	

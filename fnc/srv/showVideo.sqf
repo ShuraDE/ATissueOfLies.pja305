@@ -1,7 +1,7 @@
 private ["_tv","_videoFile","_audioCfg","_soundSource"];
 _tv = _this select 0;
 _videoFile = _this select 1;
-_audioCfg = _this select 2;
+_audioCfg = if (count _this > 2) then { _this select 2; } else { objNull; };
 
 
 if (!isServer) exitWith {
