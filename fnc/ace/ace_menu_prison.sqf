@@ -31,7 +31,7 @@ if (count _actionsObject == 0 && {count _actionsClass == 0}) then {
 _actionsObject = prison_map getVariable ["ace_interact_menu_actions", []];
 _actionsClass = missionNamespace getVariable [format ["ace_interact_menu_Act_%1", typeOf prison_map], []];
 if (count _actionsObject == 0 && {count _actionsClass == 0}) then {
-  _actionSearchMapIntel = ["prison_map_intel_search",localize "STR_ADL_ATOL_ACE_EXAMINE","", {hint "todo: map intel"}, {true}] call ace_interact_menu_fnc_createAction;
+  _actionSearchMapIntel = ["prison_map_intel_search",localize "STR_ADL_ATOL_ACE_EXAMINE","", {hint "Eine Karte der Gegend."}, {true}] call ace_interact_menu_fnc_createAction;
   [prison_map, 0, [], _actionSearchMapIntel] call ace_interact_menu_fnc_addActionToObject;
 };
 ["menu prison map"] call ADL_DEBUG;
