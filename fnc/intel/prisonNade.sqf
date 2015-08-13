@@ -30,7 +30,7 @@ if (!isNil("MONEY_NADE")) then  {
 
 	//kein platz...  auf boden legen
 	["no more room, place nade on desk"] call ADL_DEBUG;
-	hint "Ich habe kein Platz mehr, lege sie derweil auf den Tisch";
+	hintSilent localize "STR_ADL_ATOL_NO_SPACE_DESK";
 	
 	_holder = createVehicle [ "GroundWeaponHolder", [13219.75,6561.1,0], [], 0, "NONE"];
 

@@ -57,15 +57,37 @@
 			<Key ID="STR_ADL_ATOL_HACK_N_COPY">
 				<Original>Hacking and copying data....</Original>
 				<English>Hacking and copying data....</English>
-				<German>Hacke und und kopiere Daten....</German>
-			</Key>																										
+				<German>Hacke und kopiere Daten....</German>
+			</Key>	
+			<Key ID="STR_ADL_ATOL_HACK">
+				<Original>Hacking ....</Original>
+				<English>Hacking ....</English>
+				<German>Hacke ....</German>
+			</Key>	
 		</Container>	
+		<Container>
+				<Key ID="STR_ADL_ATOL_OBJ_MONEY">
+				<Original>money</Original>
+				<English>money</English>
+				<German>Geld</German>
+			</Key>	
+		</Container>
 		<Container name="ACE_MENU">
 			<Key ID="STR_ADL_ATOL_ACE_RADIO_ON">
 				<Original>Turn radio on</Original>
 				<English>Turn radio on</English>
 				<German>Radio anschalten</German>
 			</Key>
+			<Key ID="STR_ADL_ATOL_ACE_FILE">
+				<Original>Files</Original>
+				<English>Files</English>
+				<German>Dateien</German>
+			</Key>
+			<Key ID="STR_ADL_ATOL_ACE_VIDEO">
+				<Original>Videos</Original>
+				<English>Videos</English>
+				<German>Videos</German>
+			</Key>				
 			<Key ID="STR_ADL_ATOL_ACE_SHOW_FILE">
 				<Original>Show file '%1'</Original>
 				<English>Show file '%1'</English>
@@ -100,7 +122,7 @@
 				<Original>examine %1</Original>
 				<English>examine %1</English>
 				<German>%1 untersuchen</German>
-			</Key>	
+			</Key>
 		</Container>
 
 	</Package>

@@ -25,5 +25,5 @@ _unit setVariable ["money",((_unit getVariable ["money",0]) + 70000), true];
 
 
 //inform player what he get
-[format["Du hast nun %1 USD", _unit getVariable ["money",0]],"hint", _unit] call BIS_fnc_MP;
+[format[localize "STR_ADL_ATOL_MONEY_GET", _unit getVariable ["money",0]],"hint", _unit] call BIS_fnc_MP;
 ["money taken by " + name player] call ADL_DEBUG;
