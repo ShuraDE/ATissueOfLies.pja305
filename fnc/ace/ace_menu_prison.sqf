@@ -66,3 +66,11 @@ _actionCheckMoney = ["prison_money_check",format [localize "STR_ADL_ATOL_ACE_OBJ
 ["EvMoney", 0, ["ACE_MainActions"], _actionCheckMoney] call ace_interact_menu_fnc_addActionToClass;
 ["menu prison money"] call ADL_DEBUG;
 
+
+//prison tablet
+_actionsObject = prison_tablet getVariable ["ace_interact_menu_actions", []];
+_actionsClass = missionNamespace getVariable [format ["ace_interact_menu_Act_%1", typeOf prison_radio], []];
+if (count _actionsObject == 0 && {count _actionsClass == 0}) then {
+  _actionTablet = ["prison_tablet_on",localize "STR_ADL_ATOL_ACE_TABLET_ON","", {hintSilent localize "STR_ADL_ATOL_ACE_TABLET_FAIL";}, {true}] call ace_interact_menu_fnc_createAction;
+  [prison_tablet, 0, [], _actionTablet] call ace_interact_menu_fnc_addActionToObject;  
+};

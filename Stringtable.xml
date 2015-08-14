@@ -83,6 +83,16 @@
 				<English>Turn radio on</English>
 				<German>Radio anschalten</German>
 			</Key>
+			<Key ID="STR_ADL_ATOL_ACE_TABLET_ON">
+				<Original>Turn tablet on</Original>
+				<English>Turn tablet on</English>
+				<German>Tablet einschalten</German>			
+			</Key>
+			<Key ID="STR_ADL_ATOL_ACE_TABLET_FAIL">
+				<Original>No reaction</Original>
+				<English>No reaction</English>
+				<German>Keine Reaktion </German>			
+			</Key>			
 			<Key ID="STR_ADL_ATOL_ACE_FILE">
 				<Original>Files</Original>
 				<English>Files</English>
