@@ -32,10 +32,10 @@ if (isServer) then {
 	_variability = param [6, _skeet_machine getVariable["skeet_machine_variability", 6]];
 	_attachChemlight = param [7, _skeet_machine getVariable["skeet_machine_chemlight", false]];
 	_attachExplosive = param [8, _skeet_machine getVariable["skeet_machine_nade", false]];
-	_shootingAI = param [9,false];
+	_shootingAI = param [9,_skeet_machine getVariable["skeet_machine_ai", false]];
  
 	_displayHitHint =  _skeet_machine getVariable["skeet_machine_hitHint", false];
-	_displayResults =  _skeet_machine getVariable["skeet_machine_results", true];
+	_displayResults =  _skeet_machine getVariable["skeet_machine_results", false];
 	
 	
 	//to set variability +/- value  --> _skeet_speed + random(_variability);
@@ -43,7 +43,7 @@ if (isServer) then {
 	_skeet_raise = _skeet_raise - (_variability/2);
 	
 	_chemlight = "";
-	_skeet_machine setVariable ["skeet_machine_isBusy",true];
+	_skeet_machine setVariable ["skeet_machine_isBusy",true,true];
 	
 	_counter = [[],[]];
  	_skeet_machine setVariable ["skeet_machine_counter",_counter];
@@ -52,9 +52,7 @@ if (isServer) then {
 	
 		[format["skeet #%1", _skeet_amount]] call ADL_DEBUG;
 		
-		//position of skeet
-		_skeet_nr =  (_skeet_machine getVariable ["skeet_nr",0]) + 1;
-		_skeet_machine setVariable ["skeet_nr", _skeet_nr];
+		_skeet_machine setVariable ["skeet_nr",  ((_skeet_machine getVariable ["skeet_nr",0]) + 1), true];
 
 		_skeet = createVehicle ["SkeetDisk", getPos _skeet_machine, [], 0, "FLY"];
 		_skeet attachTo [_skeet_machine , [0,-0.4,0.15]];
@@ -85,48 +83,50 @@ if (isServer) then {
 			(_skeet_raise + random(_variability)) min 15
 		];
 
-		//append hit event
-		_eh_hP_skeet = _skeet addMPEventHandler ["MPHit", 
-			{
-				//get skeet machine
-				_tmp_skeetMachine = (_this select 0) getVariable["skeet_machine",objNull];
-				if (isNil "_tmp_skeetMachine") exitWith {["error handler"] call ADL_DEBUG; };
-				
-				//wenn hit angezeigt werden soll, public hint
-				if (_tmp_skeetMachine getVariable["skeet_machine_hitHint", false]) then {
-					[format["%1 has hit", name (_this select 1)],"hint", (_tmp_skeetMachine nearEntities ["Man", 15])] call BIS_fnc_MP;
-				};
-				
-				//wenn results angezeigt werden sollen, hash map befüllen
-				_hits = _tmp_skeetMachine getVariable["skeet_machine_counter",[[],[]]];
-				if (_tmp_skeetMachine getVariable["skeet_machine_results", true]) then {
-					_idx = ((_hits select 0) find (name (_this select 1)));
-					if (_idx!=-1) then {
-						(_hits select 1) set[_idx,((_hits select 1) select _idx) +1];
-						[format ["raise %1",name (_this select 1)]] call ADL_DEBUG;
-					} else {
-						[format ["add %1",name (_this select 1)]] call ADL_DEBUG;
-						_idx = (count (_hits select 0));
-						(_hits select 0) set[_idx,  name (_this select 1)];
-						(_hits select 1) set[_idx,  1];
+		if (_skeet_machine getVariable["skeet_machine_hitHint", false] || _skeet_machine getVariable["skeet_machine_results", false]) then {
+			//append hit event
+			_eh_hP_skeet = _skeet addMPEventHandler ["MPHit", 
+				{
+					//get skeet machine
+					_tmp_skeetMachine = (_this select 0) getVariable["skeet_machine",objNull];
+					if (isNil "_tmp_skeetMachine") exitWith {["error handler"] call ADL_DEBUG; };
+					
+					//wenn hit angezeigt werden soll, public hint
+					if (_tmp_skeetMachine getVariable["skeet_machine_hitHint", false]) then {
+						[format["%1 has hit", name (_this select 1)],"hint", (_tmp_skeetMachine nearEntities ["Man", 15])] call BIS_fnc_MP;
 					};
-					_tmp_skeetMachine setVariable["skeet_machine_counter",_hits];
-				};
-			}];
+					
+					//wenn results angezeigt werden sollen, hash map befüllen
+					_hits = _tmp_skeetMachine getVariable["skeet_machine_counter",[[],[]]];
+					if (_tmp_skeetMachine getVariable["skeet_machine_results", true]) then {
+						_idx = ((_hits select 0) find (name (_this select 1)));
+						if (_idx!=-1) then {
+							(_hits select 1) set[_idx,((_hits select 1) select _idx) +1];
+							[format ["raise %1",name (_this select 1)]] call ADL_DEBUG;
+						} else {
+							[format ["add %1",name (_this select 1)]] call ADL_DEBUG;
+							_idx = (count (_hits select 0));
+							(_hits select 0) set[_idx,  name (_this select 1)];
+							(_hits select 1) set[_idx,  1];
+						};
+						_tmp_skeetMachine setVariable["skeet_machine_counter",_hits];
+					};
+				}];
+		};
 		
 		//lets shoot all non bluefor in range
 		if (_shootingAI) then {
 			_list = _skeet_machine nearEntities ["Man", 10];
 			{
 				if (side _x != west) then {
-					[_x,_skeet,_skeet_nr] spawn compile preprocessFile "fnc\srv\shootSkeet.sqf";
+					[_x,_skeet, (_skeet_machine getVariable ["skeet_nr",0]), _skeet_machine] spawn ADL_SKEET_SHOOT_AI; //compile preprocessFile "fnc\srv\shootSkeet.sqf";
 				};
 			}forEach _list;
 		};
 		
 		if (_skeet_interval > 0) then { sleep (_skeet_interval  + (random(_variability)*0.2)); };
 		
-		//clear up
+		//remove EH from skeet
 		[_eh_hP_skeet, _attachChemlight, _chemlight, _skeet] spawn {
 			sleep 5;
 			removeMissionEventHandler  ["MPHit", _this select 0];
@@ -134,25 +134,30 @@ if (isServer) then {
 			deleteVehicle (_this select 3);
 		};
 		
-		//check distance activation, if then is number > 0
-		if (!_distanceActivation || count (_skeet_machine nearEntities ["Man", 5]) == 0 ) then {
+		
+		if (_distanceActivation) then {
+			if ( count (_skeet_machine nearEntities ["Man", 5]) == 0) then {
+				_skeet_amount = 0;
+			} else {
+				_skeet_amount = _skeet_amount + 1;
+			};
+		} else {
 			_skeet_amount = _skeet_amount - 1;
 		};
+
 	};
+	
+	_skeet_machine setVariable ["skeet_machine_isBusy",false,true];	
 	
 	_counter = _skeet_machine getVariable ["skeet_machine_counter",[[],[]]];
 	if (_displayResults && count (_counter select 0) > 0) then {
 		["results:","systemChat"] call BIS_fnc_MP;
-		//systemChat "results:";
 		{
 			[format["%1 : %2", _x,(_counter select 1) select _forEachIndex],"systemChat"] call BIS_fnc_MP;
-			//systemChat format["%1 : %2", _x,(_counter select 1) select _forEachIndex];
 		} forEach (_counter select 0);
 	};
-	[str(_counter)] call ADL_DEBUG;
-	
-	_skeet_machine setVariable ["skeet_machine_isBusy",false];
+
 } else {
-	["bitte als nur server ausführen"] call ADL_DEBUG;
+	["should server executed"] call ADL_DEBUG;
 	hint "server only";
 };

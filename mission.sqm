@@ -110,8 +110,8 @@ class Mission
 				items=2;
 				class Item0
 				{
-					position[]={13237.464,37.490402,6544.1089};
-					azimut=167.21201;
+					position[]={13153.776,37.310272,6656.04};
+					azimut=-24.586258;
 					id=0;
 					side="WEST";
 					vehicle="B_soldier_exp_F";
@@ -1617,13 +1617,14 @@ class Mission
 		class Item28
 		{
 			position[]={13151.896,37.070484,6662.1387};
-			azimut=-193.72723;
+			azimut=-193.72701;
 			id=74;
 			side="EMPTY";
 			vehicle="SkeetMachine";
 			leader=1;
 			skill=0.60000002;
 			text="TTWerfer";
+			init="this setVariable[""skeet_machine_ai"", true];";
 			description="SUNRAY (Zeus)";
 		};
 		class Item29

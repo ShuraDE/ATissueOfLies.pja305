@@ -27,3 +27,5 @@ ADL_VIDEO_STOP = compile preprocessFileLineNumbers "fnc\player\stopVideo.sqf";
 ADL_ANIM_TAKE =  compile preprocessFileLineNumbers "fnc\player\animTake.sqf";
 ADL_ANIM_ACTIVATE =  compile preprocessFileLineNumbers "fnc\player\animActivate.sqf";
 
+ADL_SKEET_SPAWN = compile preprocessFileLineNumbers "fnc\srv\spawnSkeet.sqf";
+ADL_SKEET_SHOOT_AI = compile preprocessFileLineNumbers "fnc\srv\shootSkeet.sqf";

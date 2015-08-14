@@ -5,13 +5,13 @@ if (count _actionsClass == 0) then {
 	["SkeetMachine", 0, [], _mainAction] call ace_interact_menu_fnc_addActionToClass;
 };
 
-_actionThrowSkeet = ["skeet_shoot_single",localize "STR_ADL_ACE_SKEET_DISK_1","", {[[[_target],"fnc\srv\spawnSkeet.sqf"],"BIS_fnc_execVM",false,false] call BIS_fnc_MP;}, {true}, {},[],[0,0,0],6] call ace_interact_menu_fnc_createAction;
+_actionThrowSkeet = ["skeet_shoot_single",localize "STR_ADL_ACE_SKEET_DISK_1","", {[[_target],"ADL_SKEET_SPAWN",false,false] call BIS_fnc_MP;}, {true}, {},[],[0,0,0],6] call ace_interact_menu_fnc_createAction;
 ["SkeetMachine", 0, ["ACE_MainActions"], _actionThrowSkeet] call ace_interact_menu_fnc_addActionToClass;
 
-_actionThrowSkeet10 = ["skeet_shoot_10",localize "STR_ADL_ACE_SKEET_DISK_10","", {[[[_target, false, 10],"fnc\srv\spawnSkeet.sqf"],"BIS_fnc_execVM",false,false] call BIS_fnc_MP;}, {true}, {},[],[0,0,0],6] call ace_interact_menu_fnc_createAction;
-["SkeetMachine", 0, ["ACE_MainActions"], _actionThrowSkeet10] call ace_interact_menu_fnc_addActionToClass;
+_actionThrowSkeet_n = ["skeet_shoot_n",format[localize "STR_ADL_ACE_SKEET_DISK_n","15"],"", {[[_target, false, 15],"ADL_SKEET_SPAWN",false,false] call BIS_fnc_MP;}, {true}, {},[],[0,0,0],6] call ace_interact_menu_fnc_createAction;
+["SkeetMachine", 0, ["ACE_MainActions"], _actionThrowSkeet_n] call ace_interact_menu_fnc_addActionToClass;
 
-_actionAutoSkeet = ["skeet_shoot_auto",localize "STR_ADL_ACE_SKEET_DISK_AUTO","", {[[[_target, true, 1],"fnc\srv\spawnSkeet.sqf"],"BIS_fnc_execVM",false,false] call BIS_fnc_MP;}, {true}, {},[],[0,0,0],6] call ace_interact_menu_fnc_createAction;
+_actionAutoSkeet = ["skeet_shoot_auto",localize "STR_ADL_ACE_SKEET_DISK_AUTO","", {[[_target, true, 1],"ADL_SKEET_SPAWN",false,false] call BIS_fnc_MP;}, {true}, {},[],[0,0,0],6] call ace_interact_menu_fnc_createAction;
 ["SkeetMachine", 0, ["ACE_MainActions"], _actionAutoSkeet] call ace_interact_menu_fnc_addActionToClass;
 
 _actionSettings = ["skeet_settings", localize "STR_ADL_ACE_SKEET_SETTINGS","",{}, {true}, {},[],[0,0,0],2] call ace_interact_menu_fnc_createAction;

@@ -138,10 +138,10 @@
 				<English>new disk</English>
 				<German>Neue Disk</German>
 			</Key>			
-			<Key ID="STR_ADL_ACE_SKEET_DISK_10">
-				<Original>throw 10 disks</Original>
-				<English>throw 10 disks</English>
-				<German>10 Disks werfen</German>
+			<Key ID="STR_ADL_ACE_SKEET_DISK_n">
+				<Original>throw %1 disks</Original>
+				<English>throw %1 disks</English>
+				<German>%1 Disks werfen</German>
 			</Key>	
 			<Key ID="STR_ADL_ACE_SKEET_DISK_AUTO">
 				<Original>throw disks until person nearby</Original>
