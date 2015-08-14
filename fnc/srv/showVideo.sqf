@@ -5,7 +5,7 @@ _audioCfg = if (count _this > 2) then { _this select 2; } else { objNull; };
 
 
 if (!isServer) exitWith {
-	[[_this], "ADL_VIDEO_SHOW_SRV", false] call BIS_fnc_MP;
+	[[_tv, _videoFile], "ADL_VIDEO_SHOW_SRV", false] call BIS_fnc_MP;
 	["video: is not server, call server"] call ADL_DEBUG;
 };
 
