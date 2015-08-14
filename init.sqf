@@ -40,6 +40,7 @@ if (isServer) then {
 
 	//set default parameters
 	missionNamespace setVariable ["HELO_COMPLETE",false];
+	publicVariable "HELO_COMPLETE";
 	
 	//create c130 fixed in air, public variable is "HELO_SPAWN_C130"
 	[] call ADL_SRV_spawnC130;
@@ -64,36 +65,33 @@ if (hasInterface) then {
 	
 	//gear
 	[player] call compile preprocessFile "fnc\player\gear.sqf";
-};
-
-
-
-//player regular connected
-if (hasInterface && !(missionNamespace getVariable "HELO_COMPLETE")) then {
-	//Mission noch nicht gestartet
-	["Player (non JIP) connected"] call ADL_DEBUG;
 	
-	//C130 HELO Jump
-	if (player getVariable ["c130_seat", -1] >= 0) then {
-		player moveInCargo [DROPSHIP_C130,player getVariable ["c130_seat", -1]];
-		[] spawn compile preprocessFile "fnc\player\heloPrepare.sqf";
-	};
-	//Osprey V22 Sitz
-	if (player getVariable ["v22_seat", -1] >= 0) then {
-		player moveInCargo [DROPSHIP_V22,player getVariable ["v22_seat", -1]];
+	//connection before / after HELO
+	if (!(missionNamespace getVariable ["HELO_COMPLETE",false])) then {
+		//Mission noch nicht gestartet
+		["Player (non JIP) connected"] call ADL_DEBUG;	
 		
+		//player  moveInCargo C130 (HELO Jump)
+		if (player getVariable ["c130_seat", -1] >= 0) then {
+			player moveInCargo [DROPSHIP_C130,player getVariable ["c130_seat", -1]];
+			[] spawn compile preprocessFile "fnc\player\heloPrepare.sqf";
+		};
+		//player moveInCargo Osprey V22 (Water Jump)
+		if (player getVariable ["v22_seat", -1] >= 0) then {
+			player moveInCargo [DROPSHIP_V22,player getVariable ["v22_seat", -1]];
+		};	
+	} else {
+		//player connected after jump
+		if (hasInterface && missionNamespace getVariable "HELO_COMPLETE") then {
+			//Mission gestartet und spieler bereits gesprungen (JIP's)
+			["Player JIP connected"] call ADL_DEBUG;
+		};
 	};	
-
-	//wiederherstellen von audio und video
-	5 fadeSound 1; 
-	5 fadeSpeech 1;
-	5 fadeMusic 1; 
-	cutText ["", "BLACK IN", 5];
+	
 };
 
-//player jip connected
-if (hasInterface && missionNamespace getVariable "HELO_COMPLETE") then {
-	//Mission gestartet und spieler bereits gesprungen (JIP's)
-	["JIP connected"] call ADL_DEBUG;
-}
-
+//wiederherstellen von audio und video
+5 fadeSound 1; 
+5 fadeSpeech 1;
+5 fadeMusic 1; 
+cutText ["", "BLACK IN", 5];
