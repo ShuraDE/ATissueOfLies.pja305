@@ -111,7 +111,7 @@ class Mission
 				class Item0
 				{
 					position[]={13237.464,37.490402,6544.1089};
-					azimut=167.21246;
+					azimut=167.21201;
 					id=0;
 					side="WEST";
 					vehicle="B_soldier_exp_F";
@@ -1207,8 +1207,8 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={7985.5879,0,-1708.5571};
-					azimut=55.531101;
+					position[]={4404.4893,21.826874,-1733.6792};
+					azimut=87.66893;
 					offsetY=1500;
 					id=42;
 					side="WEST";
@@ -1824,7 +1824,6 @@ class Mission
 			age="UNKNOWN";
 			name="trg_v22_water";
 			expActiv="[[DROPSHIP_V22],""ADL_SRV_flight_drop_V22"",false,false] call BIS_fnc_MP;";
-			expDesactiv="hint ""deactive""";
 			class Effects
 			{
 			};

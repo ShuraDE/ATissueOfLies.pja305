@@ -14,6 +14,11 @@
 				<English>&lt;t size = '.8'&gt;Sell!&lt;br /&gt;2nd Lt. for 220.000 USD&lt;br /&gt;PFC for 50.000 USD&lt;br /&gt;Location Quienhammel, to Kertosudiro today in 2h&lt;/t&gt;</English>
 				<German>&lt;t size = '.8'&gt;Verkauft!&lt;br /&gt;2nd Lt. für 220.000 USD&lt;br /&gt;PFC für 50.000 USD&lt;br /&gt;Ort Quienhammel, an Kertosudiro heute in 2h&lt;/t&gt;</German>
 			</Key>
+			<Key ID="STR_ADL_ATOL_MAIL_TRANSLATE">
+				<Original>&lt;t align="left" size = '.5'&gt;Utara, Euch werden keine Einheiten in den Zeitraum stören.&lt;br /&gt;Jeneral Hastubiro&lt;br /&gt;&lt;br /&gt;----Ursprüngliche Nachricht----&lt;br /&gt;Von: Utara&lt;br /&gt;Gesendet: Mittwoch, 12. August 2015&lt;br /&gt;An: Jeneral Hastubiro&lt;br /&gt;Betreff:  Zeit&lt;br /&gt;&lt;br /&gt;Jeneral Hastubiro, am Samstag wieder unseren Sektor zwischen 14:00 und 23:00 Uhr freihalten.&lt;br /&gt;&lt;br /&gt;Im übrigen ist die Überweisung getätigt.&lt;br /&gt;&lt;br /&gt;Gruß Utara&lt;/t&gt;</Original>
+				<English>&lt;t align="left" size = '.5'&gt;Utara, Euch werden keine Einheiten in den Zeitraum stören.&lt;br /&gt;Jeneral Hastubiro&lt;br /&gt;&lt;br /&gt;----Ursprüngliche Nachricht----&lt;br /&gt;Von: Utara&lt;br /&gt;Gesendet: Mittwoch, 12. August 2015&lt;br /&gt;An: Jeneral Hastubiro&lt;br /&gt;Betreff:  Zeit&lt;br /&gt;&lt;br /&gt;Jeneral Hastubiro, am Samstag wieder unseren Sektor zwischen 14:00 und 23:00 Uhr freihalten.&lt;br /&gt;&lt;br /&gt;Im übrigen ist die Überweisung getätigt.&lt;br /&gt;&lt;br /&gt;Gruß Utara&lt;/t&gt;</English>
+				<German>&lt;t align="left" size = '.5'&gt;Utara, Euch werden keine Einheiten in den Zeitraum stören.&lt;br /&gt;Jeneral Hastubiro&lt;br /&gt;&lt;br /&gt;----Ursprüngliche Nachricht----&lt;br /&gt;Von: Utara&lt;br /&gt;Gesendet: Mittwoch, 12. August 2015&lt;br /&gt;An: Jeneral Hastubiro&lt;br /&gt;Betreff:  Zeit&lt;br /&gt;&lt;br /&gt;Jeneral Hastubiro, am Samstag wieder unseren Sektor zwischen 14:00 und 23:00 Uhr freihalten.&lt;br /&gt;&lt;br /&gt;Im übrigen ist die Überweisung getätigt.&lt;br /&gt;&lt;br /&gt;Gruß Utara&lt;/t&gt;</German>
+			</Key>			
 			<Key ID="STR_ADL_ATOL_LAPTOP_FAILED">
 				<Original>Linux has beaten you :-P</Original>
 				<English>Linux has beaten you :-P</English>
