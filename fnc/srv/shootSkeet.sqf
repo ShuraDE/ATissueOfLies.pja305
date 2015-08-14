@@ -30,8 +30,6 @@ if (_shooter getVariable ["skeet_nr",0] == _skeetMachine getVariable ["skeet_nr"
 };
 
 sleep 3; // if no new skeet fired, return default mode
-[str(_skeetMachine getVariable ["skeet_machine_isBusy",false])] call ADL_DEBUG;
-
 if (!(_skeetMachine getVariable ["skeet_machine_isBusy",false])) then {
 	_shooter setBehaviour "SAFE";
 	_shooter enableAI "MOVE";
