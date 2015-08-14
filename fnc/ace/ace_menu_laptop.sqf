@@ -22,7 +22,7 @@ _laptopFile_3 = ["prison_laptop_file_3",  format[localize "STR_ADL_ATOL_ACE_SHOW
 
 //videos
 _laptopVideos = ["prison_laptop_videos", localize "STR_ADL_ATOL_ACE_VIDEO", "", {}, {true}] call ace_interact_menu_fnc_createAction;
-_laptopVideo_1 = ["prison_laptop_video_1", format[localize "STR_ADL_ATOL_ACE_SHOW_VIDEO","us guy"], "", {[prison_laptop, "media\intro_video.ogg", "snd_video_intro"] spawn ADL_VIDEO_SHOW_SRV}, {true}] call ace_interact_menu_fnc_createAction;
+_laptopVideo_1 = ["prison_laptop_video_1", format[localize "STR_ADL_ATOL_ACE_SHOW_VIDEO","us guy"], "", {[prison_laptop, "media\intro_video.ogv", "snd_video_intro"] spawn ADL_VIDEO_SHOW_SRV}, {true}] call ace_interact_menu_fnc_createAction;
 
 [prison_laptop, 0, ["ACE_MainActions"], _laptopVideos] call ace_interact_menu_fnc_addActionToObject;
 [prison_laptop, 0, ["ACE_MainActions","prison_laptop_videos"], _laptopVideo_1] call ace_interact_menu_fnc_addActionToObject;
