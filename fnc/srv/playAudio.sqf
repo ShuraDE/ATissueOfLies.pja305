@@ -30,7 +30,7 @@ PVEH_netSay3D = [_tmp,_snd];
 publicVariable "PVEH_netSay3D";
 
 //local execute
-if (!isDedicated) then {_tmp say3D _snd};
+if (hasInterface) then {_tmp say3D _snd};
 
 //all fine
 true;
