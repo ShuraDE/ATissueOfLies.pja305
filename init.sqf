@@ -54,6 +54,9 @@ if (isServer) then {
 	publicVariable "SERVER_IS_READY";
 };
 
+
+if ((!isServer) && (player != player)) then {waitUntil {player == player};};
+
 //all players
 if (hasInterface) then {
 
@@ -88,6 +91,8 @@ if (hasInterface) then {
 		};
 	};	
 	
+	//create mission briefing
+	[] execVM "briefing.sqf";
 };
 
 //wiederherstellen von audio und video

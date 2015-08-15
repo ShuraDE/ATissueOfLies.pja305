@@ -5,6 +5,7 @@
 //#include "CfgVehicles.hpp"
 
 enableDebugConsole = 1;
+disabledAI 	= 0;
 
 OnLoadMission = $STR_ADL_ATOL_LOAD_MISSION;
 author="Shura, Salbei @ www.gruppe-adler.de";
