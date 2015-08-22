@@ -16,9 +16,8 @@ DEBUG_TYPE_LOG = true;
 //functions for all
 [] call compile preprocessFileLineNumbers "fnc\functions.sqf";
 
-
+//server only
 if (isServer) then {
-
 	//TFAR
 	tf_no_auto_long_range_radio = true; //Long Range Radio an GrpFhr austeilen? - ja ^ nein
 	publicVariable "tf_no_auto_long_range_radio";
