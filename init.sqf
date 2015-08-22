@@ -8,13 +8,12 @@ if (hasInterface) then {
 	0 fadeMusic  0;
 };
 
-
 DEBUG_OUTPUT = true;
 DEBUG_TYPE_HINT = false;
 DEBUG_TYPE_CHAT = true;
 DEBUG_TYPE_LOG = true;
 
-//functions for all //atom test
+//functions for all
 [] call compile preprocessFileLineNumbers "fnc\functions.sqf";
 
 
