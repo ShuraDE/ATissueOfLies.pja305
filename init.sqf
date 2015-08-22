@@ -65,7 +65,7 @@ if (hasInterface) then {
 	//bound ace menu entries
 	[] call compile preprocessFile "fnc\ace\ace_interaction_menu.sqf";
 
-	//gear
+	//gear (switch file in 2 files (msog and ))
 	[player] call compile preprocessFile "fnc\player\gear.sqf";
 
 	//connection before / after HELO
