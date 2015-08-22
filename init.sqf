@@ -94,8 +94,10 @@ if (hasInterface) then {
 	[] execVM "briefing.sqf";
 };
 
-//wiederherstellen von audio und video
-5 fadeSound 1;
-5 fadeSpeech 1;
-5 fadeMusic 1;
-cutText ["", "BLACK IN", 5];
+if (hasInterface) then {
+	//wiederherstellen von audio und video
+	5 fadeSound 1;
+	5 fadeSpeech 1;
+	5 fadeMusic 1;
+	cutText ["", "BLACK IN", 5];
+};
