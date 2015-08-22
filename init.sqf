@@ -65,7 +65,7 @@ if (hasInterface) then {
 	//bound ace menu entries
 	[] call compile preprocessFile "fnc\ace\ace_interaction_menu.sqf";
 
-	//gear (switch file in 2 files (msog and ))
+	//gear (switch file in 2 files gear_bullfrog, gear_foxhound)
 	[player] call compile preprocessFile "fnc\player\gear.sqf";
 
 	//connection before / after HELO
@@ -94,6 +94,7 @@ if (hasInterface) then {
 	[] execVM "briefing.sqf";
 };
 
+//cleanup
 if (hasInterface) then {
 	//wiederherstellen von audio und video
 	5 fadeSound 1;
