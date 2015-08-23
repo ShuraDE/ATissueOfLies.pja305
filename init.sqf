@@ -54,6 +54,7 @@ if (isServer) then {
 };
 
 
+//wait player init is complete
 if ((!isServer) && (player != player)) then {waitUntil {player == player};};
 
 //all players
