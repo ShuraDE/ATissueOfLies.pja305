@@ -4,6 +4,12 @@ ADL_DEBUG = compile preprocessFileLineNumbers "fnc\sys\debug.sqf";
 //eventhandler
 [] call compile preprocessFileLineNumbers "fnc\sys\pvEventHandler.sqf";
 
+if (isServer) then {
+  //server functions #todo move to functions file
+  ADL_SRV_flight_drop_V22 =  compile preprocessFileLineNumbers "fnc\srv\flight_drop_V22.sqf";
+  ADL_SRV_spawnC130 = compile preprocessFileLineNumbers "fnc\srv\spawnC130_fixed.sqf";
+  ADL_SRV_spawnNade = compile preprocessFileLineNumbers "fnc\srv\spawnNade.sqf";
+};
 
 //anything else
 

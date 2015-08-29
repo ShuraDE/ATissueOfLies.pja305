@@ -24,11 +24,6 @@ if (isServer) then {
   tf_give_personal_radio_to_regular_soldier = false; //Personal Radio an normalen Schützen austeilen? - ja ^ nein
   publicVariable "tf_give_personal_radio_to_regular_soldier";
 
-	//server only functions
-	ADL_SRV_flight_drop_V22 =  compile preprocessFileLineNumbers "fnc\srv\flight_drop_V22.sqf";
-	ADL_SRV_spawnC130 = compile preprocessFileLineNumbers "fnc\srv\spawnC130_fixed.sqf";
-	ADL_SRV_spawnNade = compile preprocessFileLineNumbers "fnc\srv\spawnNade.sqf";
-
 	//set civ & ind to friendly
 	civilian setFriend [west, 1];
 	civilian setFriend [east, 1];
