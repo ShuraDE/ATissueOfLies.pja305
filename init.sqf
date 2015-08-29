@@ -13,7 +13,7 @@ DEBUG_TYPE_HINT = false;
 DEBUG_TYPE_CHAT = true;
 DEBUG_TYPE_LOG = true;
 
-//functions for all
+//functionslist
 [] call compile preprocessFileLineNumbers "fnc\functions.sqf";
 
 //server only
