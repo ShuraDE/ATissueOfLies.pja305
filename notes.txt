@@ -14,7 +14,7 @@ user varibles:
 * c130_seat
 
 
-external ressources:
+sources - external ressources:
 indo_radio.ogg
 * indonesia radio:  http://www.surfmusic.de/country/indonesia.html
   Listen Live	RRI World Service - Voice Of Indonesia

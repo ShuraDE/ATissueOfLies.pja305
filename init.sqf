@@ -47,12 +47,11 @@ if (isServer) then {
 	//create nade, public variable "MONEY_NADE"
 	[] call ADL_SRV_spawnNade;
 
-
+	//set "server is done", clients can now doing there stuff
 	["server is ready"] call ADL_DEBUG;
 	SERVER_IS_READY = true;
 	publicVariable "SERVER_IS_READY";
 };
-
 
 //wait player init is complete
 if ((!isServer) && (player != player)) then {waitUntil {player == player};};
@@ -95,7 +94,7 @@ if (hasInterface) then {
 	[] execVM "briefing.sqf";
 };
 
-//cleanup
+//cleanup audio / video
 if (hasInterface) then {
 	//wiederherstellen von audio und video
 	5 fadeSound 1;
