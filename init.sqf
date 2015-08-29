@@ -25,7 +25,6 @@ if (isServer) then {
 	publicVariable "tf_no_auto_long_range_radio";
   tf_give_personal_radio_to_regular_soldier = false; //Personal Radio
   publicVariable "tf_give_personal_radio_to_regular_soldier";
-	
 	//End Config
 
 
