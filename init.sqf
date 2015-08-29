@@ -20,7 +20,8 @@ DEBUG_TYPE_LOG = true;
 if (isServer) then {
 
 	//Config Section
-	//TFAR
+	//#todo check if tfar used
+	//TFAR radio settings
 	tf_no_auto_long_range_radio = true; //Long Range Radio
 	publicVariable "tf_no_auto_long_range_radio";
   tf_give_personal_radio_to_regular_soldier = false; //Personal Radio
