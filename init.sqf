@@ -18,11 +18,16 @@ DEBUG_TYPE_LOG = true;
 
 //server only
 if (isServer) then {
+
+	//Config Section
 	//TFAR
-	tf_no_auto_long_range_radio = true; //Long Range Radio an GrpFhr austeilen? - ja ^ nein
+	tf_no_auto_long_range_radio = true; //Long Range Radio
 	publicVariable "tf_no_auto_long_range_radio";
-  tf_give_personal_radio_to_regular_soldier = false; //Personal Radio an normalen Schützen austeilen? - ja ^ nein
+  tf_give_personal_radio_to_regular_soldier = false; //Personal Radio
   publicVariable "tf_give_personal_radio_to_regular_soldier";
+	
+	//End Config
+
 
 	//set civ & ind to friendly
 	civilian setFriend [west, 1];
