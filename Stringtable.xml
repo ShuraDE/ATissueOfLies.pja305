@@ -4,10 +4,10 @@
 		<Container name="Default">
 			<Key ID="STR_ADL_ATOL_LOAD_MISSION">
 				<Original>Good luck on you're mission</Original>
-				<English>Good luck on you're missionk</English>
+				<English>Good luck on you're mission</English>
 				<German>Viel Erfolg bei der Mission</German>
 			</Key>
-		</Container>	
+		</Container>
 		<Container name="Prison">
 			<Key ID="STR_ADL_ATOL_MEMO_TRANSLATE">
 				<Original>&lt;t size = '.8'&gt;Sell!&lt;br /&gt;guys for 270&lt;br /&gt;Location Quienhammel, to Kertosudiro today in 2h&lt;/t&gt;</Original>
@@ -18,7 +18,7 @@
 				<Original>&lt;t align="left" size = '.5'&gt;Utara, Euch werden keine Einheiten in den Zeitraum stören.&lt;br /&gt;Jeneral Hastubiro&lt;br /&gt;&lt;br /&gt;----Ursprüngliche Nachricht----&lt;br /&gt;Von: Utara&lt;br /&gt;Gesendet: Mittwoch, 12. August 2015&lt;br /&gt;An: Jeneral Hastubiro&lt;br /&gt;Betreff:  Zeit&lt;br /&gt;&lt;br /&gt;Jeneral Hastubiro, am Samstag wieder unseren Sektor zwischen 14:00 und 23:00 Uhr freihalten.&lt;br /&gt;&lt;br /&gt;Im übrigen ist die Überweisung getätigt.&lt;br /&gt;&lt;br /&gt;Gruß Utara&lt;/t&gt;</Original>
 				<English>&lt;t align="left" size = '.5'&gt;Utara, Euch werden keine Einheiten in den Zeitraum stören.&lt;br /&gt;Jeneral Hastubiro&lt;br /&gt;&lt;br /&gt;----Ursprüngliche Nachricht----&lt;br /&gt;Von: Utara&lt;br /&gt;Gesendet: Mittwoch, 12. August 2015&lt;br /&gt;An: Jeneral Hastubiro&lt;br /&gt;Betreff:  Zeit&lt;br /&gt;&lt;br /&gt;Jeneral Hastubiro, am Samstag wieder unseren Sektor zwischen 14:00 und 23:00 Uhr freihalten.&lt;br /&gt;&lt;br /&gt;Im übrigen ist die Überweisung getätigt.&lt;br /&gt;&lt;br /&gt;Gruß Utara&lt;/t&gt;</English>
 				<German>&lt;t align="left" size = '.5'&gt;Utara, Euch werden keine Einheiten in den Zeitraum stören.&lt;br /&gt;Jeneral Hastubiro&lt;br /&gt;&lt;br /&gt;----Ursprüngliche Nachricht----&lt;br /&gt;Von: Utara&lt;br /&gt;Gesendet: Mittwoch, 12. August 2015&lt;br /&gt;An: Jeneral Hastubiro&lt;br /&gt;Betreff:  Zeit&lt;br /&gt;&lt;br /&gt;Jeneral Hastubiro, am Samstag wieder unseren Sektor zwischen 14:00 und 23:00 Uhr freihalten.&lt;br /&gt;&lt;br /&gt;Im übrigen ist die Überweisung getätigt.&lt;br /&gt;&lt;br /&gt;Gruß Utara&lt;/t&gt;</German>
-			</Key>			
+			</Key>
 			<Key ID="STR_ADL_ATOL_LAPTOP_FAILED">
 				<Original>Linux has beaten you :-P</Original>
 				<English>Linux has beaten you :-P</English>
@@ -28,32 +28,32 @@
 				<Original>You own %1 USD</Original>
 				<English>You own %1 USD</English>
 				<German>Du hast nun %1 USD</German>
-			</Key>						
+			</Key>
 			<Key ID="STR_ADL_ATOL_MONEY_CHECK">
 				<Original>Hmm?   A fishing line is fixed there and leads behind the desk.</Original>
 				<English>Hmm?   A fishing line is fixed there and leads behind the desk.</English>
 				<German>Hmm?   Eine Angelsehne geht von einem Bündel unter den Tisch.</German>
-			</Key>			
+			</Key>
 			<Key ID="STR_ADL_ATOL_MONEY_AMOUNT">
 				<Original>likely 70,000 USD</Original>
 				<English>likely 70,000 USD</English>
 				<German>Das sind ca. 70.000 USD</German>
-			</Key>		
+			</Key>
 			<Key ID="STR_ADL_ATOL_NO_SPACE_DESK">
 				<Original>I've got no room any more, i'll place it on the desk</Original>
 				<English>I've got no room any more, i'll place it on the desk</English>
 				<German>Ich habe kein Platz mehr, lege sie derweil auf den Tisch</German>
-			</Key>				
+			</Key>
 			<Key ID="STR_ADL_ATOL_PHONE_DONE">
 				<Original>Someone has already copied the data</Original>
 				<English>Someone has already copied the data</English>
 				<German>Irgendjemand hat die Daten bereits kopiert</German>
-			</Key>	
+			</Key>
 			<Key ID="STR_ADL_ATOL_PHONE_SUCCESS">
 				<Original>Successfully copied contacts to your flashdisk</Original>
 				<English>Successfully copied contacts to your flashdisk</English>
 				<German>Daten erfolgreich auf die Flashdisk kopiert</German>
-			</Key>			
+			</Key>
 			<Key ID="STR_ADL_ATOL_FAILURE">
 				<Original>Failure!</Original>
 				<English>Failure!</English>
@@ -63,21 +63,48 @@
 				<Original>Hacking and copying data....</Original>
 				<English>Hacking and copying data....</English>
 				<German>Hacke und kopiere Daten....</German>
-			</Key>	
+			</Key>
 			<Key ID="STR_ADL_ATOL_HACK">
 				<Original>Hacking ....</Original>
 				<English>Hacking ....</English>
 				<German>Hacke ....</German>
-			</Key>	
-		</Container>	
+			</Key>
+		</Container>
 		<Container>
 				<Key ID="STR_ADL_ATOL_OBJ_MONEY">
 				<Original>money</Original>
 				<English>money</English>
 				<German>Geld</German>
-			</Key>	
+			</Key>
 		</Container>
 		<Container name="ACE_MENU">
+
+			<Key ID="STR_ADL_ACE_PADDLE_ROPE">
+				<Original>Rope</Original>
+				<English>Rope</English>
+				<German>Rope</German>
+			</Key>
+			<Key ID="STR_ADL_ACE_PADDLE_ROPE_SHORTEN">
+				<Original>--</Original>
+				<English>--</English>
+				<German>--</German>
+			</Key>
+			<Key ID="STR_ADL_ACE_PADDLE_ROPE_LENGTHEN">
+				<Original>++</Original>
+				<English>++</English>
+				<German>++</German>
+			</Key>
+			<Key ID="STR_ADL_ACE_PADDLE_ROPE_SWITCH">
+				<Original>ON/OFF</Original>
+				<English>ON/OFF</English>
+				<German>ON/OFF</German>
+			</Key>
+			<Key ID="STR_ADL_ACE_PADDLE_KILLSWITCH">
+				<Original>de- / activate motor</Original>
+				<English>de- / activate motor</English>
+				<German>Motor de-/aktivieren</German>
+			</Key>
+
 			<Key ID="STR_ADL_ATOL_ACE_RADIO_ON">
 				<Original>Turn radio on</Original>
 				<English>Turn radio on</English>
@@ -86,13 +113,13 @@
 			<Key ID="STR_ADL_ATOL_ACE_TABLET_ON">
 				<Original>Turn tablet on</Original>
 				<English>Turn tablet on</English>
-				<German>Tablet einschalten</German>			
+				<German>Tablet einschalten</German>
 			</Key>
 			<Key ID="STR_ADL_ATOL_ACE_TABLET_FAIL">
 				<Original>No reaction</Original>
 				<English>No reaction</English>
-				<German>Keine Reaktion </German>			
-			</Key>			
+				<German>Keine Reaktion </German>
+			</Key>
 			<Key ID="STR_ADL_ATOL_ACE_FILE">
 				<Original>Files</Original>
 				<English>Files</English>
@@ -102,7 +129,7 @@
 				<Original>Videos</Original>
 				<English>Videos</English>
 				<German>Videos</German>
-			</Key>				
+			</Key>
 			<Key ID="STR_ADL_ATOL_ACE_SHOW_FILE">
 				<Original>Show file '%1'</Original>
 				<English>Show file '%1'</English>
@@ -112,7 +139,7 @@
 				<Original>Show video '%1'</Original>
 				<English>Show video '%1'</English>
 				<German>Öffne Video '%1'</German>
-			</Key>						
+			</Key>
 			<Key ID="STR_ADL_ATOL_ACE_DISARM">
 				<Original>disarm</Original>
 				<English>disarm</English>
@@ -127,7 +154,7 @@
 				<Original>hacking</Original>
 				<English>hacking</English>
 				<German>Hacken</German>
-			</Key>	
+			</Key>
 			<Key ID="STR_ADL_ATOL_ACE_OBJ_TAKE">
 				<Original>take %1</Original>
 				<English>take %1</English>
@@ -147,57 +174,57 @@
 				<Original>new disk</Original>
 				<English>new disk</English>
 				<German>Neue Disk</German>
-			</Key>			
+			</Key>
 			<Key ID="STR_ADL_ACE_SKEET_DISK_n">
 				<Original>throw %1 disks</Original>
 				<English>throw %1 disks</English>
 				<German>%1 Disks werfen</German>
-			</Key>	
+			</Key>
 			<Key ID="STR_ADL_ACE_SKEET_DISK_AUTO">
 				<Original>throw disks until person nearby</Original>
 				<English>throw disks until person nearby</English>
 				<German>automatisch werfen</German>
-			</Key>		
+			</Key>
 			<Key ID="STR_ADL_ACE_SKEET_SETTINGS">
 				<Original>Settings</Original>
 				<English>Settings</English>
 				<German>Einstellungen</German>
-			</Key>	
+			</Key>
 			<Key ID="STR_ADL_ACE_SKEET_SPEED">
 				<Original>Throwing speed</Original>
 				<English>Throwing speed</English>
 				<German>Wurfgeschwindigkeit</German>
-			</Key>	
+			</Key>
 			<Key ID="STR_ADL_ACE_SKEET_RAISE">
 				<Original>pitch</Original>
 				<English>pitch</English>
 				<German>Steigung</German>
-			</Key>	
+			</Key>
 			<Key ID="STR_ADL_ACE_SKEET_INTERVAL">
 				<Original>interval</Original>
 				<English>interval</English>
 				<German>Interval</German>
-			</Key>	
+			</Key>
 			<Key ID="STR_ADL_ACE_SKEET_COINCIDENCE">
 				<Original>Randomnes factor</Original>
 				<English>Randomnes factor</English>
 				<German>Zufallsfaktor</German>
-			</Key>	
+			</Key>
 			<Key ID="STR_ADL_ACE_SKEET_CHEMLIGHT">
 				<Original>attach chemlight</Original>
 				<English>attach chemlight</English>
 				<German>Knicklicht befestigen</German>
-			</Key>	
+			</Key>
 			<Key ID="STR_ADL_ACE_SKEET_SHOW_SINGLE">
 				<Original>show every single hit</Original>
 				<English>show every single hit</English>
 				<German>Einzeltreffer anzeigen</German>
-			</Key>		
+			</Key>
 			<Key ID="STR_ADL_ACE_SKEET_SHOW_RESULT">
 				<Original>show results</Original>
 				<English>show results</English>
 				<German>Endergebnis einblenden</German>
-			</Key>																																		
+			</Key>
 		</Container>
 	</Package>
 </Project>
