@@ -40,7 +40,8 @@ class Mission
 		"A3_Structures_F_Items_Vessels",
 		"COREVLiteLoadouts",
 		"A3_Characters_F_Civil",
-		"xcam_source"
+		"xcam_source",
+		"3DEN"
 	};
 	addOnsAuto[]=
 	{
@@ -50,7 +51,8 @@ class Mission
 		"ace_weather",
 		"ace_map",
 		"ace_zeus",
-		"A3_Modules_F_Curator_Curator",
+		"3DEN",
+		"a3_modules_f_curator_curator",
 		"ace_captives",
 		"ace_sitting",
 		"ace_advanced_ballistics",
@@ -1256,7 +1258,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={18040.621,6.2897387,8938.1797};
+					position[]={13226.604,37.497242,6546.4741};
 					azimut=-166.04613;
 					id=43;
 					side="CIV";
@@ -1311,7 +1313,7 @@ class Mission
 						items=4;
 						class Item0
 						{
-							value="zeus1";
+							value="DEV_1";
 							parentCls="ModuleCurator_F";
 							typeName="Owner";
 						};
@@ -1360,7 +1362,7 @@ class Mission
 						items=4;
 						class Item0
 						{
-							value="zeus2";
+							value="DEV_2";
 							parentCls="ModuleCurator_F";
 							typeName="Owner";
 						};
