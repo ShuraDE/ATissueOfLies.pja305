@@ -8,11 +8,11 @@ class CfgORBAT
 		 // 1 - show as roman numeral, e.g. "VII"
 		 // 2 - show as NATO phonetical alphabet word, e.g. "Golf"
                 // 3 - show as color, e.g. "Red"
-           
+
 		side = "West"; // Unit side from CfgChainOfCommand >> Sides
 		size = "FireTeam"; // Unit size from CfgChainOfCommand >> Sizes
 		type = "Airborne"; // Unit type from CfgChainOfCommand >> Types
-		insignia = "\ca\missions_f\data\orbat\7thInfantry_ca.paa"; // Unit insignia, displayed in ORBAT background and in tooltip
+		insignia = "\pic\orbat\devgru.paa"; // Unit insignia, displayed in ORBAT background and in tooltip
 		colorInsignia[] = {0,0,1,1}; // Insignia image color (white default), can be either RGBA array, or class from CfgMarkerColors
 		commander = "Armstrong"; // Name of unit commander. Can be either direct name, or class from CfgWorlds >> GenericNames (random name from the list is then selected)
 		commanderRank = "Lieutenant"; // Rank of unit commander (by default selected based on unit size)
@@ -37,11 +37,11 @@ class CfgORBAT
 		 // 1 - show as roman numeral, e.g. "VII"
 		 // 2 - show as NATO phonetical alphabet word, e.g. "Golf"
          // 3 - show as color, e.g. "Red"
-           
+
 		side = "West"; // Unit side from CfgChainOfCommand >> Sides
 		size = "Troop"; // Unit size from CfgChainOfCommand >> Sizes
 		type = "Infantry"; // Unit type from CfgChainOfCommand >> Types
-		insignia = "\ca\missions_f\data\orbat\7thInfantry_ca.paa"; // Unit insignia, displayed in ORBAT background and in tooltip
+		insignia = "\pic\orbat\marsoc.paa"; // Unit insignia, displayed in ORBAT background and in tooltip
 		colorInsignia[] = {0,0,1,1}; // Insignia image color (white default), can be either RGBA array, or class from CfgMarkerColors
 		commander = "xy"; // Name of unit commander. Can be either direct name, or class from CfgWorlds >> GenericNames (random name from the list is then selected)
 		commanderRank = "Lieutenant"; // Rank of unit commander (by default selected based on unit size)
@@ -56,7 +56,7 @@ class CfgORBAT
 		description= "Foxhound Leader"; // A brief description of the group or unit.
 		assets[] = {}; // Will display pictures of all available assets to the unit commander
 		subordinates[] = {}; // Subordinates, searched on the same level as this class.
- 		
+
         // When 'subordinates' are missing, child classes will be used. They can have their own subs - number of tiers is not limited.
 		class foxhound_1
 		{
@@ -75,7 +75,7 @@ class CfgORBAT
 			side = "West";
 			commander = "NATOMen";
 			tags[] = {"BLUFOR", "USMC"};
- 		};		
+ 		};
 	};
 	class acorn
 	{
@@ -85,11 +85,11 @@ class CfgORBAT
 		 // 1 - show as roman numeral, e.g. "VII"
 		 // 2 - show as NATO phonetical alphabet word, e.g. "Golf"
          // 3 - show as color, e.g. "Red"
-           
+
 		side = "West"; // Unit side from CfgChainOfCommand >> Sides
 		size = "Troop"; // Unit size from CfgChainOfCommand >> Sizes
 		type = "Infantry"; // Unit type from CfgChainOfCommand >> Types
-		insignia = "\ca\missions_f\data\orbat\7thInfantry_ca.paa"; // Unit insignia, displayed in ORBAT background and in tooltip
+		insignia = "\pic\orbat\marsoc.paa"; // Unit insignia, displayed in ORBAT background and in tooltip
 		colorInsignia[] = {0,0,1,1}; // Insignia image color (white default), can be either RGBA array, or class from CfgMarkerColors
 		commander = "gha"; // Name of unit commander. Can be either direct name, or class from CfgWorlds >> GenericNames (random name from the list is then selected)
 		commanderRank = "Lieutenant"; // Rank of unit commander (by default selected based on unit size)
