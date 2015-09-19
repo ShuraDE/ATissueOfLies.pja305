@@ -1,12 +1,12 @@
 //root menu entry, append if !exists
 _mainAction = ["ACE_MainActions", (localize "STR_ACE_Interaction_MainAction"), "", {}, {true}] call ace_interact_menu_fnc_createAction;
-/* 
+/*
 * Prison objects
 */
 
 //prison nade
 _actionDisarmNade = ["prison_money_disarm",localize "STR_ADL_ATOL_ACE_DISARM","", {[player] spawn ADL_MNU_INTEL_NADE;}, {true}, {},[],[0.1,0,-0.65],1] call ace_interact_menu_fnc_createAction;
-[MONEY_NADE, 0, [], _actionDisarmNade] call ace_interact_menu_fnc_addActionToObject;  
+[MONEY_NADE, 0, [], _actionDisarmNade] call ace_interact_menu_fnc_addActionToObject;
 ["menu prison trap"] call ADL_DEBUG;
 
 //prison radio
@@ -14,7 +14,7 @@ _actionsObject = prison_radio getVariable ["ace_interact_menu_actions", []];
 _actionsClass = missionNamespace getVariable [format ["ace_interact_menu_Act_%1", typeOf prison_radio], []];
 if (count _actionsObject == 0 && {count _actionsClass == 0}) then {
   _actionTurnOnRadio = ["prison_radio_turnOn",localize "STR_ADL_ATOL_ACE_RADIO_ON","", {[player,_target,"snd_radio_indo"] spawn ADL_AUDIO_RADIO;}, {true}] call ace_interact_menu_fnc_createAction;
-  [prison_radio, 0, [], _actionTurnOnRadio] call ace_interact_menu_fnc_addActionToObject;  
+  [prison_radio, 0, [], _actionTurnOnRadio] call ace_interact_menu_fnc_addActionToObject;
 };
 ["menu prison radio"] call ADL_DEBUG;
 
@@ -72,5 +72,5 @@ _actionsObject = prison_tablet getVariable ["ace_interact_menu_actions", []];
 _actionsClass = missionNamespace getVariable [format ["ace_interact_menu_Act_%1", typeOf prison_radio], []];
 if (count _actionsObject == 0 && {count _actionsClass == 0}) then {
   _actionTablet = ["prison_tablet_on",localize "STR_ADL_ATOL_ACE_TABLET_ON","", {hintSilent localize "STR_ADL_ATOL_ACE_TABLET_FAIL";}, {true}] call ace_interact_menu_fnc_createAction;
-  [prison_tablet, 0, [], _actionTablet] call ace_interact_menu_fnc_addActionToObject;  
+  [prison_tablet, 0, [], _actionTablet] call ace_interact_menu_fnc_addActionToObject;
 };
