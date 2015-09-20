@@ -3,8 +3,8 @@
 	<Package name="Mission1">
 		<Container name="Default">
 			<Key ID="STR_ADL_ATOL_LOAD_MISSION">
-				<Original>Good luck on you're mission</Original>
-				<English>Good luck on you're mission</English>
+				<Original>Good luck on your mission</Original>
+				<English>Good luck on your mission</English>
 				<German>Viel Erfolg bei der Mission</German>
 			</Key>
 		</Container>
