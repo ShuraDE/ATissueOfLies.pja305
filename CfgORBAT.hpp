@@ -5,7 +5,7 @@ class CfgORBAT
 		id = 1;
 		idType=0;
 		side="West";
-		size="Brigade";
+		size="Platoon";
 		type="HQ";
 		//insignia="pic\orbat\socom.paa"; //produziert fehler wenn erste einheit die insignia drin hat Oo
 		commander="NATOMen";
@@ -19,7 +19,7 @@ class CfgORBAT
 			id = 1;
 			idType=0;
 			side="West";
-			size="HBCT";
+			size="Section";
 			type="GeneralSupport";
 			insignia="pic\orbat\socom.paa";
 			commander="NATOMen";
@@ -41,10 +41,10 @@ class CfgORBAT
 				size = "FireTeam"; // Unit size from CfgChainOfCommand >> Sizes
 				type = "Airborne"; // Unit type from CfgChainOfCommand >> Types
 				insignia = "pic\orbat\devgru.paa"; // Unit insignia, displayed in ORBAT background and in tooltip
-				//colorInsignia[] = {0,0,1,1}; // Insignia image color (white default), can be either RGBA array, or class from CfgMarkerColors
+				colorInsignia[] = {0,0,1,1}; // Insignia image color (white default), can be either RGBA array, or class from CfgMarkerColors
 				commander = "NATOMen"; // Name of unit commander. Can be either direct name, or class from CfgWorlds >> GenericNames (random name from the list is then selected)
 				commanderRank = "Lieutenant"; // Rank of unit commander (by default selected based on unit size)
-				//tags[] = {}; // Group tags. When opening ORBAT viewer, user can define what tags will be accepted.
+				tags[] = {}; // Group tags. When opening ORBAT viewer, user can define what tags will be accepted.
 				text = "United States Naval Special Warfare Development Group"; // Custom text and short text, can still use some arguments when defined:
 				// 	%1 - ID (e.g. "7th")
 				// 	%2 - Type (e.g. "Infantry")
@@ -62,7 +62,7 @@ class CfgORBAT
 				id = 10;
 				idType = 2;
 				side = "West";
-				size = "Troop";
+				size = "Squad";
 				type = "Infantry";
 				insignia = "pic\orbat\marsoc.paa";
 				colorInsignia[] = {0,0,1,1};
@@ -81,10 +81,10 @@ class CfgORBAT
 					id = 1;
 					idType = 2;
 					type = "Infantry";
-					size = "Squad";
+					size = "FireTeam";
 					side = "West";
 					commander = "NATOMen";
-					insignia = "pic\orbat\marsoc.paa";
+					insignia = "pic\orbat\1stMRB.paa";
 					tags[] = {"BLUFOR", "USMC"};
 		 		};
 				class UFOXHOUND_2
@@ -92,10 +92,10 @@ class CfgORBAT
 					id = 2;
 					idType = 2;
 					type = "Infantry";
-					size = "Squad";
+					size = "FireTeam";
 					side = "West";
 					commander = "NATOMen";
-					insignia = "pic\orbat\marsoc.paa";
+					insignia = "pic\orbat\1stMRB.paa";
 					tags[] = {"BLUFOR", "USMC"};
 		 		};
 			};
@@ -104,15 +104,15 @@ class CfgORBAT
 				id = 1;
 				idType = 3;
 				side = "West";
-				size = "Troop";
+				size = "FireTeam";
 				type = "Infantry";
-				insignia = "pic\orbat\marsoc.paa";
+				insignia = "pic\orbat\MSOIB.paa";
 				colorInsignia[] = {0,0,1,1};
 				commander = "NATOMen";
 				commanderRank = "Major";
-				tags[] = {};
-				text = "Marine Special Operations Support Group";
-				textShort = "MSOG - Callsign: Acorn";
+				tags[] = {"BLUFOR", "USMC"};
+				text = "Marine Special Operations Intelligence Battalion";
+				textShort = "MSIOB - Callsign: Acorn";
 				color[] = {0,0,1,1};
 				description= "MSOG Officer";
 				assets[] = {};
