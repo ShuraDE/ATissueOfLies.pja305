@@ -20,13 +20,13 @@ class CfgORBAT
 		id = 1;
 		idType=0;
 		side="West";
-		size="GeneralSupport";
-		type="Maritime";
+		size="HBCT";
+		type="GeneralSupport";
 		insignia="pic\orbat\socom.paa";
 		commander="NATOMen";
 		commanderRank="Colonel";
-		text="Mission Command";
-		textShort = "";
+		text="Mission Command - Callsign: Sunray";
+		textShort = "HBCT - SUNRAY";
 		color[] = {0,0,1,1};
 		subordinates[] = {UBULLFROG,UFOXHOUND,UACORN};
 	}
@@ -51,10 +51,10 @@ class CfgORBAT
 		// 	%1 - ID (e.g. "7th")
 		// 	%2 - Type (e.g. "Infantry")
 		// 	%3 - Size (e.g. "Division")
-		textShort = "DEVGRU";
+		textShort = "DEVGRU - Callsign: Bullfrog";
 		//texture = "\ca\missions_f\data\orbat\customTexture_ca.paa"; // Custom texture, will replace icon set by 'type' param.
 		color[] = {0,0,1,1}; // Custom color, will replace color set by 'side' param. Can be either RGBA array, or class from CfgMarkerColors
-		description= "Seal Team Six"; // A brief description of the group or unit.
+		description= "Seal Team Six, Callsign: Bullfrog"; // A brief description of the group or unit.
 		assets[] = {}; // Will display pictures of all available assets to the unit commander
 		subordinates[] = {}; // Subordinates, searched on the same level as this class.
 
@@ -72,7 +72,7 @@ class CfgORBAT
 		commanderRank = "Captain";
 		tags[] = {};
 		text = "Marine Special Operations Regiment";
-		textShort = "MSOR";
+		textShort = "MSOR - Callsign: Foxhound";
 		//texture = "\ca\missions_f\data\orbat\customTexture_ca.paa"; // Custom texture, will replace icon set by 'type' param.
 		color[] = {0,0,1,1};
 		description= "Foxhound Leader";
@@ -81,6 +81,7 @@ class CfgORBAT
 		class UFOXHOUND_1
 		{
 			id = 1;
+			idType = 2;
 			type = "Infantry";
 			size = "Squad";
 			side = "West";
@@ -91,6 +92,7 @@ class CfgORBAT
 		class UFOXHOUND_2
 		{
 			id = 2;
+			idType = 2;
 			type = "Infantry";
 			size = "Squad";
 			side = "West";
@@ -112,7 +114,7 @@ class CfgORBAT
 		commanderRank = "Major";
 		tags[] = {};
 		text = "Marine Special Operations Support Group";
-		textShort = "MSOG";
+		textShort = "MSOG - Callsign: Acorn";
 		color[] = {0,0,1,1};
 		description= "MSOG Officer";
 		assets[] = {};
