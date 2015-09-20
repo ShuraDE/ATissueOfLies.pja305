@@ -80,24 +80,24 @@
 		<Container name="ACE_MENU">
 
 			<Key ID="STR_ADL_ACE_PADDLE_ROPE">
-				<Original>Rope</Original>
-				<English>Rope</English>
+				<Original>rope</Original>
+				<English>rope</English>
 				<German>Rope</German>
 			</Key>
 			<Key ID="STR_ADL_ACE_PADDLE_ROPE_SHORTEN">
-				<Original>--</Original>
-				<English>--</English>
-				<German>--</German>
+				<Original>shorten rope</Original>
+				<English>shorten rope</English>
+				<German>Seil kürzen</German>
 			</Key>
 			<Key ID="STR_ADL_ACE_PADDLE_ROPE_LENGTHEN">
-				<Original>++</Original>
-				<English>++</English>
-				<German>++</German>
+				<Original>lengthen rope</Original>
+				<English>lengthen rope</English>
+				<German>Seil geben</German>
 			</Key>
 			<Key ID="STR_ADL_ACE_PADDLE_ROPE_SWITCH">
-				<Original>ON/OFF</Original>
-				<English>ON/OFF</English>
-				<German>ON/OFF</German>
+				<Original>Throw/Reeling</Original>
+				<English>Throw/Reeling</English>
+				<German>Werfen/Einholen</German>
 			</Key>
 			<Key ID="STR_ADL_ACE_PADDLE_KILLSWITCH">
 				<Original>de- / activate motor</Original>

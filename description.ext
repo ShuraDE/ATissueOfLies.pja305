@@ -2,6 +2,8 @@
 #include "dlg_note.hpp"
 #include "dlg_movie.hpp"
 #include "CfgSounds.hpp"
+#include "CfgORBAT.hpp"
+#include "CfgUnitInsignia.hpp"
 //#include "CfgVehicles.hpp"
 
 enableDebugConsole = 1;
