@@ -18,4 +18,16 @@ class CfgUnitInsignia
 		displayName = "SOCOM";
 		texture = "pic\orbat\socom.paa";
 	};
+	class MSOIB
+	{
+		author = "us";
+		displayName = "MSOIB";
+		texture = "pic\orbat\MSOIB.paa";
+	};
+	class 1stMRB
+	{
+		author = "us";
+		displayName = "1stMRB";
+		texture = "pic\orbat\1stMRB.paa";
+	};
 };
