@@ -942,7 +942,7 @@ class Mission
 					skill=0.60000002;
 					text="Foxhound_0_0";
 					init="(group this) setGroupId [""Foxhound""]; this setVariable [""v22_seat"",3];";
-					description="Foxhound Truppführer";
+					description="1: Foxhound Truppführer";
 					syncId=5;
 					synchronizations[]={15};
 				};
@@ -974,11 +974,11 @@ class Mission
 					vehicle="B_Soldier_TL_F";
 					player="PLAY CDG";
 					leader=1;
-					rank="LIEUTENANT";
+					rank="SERGEANT";
 					skill=0.60000002;
 					text="Foxhound_2_0";
 					init="(group this) setGroupId [""Foxhound Bravo""]; this setVariable [""v22_seat"",5];";
-					description="Foxhound TL Bravo";
+					description="1: Foxhound TL Bravo";
 					syncId=6;
 					synchronizations[]={16};
 				};
@@ -1044,9 +1044,8 @@ class Mission
 					position[]={17706.785,3.593524,113.61938};
 					id=28;
 					side="WEST";
-					vehicle="B_medic_F";
+					vehicle="B_Soldier_F";
 					player="PLAY CDG";
-					rank="CORPORAL";
 					skill=0.60000002;
 					text="Foxhound_2_6";
 					init="this setVariable [""v22_seat"",15];";
@@ -1067,11 +1066,11 @@ class Mission
 					vehicle="B_Soldier_TL_F";
 					player="PLAY CDG";
 					leader=1;
-					rank="LIEUTENANT";
+					rank="SERGEANT";
 					skill=0.60000002;
 					text="Foxhound_1_0";
 					init="(group this) setGroupId [""Foxhound Alpha""]; this setVariable [""v22_seat"",4];";
-					description="Foxhound TL Alpha";
+					description="1: Foxhound TL Alpha";
 					syncId=7;
 					synchronizations[]={18};
 				};
@@ -1137,9 +1136,8 @@ class Mission
 					position[]={17685.377,3.6683922,106.72851};
 					id=35;
 					side="WEST";
-					vehicle="B_medic_F";
+					vehicle="B_Soldier_F";
 					player="PLAY CDG";
-					rank="CORPORAL";
 					skill=0.60000002;
 					text="Foxhound_1_6";
 					init="this setVariable [""v22_seat"",14];";
@@ -1190,7 +1188,6 @@ class Mission
 					skill=0.60000002;
 					text="Bullfrog_5";
 					init="this setVariable [""c130_seat"",7];";
-					description="Ingenieur";
 				};
 				class Item3
 				{
@@ -1203,7 +1200,6 @@ class Mission
 					skill=0.60000002;
 					text="Bullfrog_4";
 					init="this setVariable [""c130_seat"",23];";
-					description="Medic";
 				};
 				class Item4
 				{
